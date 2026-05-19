@@ -1,4 +1,6 @@
-# Brenda Vega — Visual Systems Portfolio
+# Brenda Vega — Community Manager Portfolio
+
+This repository is a Community Manager adaptation of the original Visual Systems portfolio.
 
 Portfolio profesional desarrollado para presentar proyectos de diseño visual, UI/UX, sistemas editoriales y contenido digital.
 

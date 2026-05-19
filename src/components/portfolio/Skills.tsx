@@ -60,7 +60,7 @@ export const Skills = () => {
 
         <div className="mb-20 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-end">
           <h2 className="max-w-4xl font-display text-5xl leading-[0.96] tracking-normal text-balance sm:text-6xl lg:col-span-8 lg:text-7xl">
-            Skills & tools for visual systems.
+            Skills & tools for digital communication.
           </h2>
           <p className="max-w-md text-sm leading-relaxed text-muted-foreground lg:col-span-3 lg:col-start-10">
             Herramientas de diseño, producción y colaboración para crear piezas visuales consistentes entre formatos y canales.

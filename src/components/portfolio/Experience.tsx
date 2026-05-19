@@ -18,7 +18,7 @@ const items = [
     desc: "Diseño visual para campañas digitales, branding, contenido y comunicación enfocada en comunidad.",
   },
   {
-    role: "Branding & Visual Systems",
+    role: "Branding & Creative Systems",
     company: "Freelance",
     period: "2018 — Actualidad",
     desc: "Desarrollo de branding, contenido digital y sistemas visuales para negocios, eventos y marcas digitales.",

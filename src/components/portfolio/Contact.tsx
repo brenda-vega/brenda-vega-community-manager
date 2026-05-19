@@ -3,7 +3,7 @@ import { ArrowUpRight, Download, Link as LinkIcon, MapPin, MessageCircle } from 
 const cvHref = `${import.meta.env.BASE_URL}CV_VisualDesigner_BrendaVega_2026_v2.pdf`;
 
 const services = [
-  "Visual Systems",
+  "Creative Systems",
   "Editorial Direction",
   "Digital Experiences",
   "Product Communication",
