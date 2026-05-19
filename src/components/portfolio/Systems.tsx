@@ -28,13 +28,13 @@ export const Systems = () => {
 
       <div className="container">
         <div className="mb-16 flex items-center justify-between border-b border-hairline pb-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
-          <span>06 · What I bring to creative teams</span>
+          <span>08 · What I bring to creative teams</span>
           <span className="hidden sm:inline">Social media · Content execution</span>
         </div>
 
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:items-start">
           <div className="lg:col-span-7 space-y-8">
-            <span className="font-display text-7xl leading-none text-foreground/8 sm:text-8xl">06</span>
+            <span className="font-display text-7xl leading-none text-foreground/8 sm:text-8xl">08</span>
             <h2 className="max-w-3xl font-display text-3xl tracking-tight text-balance sm:text-4xl lg:text-6xl">
               Más que publicaciones aisladas.
             </h2>
