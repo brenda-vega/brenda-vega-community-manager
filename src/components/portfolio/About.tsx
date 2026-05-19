@@ -5,7 +5,7 @@ export const About = () => {
       <div className="container">
         <div className="mb-16 flex items-center justify-between border-b border-hairline pb-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
           <span>02 · About</span>
-          <span className="hidden sm:inline">Execution · Systems · Direction</span>
+          <span className="hidden sm:inline">Content · Community · Execution</span>
         </div>
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
@@ -13,20 +13,20 @@ export const About = () => {
             <div className="sticky top-32 space-y-8">
               <span className="font-display text-7xl leading-none text-foreground/8 sm:text-8xl">02</span>
               <h2 className="max-w-sm font-display text-3xl leading-tight text-foreground sm:text-4xl">
-                Diseño visual orientado a ejecución con criterio.
+                Contenido visual y social media con ejecución constante.
               </h2>
             </div>
           </div>
           <div className="lg:col-span-7 lg:col-start-6">
             <div className="space-y-8 border-l border-hairline pl-6 text-lg leading-relaxed text-muted-foreground text-pretty sm:pl-8 lg:text-xl">
               <p>
-                He trabajado en proyectos de tecnología, educación digital y productos online,
-                desarrollando sistemas visuales que funcionan de manera consistente entre campañas,
-                plataformas y formatos digitales.
+                He trabajado en proyectos de tecnología, educación digital y comunidades online,
+                gestionando contenido, redes sociales y comunicación visual para mantener presencia
+                activa entre plataformas, campañas y formatos digitales.
               </p>
               <p>
-                Mi enfoque está en construir visuales <span className="text-foreground">claros, adaptables y funcionales</span>,
-                facilitando tanto la comunicación de marca como la producción continua de contenido
+                Mi enfoque está en producir contenido <span className="text-foreground">claro, consistente y accionable</span>,
+                conectando calendarios editoriales, piezas visuales, reels, métricas y reportes
                 dentro de equipos creativos y entornos digitales de ritmo rápido.
               </p>
             </div>

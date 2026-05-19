@@ -22,12 +22,12 @@ type Tool = {
 
 const groups: SkillGroup[] = [
   {
-    title: "Diseño Visual",
-    items: ["Branding", "Dirección visual", "Diseño editorial", "Storytelling visual", "Sistemas visuales", "Social media design"],
+    title: "Social Media",
+    items: ["Community Management", "Calendarios editoriales", "Engagement", "Crecimiento orgánico", "Métricas y reportes", "Social media design"],
   },
   {
-    title: "Diseño Digital",
-    items: ["UI visual", "Responsive layouts", "Diseño para productos digitales", "Arquitectura visual", "Adaptación multiformato"],
+    title: "Contenido Visual",
+    items: ["Content Design", "Reels", "Short-form video", "Piezas multiformato", "Visual branding", "Adaptación por canal"],
   },
 ];
 
@@ -44,8 +44,8 @@ const tools: Tool[] = [
 ];
 
 const groupIcons: Record<string, LucideIcon> = {
-  "Diseño Visual": Palette,
-  "Diseño Digital": Type,
+  "Social Media": Palette,
+  "Contenido Visual": Type,
 };
 
 export const Skills = () => {
@@ -55,15 +55,15 @@ export const Skills = () => {
       <div className="container">
         <div className="mb-16 flex items-center justify-between border-b border-hairline pb-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
           <span>05 · Capabilities</span>
-          <span className="hidden sm:inline">Visual design · Digital systems · Tools</span>
+          <span className="hidden sm:inline">Social media · Content design · Tools</span>
         </div>
 
         <div className="mb-20 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-end">
           <h2 className="max-w-4xl font-display text-5xl leading-[0.96] tracking-normal text-balance sm:text-6xl lg:col-span-8 lg:text-7xl">
-            Skills & tools for digital communication.
+            Skills & tools for social media execution.
           </h2>
           <p className="max-w-md text-sm leading-relaxed text-muted-foreground lg:col-span-3 lg:col-start-10">
-            Herramientas de diseño, producción y colaboración para crear piezas visuales consistentes entre formatos y canales.
+            Herramientas de producción, diseño y colaboración para planear, crear y medir contenido visual entre formatos y canales.
           </p>
         </div>
 

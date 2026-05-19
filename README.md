@@ -2,7 +2,7 @@
 
 This repository is a Community Manager adaptation of the original Visual Systems portfolio.
 
-Portfolio profesional desarrollado para presentar proyectos de diseño visual, UI/UX, sistemas editoriales y contenido digital.
+Portfolio profesional desarrollado para presentar proyectos de community management, social media, contenido visual y comunicación digital.
 
 ## Stack
 
@@ -19,12 +19,12 @@ Portfolio profesional desarrollado para presentar proyectos de diseño visual, U
 
 Este portfolio fue diseñado como una experiencia editorial y visual enfocada en:
 
-- sistemas visuales
-- diseño de producto
-- branding digital
-- dashboards
-- campañas
-- contenido editorial
+- community management
+- social media
+- contenido visual
+- reels y short-form content
+- campañas digitales
+- métricas y reportes
 - case studies interactivos
 
 Incluye proyectos como:

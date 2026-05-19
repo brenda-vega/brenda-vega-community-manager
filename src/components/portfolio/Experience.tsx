@@ -1,27 +1,27 @@
 const items = [
   {
-    role: "Visual Designer & Digital Communication",
+    role: "Community Manager & Visual Content Designer",
     company: "Kairos Research",
     period: "2023 — Actualidad",
-    desc: "Diseño de sistemas visuales, contenido editorial y comunicación digital para plataformas enfocadas en tecnología y análisis digital.",
+    desc: "Gestión de social media, newsletter, infografías, videos cortos y comunicación digital para una marca enfocada en análisis Web3.",
   },
   {
-    role: "Content & Visual Designer",
+    role: "Community Builder & Content Designer",
     company: "Lytryum",
     period: "2022 — 2023",
-    desc: "Desarrollo de contenido visual y sistemas gráficos para educación digital y comunicación multicanal.",
+    desc: "Construcción de comunidad, contenido educativo, adaptación multicanal y comunicación visual para academia Web3 en español.",
   },
   {
-    role: "Marketing Visual Designer",
+    role: "Social Media & Visual Content Designer",
     company: "Exponencial Cripto Club",
     period: "2021 — 2023",
-    desc: "Diseño visual para campañas digitales, branding, contenido y comunicación enfocada en comunidad.",
+    desc: "Producción de thumbnails, piezas promocionales, videos y contenido visual para eventos, redes sociales y comunidad.",
   },
   {
-    role: "Branding & Creative Systems",
+    role: "Community & Content Support",
     company: "Freelance",
     period: "2018 — Actualidad",
-    desc: "Desarrollo de branding, contenido digital y sistemas visuales para negocios, eventos y marcas digitales.",
+    desc: "Apoyo en contenido digital, consistencia de marca, calendarios editoriales y materiales visuales para marcas y negocios.",
   },
 ];
 

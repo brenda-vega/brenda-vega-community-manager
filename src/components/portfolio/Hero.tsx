@@ -13,9 +13,9 @@ type StatConfig = {
 const cvHref = `${import.meta.env.BASE_URL}CV_VisualDesigner_BrendaVega_2026_v2.pdf`;
 
 const stats: StatConfig[] = [
-  { end: 4, suffix: "+", label: "áreas de diseño" },
-  { end: 20, suffix: "+", label: "proyectos visuales" },
-  { end: 100, suffix: "+", label: "assets digitales" },
+  { end: 4, suffix: "+", label: "comunidades activadas" },
+  { end: 100, suffix: "+", label: "piezas visuales" },
+  { end: 42, suffix: "+", label: "semanas de newsletter" },
 ];
 
 const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
@@ -88,23 +88,20 @@ export const Hero = () => {
         <div className="max-w-3xl space-y-8 lg:max-w-[43rem] xl:max-w-[47rem] lg:space-y-10">
           <div className="reveal inline-flex items-center gap-3 rounded-full border border-hairline bg-surface/35 px-4 py-2 text-[11px] uppercase tracking-[0.22em] text-muted-foreground backdrop-blur-md">
             <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_18px_hsl(var(--accent)/0.45)]" />
-            Visual Designer · Branding · Editorial · Digital
+            Social Media · Reels · Content Design · Community Management · Visual Branding · Short-form Content
           </div>
 
           <h1 className="reveal reveal-delay-1 max-w-[13ch] font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.94] tracking-normal text-balance">
-            <span className="text-foreground">Visual </span>
-            <span className="italic font-light text-accent">Designer</span>
+            <span className="text-foreground">Community Manager </span>
+            <span className="italic font-light text-accent">& Visual Content Designer</span>
           </h1>
 
           <div className="reveal reveal-delay-2 max-w-2xl space-y-5 text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed text-pretty">
             <p>
-              Diseño sistemas visuales, campañas y contenido digital para marcas que necesitan
-              mantener coherencia, velocidad y calidad visual en múltiples canales.
+              Gestión de redes sociales, contenido visual, reels y comunicación digital para marcas que necesitan consistencia, presencia activa y contenido alineado a objetivos.
             </p>
             <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-foreground/68">
-              Mi perfil combina branding, diseño editorial, social media design y diseño visual
-              para productos digitales, permitiéndome trabajar tanto en campañas creativas como
-              en sistemas gráficos estructurados para clientes con necesidades cambiantes.
+              Gestiono social media, contenido visual, video corto y reportes de ejecución para marcas que necesitan mantener ritmo, coherencia visual y conversación activa con su comunidad.
             </p>
           </div>
 
@@ -120,7 +117,7 @@ export const Hero = () => {
               }}
               className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3.5 text-sm font-medium text-background shadow-glow soft-button hover:bg-accent-soft"
             >
-              Ver proyectos
+              Ver proyectos de contenido
               <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
             <a
@@ -135,7 +132,7 @@ export const Hero = () => {
           </div>
 
           <p className="text-[11px] uppercase tracking-[0.16em] text-foreground/48 sm:text-xs lg:hidden">
-            4+ ÁREAS · 20+ PROYECTOS · 100+ ASSETS
+            4+ COMUNIDADES · 100+ PIEZAS · 42+ NEWSLETTERS
           </p>
 
           <div

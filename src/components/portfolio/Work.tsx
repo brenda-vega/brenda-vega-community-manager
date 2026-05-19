@@ -25,26 +25,26 @@ type Project = {
 const projects: Project[] = [
   {
     index: "01",
-    name: "Kairos Research",
-    eyebrow: "EDITORIAL SYSTEM",
-    category: "Editorial System · Newsletter Design · Information Design",
+    name: "Kairos Research — Social Media, Newsletter & Visual Content",
+    eyebrow: "SOCIAL MEDIA",
+    category: "Social Media · Newsletter · Visual Content",
     slug: "kairos",
     caseStudyPath: "/projects/kairos",
     hasCaseStudy: true,
     description: [
-      "Diseñé el sistema visual y editorial de Lupa Web3, creando estructuras reutilizables para contenido recurrente, piezas editoriales e infografías adaptadas a múltiples formatos digitales.",
+      "Gestión de contenido y comunicación visual para marca especializada en análisis Web3. Producción de infografías, contenido editorial, videos cortos y piezas para múltiples plataformas con enfoque en claridad, consistencia y crecimiento orgánico.",
     ],
     did: [
-      "Sistema editorial modular",
-      "Arquitectura visual de contenido",
-      "Infografías financieras",
-      "Diseño para newsletter",
+      "+129% crecimiento orgánico de comunidad",
+      "30-35% open rate sostenido durante 42 semanas",
+      "+100 piezas visuales e infografías",
+      "Contenido diario para TikTok durante aproximadamente 3 meses",
+      "Newsletter editorial",
       "Adaptación multiformato",
-      "Organización de información compleja",
     ],
     result:
-      "Producción editorial consistente durante 42 ediciones semanales con crecimiento sostenido de audiencia.",
-    tags: ["Editorial", "Newsletter", "Information Design", "Data Visualization"],
+      "+129% crecimiento orgánico, 30-35% open rate y más de 100 piezas visuales producidas.",
+    tags: ["Social Media", "Newsletter", "Reels", "Infographics"],
     image: kairos,
     featured: true,
   },
@@ -52,96 +52,96 @@ const projects: Project[] = [
     index: "02",
     name: "Fidex Capital",
     eyebrow: "UI VISUAL DESIGN",
-    category: "UI Visual Design · Design System · Responsive Layouts",
+    category: "Digital Communication · Landing Content · Brand Consistency",
     slug: "fidex",
     caseStudyPath: "/projects/fidex",
     hasCaseStudy: true,
     description: [
-      "Diseñé interfaces y layouts responsivos para un producto financiero digital, desarrollando componentes reutilizables y estructuras visuales orientadas a claridad y consistencia.",
+      "Desarrollé comunicación visual para una experiencia digital financiera, cuidando claridad del mensaje, consistencia de marca y adaptación de contenido entre pantallas.",
     ],
     did: [
-      "Responsive layouts",
-      "UI systems",
-      "Design systems",
-      "Componentes reutilizables",
-      "Jerarquía visual",
-      "Design tokens",
+      "Comunicación digital",
+      "Consistencia de marca",
+      "Adaptación responsive",
+      "Jerarquía de contenido",
+      "Piezas para producto",
+      "Visual branding",
     ],
     result:
-      "Sistema adaptable para desktop y mobile manteniendo coherencia visual entre pantallas.",
-    tags: ["UI Visual", "Design System", "Responsive", "Product Design"],
+      "Base visual adaptable para comunicar valor con claridad en desktop y mobile.",
+    tags: ["Digital Content", "Branding", "Responsive", "Communication"],
     image: fidex,
   },
   {
     index: "03",
     name: "Phronesis",
     eyebrow: "DASHBOARD SYSTEM",
-    category: "UX/UI · Dashboard System · Information Architecture",
+    category: "Metrics · Reports · Information Clarity",
     slug: "phronesis",
     caseStudyPath: "/projects/phronesis",
     hasCaseStudy: true,
     description: [
-      "Diseñé dashboards e interfaces orientadas a organizar información compleja mediante jerarquía visual, estructuras modulares y navegación clara.",
+      "Organicé información compleja en una experiencia visual clara para facilitar lectura de métricas, reportes y datos relevantes para toma de decisiones.",
     ],
     did: [
-      "Dashboard systems",
-      "Information architecture",
-      "Data hierarchy",
-      "Visual states",
-      "Modular layouts",
-      "UI organization",
+      "Métricas",
+      "Reportes",
+      "Jerarquía de información",
+      "Claridad visual",
+      "Organización de datos",
+      "Comunicación ejecutiva",
     ],
     result:
-      "Interfaz preparada para escalar módulos y facilitar lectura rápida de métricas y datos.",
-    tags: ["Dashboard", "UX/UI", "Information Design", "Product System"],
+      "Estructura preparada para leer métricas y reportes con mayor claridad.",
+    tags: ["Metrics", "Reports", "Information Design", "Dashboard"],
     image: phronesis,
   },
   {
     index: "04",
-    name: "Lytryum",
-    eyebrow: "CONTENT DESIGN",
-    category: "Educational Visual System · Content Architecture · Digital Learning",
+    name: "Lytryum — Community Building & Educational Content",
+    eyebrow: "COMMUNITY BUILDING",
+    category: "Community Building · Educational Content · Social Media",
     slug: "lytryum",
     caseStudyPath: "/projects/lytryum",
     hasCaseStudy: true,
     description: [
-      "Participé en la construcción visual de un ecosistema educativo digital, desarrollando sistemas adaptables para contenido, certificaciones y materiales de aprendizaje.",
+      "Construcción de comunidad digital desde cero para academia Web3 en español. Desarrollo de contenido educativo, adaptación multicanal y comunicación visual para redes sociales.",
     ],
     did: [
-      "Sistemas educativos visuales",
-      "Arquitectura de contenido",
-      "Materiales educativos",
-      "Diseño para redes sociales",
+      "4 comunidades construidas desde cero",
+      "+50 piezas educativas",
+      "Discord, LinkedIn, YouTube e Instagram",
+      "Crecimiento 100% orgánico",
+      "Contenido educativo",
       "Adaptación multicanal",
-      "Producción asistida por IA",
     ],
     result:
-      "Consistencia visual entre contenido educativo, comunicación digital y assets promocionales.",
-    tags: ["Education", "Content System", "Digital Learning", "AI Assisted"],
+      "4 comunidades construidas desde cero con contenido educativo y crecimiento 100% orgánico.",
+    tags: ["Community", "Education", "Discord", "Organic Growth"],
     image: lytryum,
   },
   {
     index: "05",
-    name: "Exponencial Cripto Club",
-    eyebrow: "CAMPAIGN DESIGN",
-    category: "Campaign System · Event Branding · Digital Content",
+    name: "Exponencial Cripto Club — Social Media, Events & Visual Content",
+    eyebrow: "SOCIAL CONTENT",
+    category: "Social Media · Events · Visual Content",
     slug: "exponencial",
     caseStudyPath: "/projects/exponencial",
     hasCaseStudy: true,
     description: [
-      "Diseñé sistemas visuales para campañas digitales, eventos y contenido audiovisual adaptado a múltiples plataformas y formatos de comunicación.",
+      "Producción de contenido visual, thumbnails, piezas promocionales y materiales para eventos de comunidad cripto. Gestión de contenido multicanal con enfoque en consistencia visual y comunicación digital.",
     ],
     did: [
-      "Campaign assets",
-      "Event branding",
-      "Streaming visuals",
-      "YouTube content",
-      "Comunicación multiplataforma",
-      "Adaptación de contenido digital",
+      "Gestión de contenido en 6+ plataformas",
+      "Materiales para eventos y campañas",
+      "Thumbnails, videos y piezas para redes sociales",
+      "Soporte visual para comunidad y embajadores",
+      "Comunicación multicanal",
+      "Consistencia visual",
     ],
     result:
-      "Sistema visual consistente para campañas, eventos y contenido recurrente en distintos canales.",
-    tags: ["Campaign", "Event Branding", "Digital Content", "YouTube"],
+      "Contenido visual para 6+ plataformas, eventos, campañas y comunidad.",
+    tags: ["Social Media", "Events", "Thumbnails", "Video"],
     image: exponencial,
   },
 ];
@@ -159,7 +159,7 @@ export const Work = () => {
               <span className="h-px w-10 bg-accent/60" />
               03 / Selected Projects
             </span>
-            <span className="hidden lg:inline">Brand systems · Editorial · Digital campaigns</span>
+            <span className="hidden lg:inline">Social media · Reels · Community · Metrics</span>
           </div>
 
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-end">
@@ -167,7 +167,7 @@ export const Work = () => {
               Selected Work
             </h2>
             <p className="reveal reveal-delay-2 max-w-md text-sm leading-relaxed text-muted-foreground lg:col-span-3 lg:col-start-10">
-              Sistemas visuales, campañas y contenido digital desarrollados para marcas con necesidades de coherencia, velocidad y calidad visual.
+              Proyectos de social media, contenido visual y comunicación digital para marcas que necesitan consistencia, presencia activa y ejecución medible.
             </p>
           </div>
         </div>

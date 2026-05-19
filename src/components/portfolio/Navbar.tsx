@@ -99,7 +99,7 @@ export const Navbar = () => {
             className="group font-display text-sm tracking-normal"
           >
             <span className="text-foreground transition-colors group-hover:text-accent-soft">Brenda Vega</span>
-            <span className="text-muted-foreground"> · Visual Designer</span>
+            <span className="text-muted-foreground"> · Community Manager</span>
           </a>
           <nav className="hidden items-center gap-7 text-[13px] text-muted-foreground md:flex" aria-label="Navegación principal">
             {links.map((l) => {
@@ -139,7 +139,7 @@ export const Navbar = () => {
             }`}
           >
             <span>Brenda Vega</span>
-            <span className="text-muted-foreground/78"> · Visual Designer</span>
+            <span className="text-muted-foreground/78"> · Community Manager</span>
           </a>
 
           <button

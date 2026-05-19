@@ -5,25 +5,25 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const highlights = [
-  { value: "Multichannel System", label: "Contenido distribuido en múltiples plataformas" },
-  { value: "Event Communication", label: "Campañas y activaciones digitales" },
-  { value: "Reusable Assets", label: "Producción visual escalable" },
+  { value: "6+", label: "Plataformas con gestión de contenido" },
+  { value: "Eventos", label: "Materiales para campañas y activaciones" },
+  { value: "Social", label: "Thumbnails, videos y piezas para comunidad" },
 ];
 
 const decisions = [
-  "Definir una estructura visual reutilizable para campañas y contenido digital.",
-  "Adaptar piezas para YouTube, eventos, redes sociales y streaming.",
-  "Mantener coherencia visual entre comunicación digital y activaciones de comunidad.",
-  "Diseñar assets reutilizables para acelerar producción y distribución.",
+  "Producir contenido visual para redes sociales, eventos y campañas de comunidad.",
+  "Adaptar thumbnails, videos y piezas promocionales para diferentes plataformas.",
+  "Mantener consistencia visual entre contenido recurrente, embajadores y activaciones.",
+  "Apoyar la comunicación digital de una comunidad cripto con materiales claros y accionables.",
 ];
 
 const tags = [
-  "Campaign System",
-  "Event Branding",
-  "Digital Content",
-  "YouTube",
-  "Community Communication",
-  "Multiplatform Design",
+  "Social Media",
+  "Events",
+  "Visual Content",
+  "Thumbnails",
+  "Video",
+  "Community",
 ];
 
 const Exponencial = () => {
@@ -46,14 +46,14 @@ const Exponencial = () => {
             <div className="space-y-6 lg:col-span-8">
               <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-muted-foreground">
                 <span className="h-px w-10 bg-accent/60" />
-                Campaign System · Event Branding · Digital Content Distribution
+                Social Media · Events · Visual Content
               </span>
               <h1 className="font-display text-5xl leading-[0.96] tracking-normal text-balance sm:text-6xl lg:text-8xl">
-                Exponencial Cripto Club
+                Exponencial Cripto Club — Social Media, Events & Visual Content
               </h1>
             </div>
             <p className="max-w-xl text-base leading-relaxed text-muted-foreground text-pretty lg:col-span-4 lg:text-lg">
-              Case study enfocado en campañas digitales, sistemas de contenido y comunicación visual multiplataforma.
+              Producción de contenido visual, thumbnails, piezas promocionales y materiales para eventos de comunidad cripto.
             </p>
           </div>
 
@@ -84,7 +84,7 @@ const Exponencial = () => {
             <div className="scroll-reveal sticky top-28 space-y-4 sm:space-y-6 lg:top-32 lg:space-y-7">
               <span className="hidden font-display text-7xl leading-none text-foreground/8 sm:block sm:text-8xl">01</span>
               <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
-                Sistema visual orientado a campañas digitales, activaciones de comunidad y distribución de contenido multiformato.
+                Gestión de contenido multicanal con enfoque en consistencia visual, eventos y comunicación digital para comunidad cripto.
               </p>
               <div className="flex max-w-sm flex-wrap gap-2 pt-2 sm:pt-5">
                 {tags.map((tag) => (
@@ -97,9 +97,9 @@ const Exponencial = () => {
           </aside>
 
           <div className="space-y-10 sm:space-y-14 lg:col-span-7 lg:col-start-6 lg:space-y-20">
-            <CaseBlock title="Contexto" body="Exponencial Cripto Club necesitaba estructurar su comunicación visual entre múltiples plataformas, eventos y formatos digitales manteniendo consistencia y reconocimiento visual." />
-            <CaseBlock title="Problema" body="La distribución de contenido y comunicación visual estaban fragmentadas entre canales, dificultando mantener coherencia entre campañas, eventos y contenido recurrente." />
-            <CaseBlock title="Hipótesis" body="Un sistema visual adaptable y una estructura de contenido consistente pueden transformar comunicación dispersa en una identidad reconocible y escalable." />
+            <CaseBlock title="Contexto" body="Exponencial Cripto Club necesitaba contenido visual y soporte de comunicación para redes sociales, eventos, embajadores y campañas dentro de una comunidad cripto." />
+            <CaseBlock title="Problema" body="El contenido debía adaptarse a múltiples plataformas sin perder consistencia visual, claridad promocional ni ritmo de publicación para la comunidad." />
+            <CaseBlock title="Hipótesis" body="Una producción visual multicanal con criterios claros puede sostener campañas, reforzar comunidad y hacer más reconocible la comunicación digital." />
 
             <section className="scroll-reveal space-y-4 border-t border-hairline pt-7 transition-colors duration-500 hover:border-accent/25 lg:space-y-5 lg:pt-10">
               <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground/88">Decisiones clave</p>
@@ -113,9 +113,9 @@ const Exponencial = () => {
               </ol>
             </section>
 
-            <CaseBlock title="Solución" body="Sistema visual y de contenido diseñado para soportar campañas recurrentes, eventos y distribución multiplataforma manteniendo consistencia visual entre formatos." />
-            <CaseBlock title="Resultado" body="Comunicación visual unificada entre plataformas, campañas y eventos digitales con una estructura adaptable para producción continua." />
-            <CaseBlock title="Aprendizajes" body="La consistencia visual no depende del formato; depende del sistema que conecta todas las piezas dentro de una misma narrativa visual." />
+            <CaseBlock title="Solución" body="Producción de thumbnails, videos, piezas para redes sociales, materiales promocionales y soporte visual para comunidad, eventos y embajadores." />
+            <CaseBlock title="Resultado" body="Gestión de contenido en 6+ plataformas, materiales para eventos y campañas, y soporte visual constante para comunicación de comunidad." />
+            <CaseBlock title="Aprendizajes" body="En comunidades activas, cada pieza debe comunicar rápido, verse consistente y poder adaptarse sin perder intención entre canales." />
 
             <section className="scroll-reveal rounded-[1.75rem] border border-hairline bg-surface/22 p-7 shadow-soft transition-all duration-700 hover:-translate-y-1 hover:border-accent/25 hover:bg-surface/32 sm:p-9 lg:p-10">
               <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground/88">Next</p>

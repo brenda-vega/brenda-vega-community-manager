@@ -5,25 +5,25 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const metrics = [
-  { value: "42+", label: "Semanas editoriales" },
-  { value: "100+", label: "Assets digitales" },
-  { value: "Multiformato", label: "Newsletter · Social · Reports" },
+  { value: "+129%", label: "Crecimiento orgánico de comunidad" },
+  { value: "30-35%", label: "Open rate sostenido durante 42 semanas" },
+  { value: "100+", label: "Piezas visuales, infografías y contenido diario para TikTok" },
 ];
 
 const decisions = [
-  "Diseñar una estructura editorial reutilizable para contenido semanal.",
-  "Crear componentes visuales adaptables para infografías, reportes y piezas educativas.",
-  "Estandarizar jerarquías visuales para mejorar lectura y comprensión.",
-  "Mantener coherencia visual entre newsletter, social media y contenido digital.",
+  "Planear contenido editorial y visual para newsletter, redes sociales y piezas educativas.",
+  "Producir infografías y contenidos multiformato con claridad para audiencias Web3.",
+  "Mantener consistencia visual entre publicaciones, videos cortos y comunicación diaria.",
+  "Dar seguimiento a métricas de comunidad, open rate y crecimiento orgánico.",
 ];
 
 const tags = [
-  "Editorial Systems",
-  "Information Design",
+  "Social Media",
+  "Visual Content",
   "Newsletter",
-  "Content Structure",
-  "Data Visualization",
-  "Digital Communication",
+  "Reels",
+  "Infographics",
+  "Organic Growth",
 ];
 
 const Kairos = () => {
@@ -46,14 +46,14 @@ const Kairos = () => {
             <div className="space-y-6 lg:col-span-8">
               <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-muted-foreground">
                 <span className="h-px w-10 bg-accent/60" />
-                Editorial System · Newsletter Design · Information Design
+                Social Media · Newsletter · Visual Content
               </span>
               <h1 className="font-display text-5xl leading-[0.96] tracking-normal text-balance sm:text-6xl lg:text-8xl">
-                Kairos Research
+                Kairos Research — Social Media, Newsletter & Visual Content
               </h1>
             </div>
             <p className="max-w-xl text-base leading-relaxed text-muted-foreground text-pretty lg:col-span-4 lg:text-lg">
-              Sistema visual y editorial para newsletter especializado en análisis de mercados digitales.
+              Gestión de contenido y comunicación visual para marca especializada en análisis Web3.
             </p>
           </div>
 
@@ -84,7 +84,7 @@ const Kairos = () => {
             <div className="scroll-reveal sticky top-28 space-y-4 sm:space-y-6 lg:top-32 lg:space-y-7">
               <span className="hidden font-display text-7xl leading-none text-foreground/8 sm:block sm:text-8xl">01</span>
               <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
-                Case study enfocado en sistemas editoriales, estructura visual de contenido y comunicación digital recurrente.
+                Case study enfocado en social media, newsletter, infografías, video corto y comunicación digital recurrente.
               </p>
               <div className="flex max-w-sm flex-wrap gap-2 pt-2 sm:pt-5">
                 {tags.map((tag) => (
@@ -100,13 +100,13 @@ const Kairos = () => {
             <section className="scroll-reveal rounded-[1.75rem] border border-hairline bg-surface/22 p-7 shadow-soft transition-all duration-700 hover:-translate-y-1 hover:border-accent/25 hover:bg-surface/32 sm:p-9 lg:p-10">
               <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground/88">Status</p>
               <p className="mt-5 text-base leading-relaxed text-foreground/78 text-pretty lg:text-lg">
-                Sistema editorial desarrollado para producción semanal, adaptación multicanal y organización visual de información compleja.
+                Gestión de contenido desarrollada para sostener newsletter semanal, redes sociales, infografías y presencia diaria en canales digitales.
               </p>
             </section>
 
-            <CaseBlock title="Contexto" body="Kairos Research necesitaba consolidar su newsletter y comunicación visual como un sistema escalable, manteniendo consistencia entre contenido editorial, piezas informativas y formatos digitales recurrentes." />
-            <CaseBlock title="Problema" body="El contenido crecía rápidamente, pero la producción visual dependía de procesos manuales y estructuras poco reutilizables, dificultando consistencia, velocidad y adaptación entre plataformas." />
-            <CaseBlock title="Hipótesis" body="Un sistema visual modular permitiría organizar información compleja, acelerar producción editorial y mantener coherencia visual entre newsletter, redes sociales y materiales informativos." />
+            <CaseBlock title="Contexto" body="Kairos Research necesitaba sostener una presencia digital clara y constante para una audiencia interesada en análisis Web3, combinando newsletter, social media, infografías y videos cortos." />
+            <CaseBlock title="Problema" body="La información era técnica y frecuente, por lo que necesitaba transformarse en contenido visual claro, consistente y adaptable para distintos canales sin perder rigor ni ritmo de publicación." />
+            <CaseBlock title="Hipótesis" body="Una gestión de contenido con calendarios, piezas visuales reutilizables y seguimiento de métricas puede fortalecer comunidad, mejorar lectura y sostener crecimiento orgánico." />
 
             <section className="scroll-reveal space-y-4 border-t border-hairline pt-7 transition-colors duration-500 hover:border-accent/25 lg:space-y-5 lg:pt-10">
               <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground/88">Decisiones clave</p>
@@ -120,9 +120,9 @@ const Kairos = () => {
               </ol>
             </section>
 
-            <CaseBlock title="Solución" body="Desarrollo de un sistema visual editorial enfocado en claridad, reutilización y adaptación multiformato, permitiendo producir contenido recurrente con identidad visual consistente." />
-            <CaseBlock title="Resultado" body="Sistema editorial estable para producción continua de contenido, mejorando organización visual, consistencia y adaptación entre plataformas digitales." />
-            <CaseBlock title="Aprendizajes" body="La organización visual funciona mejor cuando el diseño se construye como sistema y no como piezas aisladas. La consistencia acelera producción y fortalece percepción de marca." />
+            <CaseBlock title="Solución" body="Gestión de contenido y comunicación visual para múltiples plataformas: infografías, newsletter, videos cortos, piezas editoriales y contenido diario para TikTok durante aproximadamente 3 meses." />
+            <CaseBlock title="Resultado" body="+129% de crecimiento orgánico de comunidad, 30-35% de open rate sostenido durante 42 semanas y más de 100 piezas visuales e infografías producidas." />
+            <CaseBlock title="Aprendizajes" body="Cuando una marca publica de forma constante, la claridad visual y la lectura de métricas son tan importantes como la creatividad: ayudan a sostener comunidad y mejorar ejecución." />
 
             <section className="scroll-reveal rounded-[1.75rem] border border-hairline bg-surface/22 p-7 shadow-soft transition-all duration-700 hover:-translate-y-1 hover:border-accent/25 hover:bg-surface/32 sm:p-9 lg:p-10">
               <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground/88">Next</p>

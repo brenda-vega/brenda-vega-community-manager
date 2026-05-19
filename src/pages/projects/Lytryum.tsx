@@ -5,25 +5,25 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const highlights = [
-  { value: "Educational System", label: "Contenido modular escalable" },
-  { value: "Multiformat Design", label: "Adaptación multiplataforma" },
-  { value: "AI Assisted Workflow", label: "Producción visual optimizada" },
+  { value: "4", label: "Comunidades construidas desde cero" },
+  { value: "50+", label: "Piezas educativas" },
+  { value: "100%", label: "Crecimiento orgánico en Discord, LinkedIn, YouTube e Instagram" },
 ];
 
 const decisions = [
-  "Definir una estructura visual consistente para contenido educativo y promocional.",
-  "Diseñar assets reutilizables para campañas, redes sociales y eventos.",
-  "Crear piezas adaptables a distintos formatos y plataformas digitales.",
-  "Integrar exploración visual asistida por IA para acelerar producción creativa.",
+  "Construir comunidad desde cero con contenido educativo y comunicación constante.",
+  "Adaptar mensajes para Discord, LinkedIn, YouTube e Instagram.",
+  "Crear piezas educativas claras para explicar temas Web3 a una audiencia en español.",
+  "Mantener crecimiento orgánico mediante consistencia, presencia activa y contenido útil.",
 ];
 
 const tags = [
-  "Education",
-  "Content System",
-  "Social Design",
-  "AI Assisted",
-  "Digital Learning",
-  "Visual System",
+  "Community Building",
+  "Educational Content",
+  "Discord",
+  "LinkedIn",
+  "YouTube",
+  "Organic Growth",
 ];
 
 const Lytryum = () => {
@@ -46,14 +46,14 @@ const Lytryum = () => {
             <div className="space-y-6 lg:col-span-8">
               <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-muted-foreground">
                 <span className="h-px w-10 bg-accent/60" />
-                Educational Visual System · Content Architecture · Digital Learning
+                Community Building · Educational Content · Social Media
               </span>
               <h1 className="font-display text-5xl leading-[0.96] tracking-normal text-balance sm:text-6xl lg:text-8xl">
-                Lytryum
+                Lytryum — Community Building & Educational Content
               </h1>
             </div>
             <p className="max-w-xl text-base leading-relaxed text-muted-foreground text-pretty lg:col-span-4 lg:text-lg">
-              Case study enfocado en sistemas visuales educativos, contenido digital y estructuras visuales adaptables para plataformas online.
+              Construcción de comunidad digital desde cero para academia Web3 en español.
             </p>
           </div>
 
@@ -84,7 +84,7 @@ const Lytryum = () => {
             <div className="scroll-reveal sticky top-28 space-y-4 sm:space-y-6 lg:top-32 lg:space-y-7">
               <span className="hidden font-display text-7xl leading-none text-foreground/8 sm:block sm:text-8xl">01</span>
               <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
-                Sistema visual diseñado para escalar contenido educativo, materiales digitales y comunicación visual multiformato.
+                Contenido educativo y comunicación visual para activar comunidades en Discord, LinkedIn, YouTube e Instagram.
               </p>
               <div className="flex max-w-sm flex-wrap gap-2 pt-2 sm:pt-5">
                 {tags.map((tag) => (
@@ -97,9 +97,9 @@ const Lytryum = () => {
           </aside>
 
           <div className="space-y-10 sm:space-y-14 lg:col-span-7 lg:col-start-6 lg:space-y-20">
-            <CaseBlock title="Contexto" body="Lytryum necesitaba estructurar visualmente una plataforma educativa Web3 capaz de mantener coherencia entre cursos, redes sociales, eventos y materiales digitales." />
-            <CaseBlock title="Problema" body="La comunicación visual y producción de contenido eran inconsistentes entre plataformas, dificultando escalabilidad y reconocimiento visual del ecosistema educativo." />
-            <CaseBlock title="Hipótesis" body="Un sistema visual modular con estructuras reutilizables y lineamientos claros puede acelerar producción y mantener consistencia visual entre múltiples formatos digitales." />
+            <CaseBlock title="Contexto" body="Lytryum necesitaba construir comunidad digital desde cero para una academia Web3 en español, con contenido educativo, comunicación multicanal y presencia constante." />
+            <CaseBlock title="Problema" body="La comunidad necesitaba crecer orgánicamente en diferentes canales, manteniendo claridad educativa, consistencia visual y conversación activa con audiencias nuevas." />
+            <CaseBlock title="Hipótesis" body="Una estrategia de contenido educativo con adaptación por canal puede activar comunidad, explicar temas complejos y sostener crecimiento sin depender de pauta." />
 
             <section className="scroll-reveal space-y-4 border-t border-hairline pt-7 transition-colors duration-500 hover:border-accent/25 lg:space-y-5 lg:pt-10">
               <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground/88">Decisiones clave</p>
@@ -113,9 +113,9 @@ const Lytryum = () => {
               </ol>
             </section>
 
-            <CaseBlock title="Solución" body="Sistema visual modular orientado a contenido educativo digital, combinando identidad visual consistente, adaptación multiformato y producción escalable." />
-            <CaseBlock title="Resultado" body="Consistencia visual entre materiales educativos, campañas digitales y assets promocionales dentro del ecosistema de comunicación." />
-            <CaseBlock title="Aprendizajes" body="Los sistemas visuales educativos deben priorizar claridad, adaptación y velocidad de producción sin perder identidad visual." />
+            <CaseBlock title="Solución" body="Desarrollo de contenido educativo, adaptación multicanal y comunicación visual para redes sociales, con piezas pensadas para comunidad, aprendizaje y distribución orgánica." />
+            <CaseBlock title="Resultado" body="4 comunidades construidas desde cero, más de 50 piezas educativas y crecimiento 100% orgánico en Discord, LinkedIn, YouTube e Instagram." />
+            <CaseBlock title="Aprendizajes" body="La comunidad crece mejor cuando el contenido enseña, conversa y aparece con consistencia en los canales donde la audiencia ya está participando." />
 
             <section className="scroll-reveal rounded-[1.75rem] border border-hairline bg-surface/22 p-7 shadow-soft transition-all duration-700 hover:-translate-y-1 hover:border-accent/25 hover:bg-surface/32 sm:p-9 lg:p-10">
               <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground/88">Next</p>

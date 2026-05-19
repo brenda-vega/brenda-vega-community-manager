@@ -3,12 +3,12 @@ import { ArrowUpRight, Download, Link as LinkIcon, MapPin, MessageCircle } from 
 const cvHref = `${import.meta.env.BASE_URL}CV_VisualDesigner_BrendaVega_2026_v2.pdf`;
 
 const services = [
-  "Creative Systems",
-  "Editorial Direction",
-  "Digital Experiences",
-  "Product Communication",
-  "Branding",
-  "Remote Collaboration",
+  "Community Manager",
+  "Social Media Manager",
+  "Content Creator",
+  "Visual Content Designer",
+  "Marketing Assistant",
+  "Social Media Designer",
 ];
 
 const secondaryLinks = [
@@ -39,10 +39,10 @@ export const Contact = () => {
           <div className="space-y-8 lg:col-span-7 lg:space-y-10">
             <span className="text-xs uppercase tracking-[0.22em] text-muted-foreground">07 · Contact</span>
             <h2 className="max-w-4xl font-display text-4xl leading-[1.04] tracking-tight text-balance sm:text-5xl lg:text-6xl">
-              Este portfolio es una muestra de cómo el diseño puede conectar estructura, comunicación y experiencia digital.
+              Este portfolio muestra cómo el contenido puede sostener presencia, comunidad y comunicación digital con consistencia.
             </h2>
             <p className="max-w-2xl text-base leading-relaxed text-muted-foreground text-pretty lg:text-lg">
-              Siempre me interesa colaborar en proyectos donde las ideas necesiten dirección visual, sistemas claros y experiencias digitales capaces de adaptarse y crecer.
+              Estoy disponible para apoyar marcas que necesitan gestión de redes, contenido visual, reels, calendarios editoriales y reportes claros de ejecución.
             </p>
 
             <div className="space-y-5 pt-1 sm:pt-2">
@@ -86,7 +86,7 @@ export const Contact = () => {
                 <span className="absolute inline-flex h-full w-full rounded-full bg-accent opacity-60 animate-ping" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
               </span>
-              <span className="text-xs uppercase tracking-[0.18em] text-foreground/88">Visual Designer</span>
+              <span className="text-xs uppercase tracking-[0.18em] text-foreground/88">Available for</span>
             </div>
             <ul className="space-y-3">
               {services.map((s) => (
@@ -100,8 +100,8 @@ export const Contact = () => {
         </div>
 
         <footer className="mt-24 flex flex-col items-start justify-between gap-4 border-t border-hairline pt-8 text-xs sm:flex-row sm:items-center lg:mt-32 lg:pt-10">
-          <p className="text-foreground/55">© 2026 Brenda Vega · Visual Designer</p>
-          <p className="text-foreground/68">Visual Designer · Branding · Editorial · Social Media · Digital Design</p>
+          <p className="text-foreground/55">© 2026 Brenda Vega · Community Manager</p>
+          <p className="text-foreground/68">Community Manager · Social Media · Reels · Visual Content · Digital Communication</p>
         </footer>
       </div>
     </section>

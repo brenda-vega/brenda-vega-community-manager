@@ -1,23 +1,23 @@
 import { LayoutGrid, Layers3, PenTool } from "lucide-react";
 
 const blocks = [
-  { icon: Layers3, label: "Branding visual", desc: "Dirección visual, sistemas de marca y consistencia entre aplicaciones digitales." },
-  { icon: PenTool, label: "Diseño editorial", desc: "Organización de contenido, jerarquía visual y comunicación clara de información compleja." },
-  { icon: LayoutGrid, label: "UI visual", desc: "Layouts web, arquitectura visual y adaptación multiformato para productos digitales." },
+  { icon: Layers3, label: "Community management", desc: "Gestión de comunidades, conversación activa y seguimiento de interacción en canales digitales." },
+  { icon: PenTool, label: "Content design", desc: "Producción de contenido visual, reels, piezas editoriales y comunicación clara para redes sociales." },
+  { icon: LayoutGrid, label: "Social media execution", desc: "Calendarios editoriales, adaptación multiformato y reportes para sostener presencia digital." },
 ];
 
-const principles = ["consistencia", "claridad", "velocidad de producción", "percepción de calidad"];
+const principles = ["consistencia", "presencia activa", "ritmo de publicación", "medición de contenido"];
 
 const focus = [
-  "Branding visual",
-  "Social media systems",
-  "Diseño editorial",
-  "Campañas digitales",
-  "Layouts web",
-  "UI visual",
-  "Dirección visual",
-  "Organización de contenido",
-  "Exploración creativa con IA",
+  "Community Management",
+  "Social Media",
+  "Visual Content",
+  "Content Design",
+  "Reels",
+  "Short-form Video",
+  "Editorial Calendars",
+  "Engagement",
+  "Metrics & Reports",
 ];
 
 export const Systems = () => {
@@ -29,18 +29,18 @@ export const Systems = () => {
       <div className="container">
         <div className="mb-16 flex items-center justify-between border-b border-hairline pb-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
           <span>06 · What I bring to creative teams</span>
-          <span className="hidden sm:inline">Creative systems · Production clarity</span>
+          <span className="hidden sm:inline">Social media · Content execution</span>
         </div>
 
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:items-start">
           <div className="lg:col-span-7 space-y-8">
             <span className="font-display text-7xl leading-none text-foreground/8 sm:text-8xl">06</span>
             <h2 className="max-w-3xl font-display text-3xl tracking-tight text-balance sm:text-4xl lg:text-6xl">
-              Más que piezas aisladas.
+              Más que publicaciones aisladas.
             </h2>
             <p className="max-w-2xl text-base leading-relaxed text-muted-foreground text-pretty lg:text-lg">
-              Me interesa construir sistemas visuales que ayuden a las marcas a mantener consistencia,
-              claridad, velocidad de producción y percepción de calidad entre plataformas.
+              Me interesa gestionar contenido que ayude a las marcas a mantener consistencia,
+              presencia activa, crecimiento orgánico y lectura clara de resultados entre plataformas.
             </p>
 
             <div className="grid border-y border-hairline sm:grid-cols-4">
