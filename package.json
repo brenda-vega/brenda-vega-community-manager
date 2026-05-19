@@ -8,7 +8,7 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist --cname cm.brenda-vega.xyz",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
