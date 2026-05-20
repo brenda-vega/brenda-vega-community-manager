@@ -6,8 +6,8 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const highlights = [
-  { value: "Metrics", label: "Lectura clara de datos" },
-  { value: "Reports", label: "Jerarquía de información" },
+  { value: "Métricas", label: "Lectura clara de datos" },
+  { value: "Reportes", label: "Jerarquía de información" },
   { value: "Responsive", label: "Desktop · Tablet · Mobile" },
 ];
 
@@ -19,11 +19,11 @@ const decisions = [
 ];
 
 const tags = [
-  "Metrics",
-  "Reports",
-  "Information Design",
+  "Métricas",
+  "Reportes",
+  "Diseño de información",
   "Dashboard",
-  "Data Clarity",
+  "Claridad de datos",
   "Responsive",
 ];
 
@@ -40,21 +40,21 @@ const Phronesis = () => {
             className="group reveal mb-16 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-muted-foreground transition-all duration-500 hover:-translate-y-0.5 hover:text-foreground"
           >
             <ArrowLeft className="h-4 w-4 text-accent transition-transform duration-500 group-hover:-translate-x-1" aria-hidden="true" />
-            Back to Work
+            Volver a proyectos
           </Link>
 
           <div className="reveal reveal-delay-1 grid grid-cols-1 gap-9 lg:grid-cols-12 lg:items-end lg:gap-12">
             <div className="space-y-6 lg:col-span-8">
               <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-muted-foreground">
                 <span className="h-px w-10 bg-accent/60" />
-                Metrics · Reports · Information Clarity
+                Otros proyectos digitales · Métricas · Reportes
               </span>
               <h1 className="font-display text-5xl leading-[0.96] tracking-normal text-balance sm:text-6xl lg:text-8xl">
                 Phronesis
               </h1>
             </div>
             <p className="max-w-xl text-base leading-relaxed text-muted-foreground text-pretty lg:col-span-4 lg:text-lg">
-              Case study enfocado en métricas, reportes y organización clara de información para productos digitales.
+              Proyecto digital secundario enfocado en métricas, reportes y organización clara de información.
             </p>
           </div>
 
@@ -117,7 +117,7 @@ const Phronesis = () => {
             <section className="scroll-reveal overflow-hidden rounded-[1.75rem] border border-hairline bg-surface/20 p-3 shadow-soft transition-all duration-700 hover:-translate-y-1 hover:border-accent/25 hover:bg-surface/32 sm:p-5 lg:p-7">
               <div className="mb-6 flex items-center justify-between gap-6 border-b border-hairline pb-5">
                 <p className="text-[11px] uppercase tracking-[0.24em] text-muted-foreground/88">Supporting content</p>
-                <span className="text-xs text-muted-foreground/58">Metrics detail</span>
+                <span className="text-xs text-muted-foreground/58">Detalle de métricas</span>
               </div>
               <img
                 src={phronesisSystem}

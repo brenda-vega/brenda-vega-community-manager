@@ -34,7 +34,7 @@ const visualAssets = [
     alt: "Mantle Puebla event promotion post",
   },
   {
-    title: "Travel VYP — Social Media Campaigns",
+    title: "Travel VYP — Campañas en redes sociales",
     caption: "Social campaign visuals.",
     src: assetPath("travelvyp-social-campaigns.png"),
     alt: "Travel VYP social media campaign visuals",
@@ -81,7 +81,7 @@ export const ServicesContent = () => {
         <div className="container">
           <div className="mb-12 flex items-center justify-between border-b border-hairline pb-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
             <span>05 · Qué hago</span>
-            <span className="hidden sm:inline">Social media · Content execution</span>
+            <span className="hidden sm:inline">Redes sociales · Ejecución de contenido</span>
           </div>
 
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end">
@@ -115,13 +115,13 @@ export const ServicesContent = () => {
 
         <div className="container">
           <div className="mb-12 flex items-center justify-between border-b border-hairline pb-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
-            <span>06 · Content & Video</span>
+            <span>06 · Contenido y video</span>
             <span className="hidden sm:inline">Reels · Carruseles · Newsletters</span>
           </div>
 
           <div className="mb-12 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end">
             <h2 className="max-w-4xl font-display text-4xl leading-[0.98] tracking-normal text-balance sm:text-5xl lg:col-span-8 lg:text-6xl">
-              Content & Video
+              Contenido y video
             </h2>
             <p className="max-w-md text-sm leading-relaxed text-muted-foreground lg:col-span-3 lg:col-start-10">
               Reels, campañas, piezas editoriales y materiales listos para ver en detalle.

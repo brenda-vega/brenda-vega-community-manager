@@ -3,17 +3,17 @@ import { useEffect, useRef, useState, type MouseEvent } from "react";
 import { navigateToHash } from "@/lib/scroll";
 
 const links = [
-  { href: "#work", label: "Work" },
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
+  { href: "#work", label: "Proyectos" },
+  { href: "#about", label: "Perfil" },
+  { href: "#experience", label: "Experiencia" },
+  { href: "#contact", label: "Contacto" },
 ];
 
 const cvHref = `${import.meta.env.BASE_URL}CV_VisualDesigner_BrendaVega_2026_v2.pdf`;
 
 const socialLinks = [
   { href: "https://www.linkedin.com/in/brendavega012/", label: "LinkedIn", icon: ArrowUpRight },
-  { href: cvHref, label: "Download CV", icon: Download },
+  { href: cvHref, label: "Descargar CV", icon: Download },
 ];
 
 export const Navbar = () => {

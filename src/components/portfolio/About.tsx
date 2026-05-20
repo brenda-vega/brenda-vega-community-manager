@@ -4,8 +4,8 @@ export const About = () => {
       <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-64 bg-gradient-to-b from-accent/8 to-transparent" />
       <div className="container">
         <div className="mb-16 flex items-center justify-between border-b border-hairline pb-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
-          <span>02 · About</span>
-          <span className="hidden sm:inline">Content · Community · Execution</span>
+          <span>02 · Perfil</span>
+          <span className="hidden sm:inline">Contenido · Comunidad · Ejecución</span>
         </div>
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">

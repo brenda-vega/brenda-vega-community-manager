@@ -20,19 +20,20 @@ type Project = {
   tags: string[];
   image: string;
   featured?: boolean;
+  supporting?: boolean;
 };
 
 const projects: Project[] = [
   {
     index: "01",
-    name: "Kairos Research — Social Media, Newsletter & Visual Content",
+    name: "Kairos Research — Redes sociales, newsletter y contenido visual",
     eyebrow: "SOCIAL MEDIA",
-    category: "Social Media · Newsletter · Visual Content",
+    category: "Redes sociales · Newsletter · Contenido visual",
     slug: "kairos",
     caseStudyPath: "/projects/kairos",
     hasCaseStudy: true,
     description: [
-      "Gestión de contenido y comunicación visual para marca especializada en análisis Web3. Producción de infografías, contenido editorial, videos cortos y piezas para múltiples plataformas con enfoque en claridad, consistencia y crecimiento orgánico.",
+      "Social media, newsletter, infografías y videos cortos para una marca Web3 con foco en claridad y crecimiento orgánico.",
     ],
     did: [
       "+129% crecimiento orgánico de comunidad",
@@ -44,68 +45,20 @@ const projects: Project[] = [
     ],
     result:
       "+129% crecimiento orgánico, 30-35% open rate y más de 100 piezas visuales producidas.",
-    tags: ["Social Media", "Newsletter", "Reels", "Infographics"],
+    tags: ["Redes sociales", "Newsletter", "Reels", "Infografías"],
     image: kairos,
     featured: true,
   },
   {
     index: "02",
-    name: "Fidex Capital",
-    eyebrow: "UI VISUAL DESIGN",
-    category: "Digital Communication · Landing Content · Brand Consistency",
-    slug: "fidex",
-    caseStudyPath: "/projects/fidex",
-    hasCaseStudy: true,
-    description: [
-      "Desarrollé comunicación visual para una experiencia digital financiera, cuidando claridad del mensaje, consistencia de marca y adaptación de contenido entre pantallas.",
-    ],
-    did: [
-      "Comunicación digital",
-      "Consistencia de marca",
-      "Adaptación responsive",
-      "Jerarquía de contenido",
-      "Piezas para producto",
-      "Visual branding",
-    ],
-    result:
-      "Base visual adaptable para comunicar valor con claridad en desktop y mobile.",
-    tags: ["Digital Content", "Branding", "Responsive", "Communication"],
-    image: fidex,
-  },
-  {
-    index: "03",
-    name: "Phronesis",
-    eyebrow: "DASHBOARD SYSTEM",
-    category: "Metrics · Reports · Information Clarity",
-    slug: "phronesis",
-    caseStudyPath: "/projects/phronesis",
-    hasCaseStudy: true,
-    description: [
-      "Organicé información compleja en una experiencia visual clara para facilitar lectura de métricas, reportes y datos relevantes para toma de decisiones.",
-    ],
-    did: [
-      "Métricas",
-      "Reportes",
-      "Jerarquía de información",
-      "Claridad visual",
-      "Organización de datos",
-      "Comunicación ejecutiva",
-    ],
-    result:
-      "Estructura preparada para leer métricas y reportes con mayor claridad.",
-    tags: ["Metrics", "Reports", "Information Design", "Dashboard"],
-    image: phronesis,
-  },
-  {
-    index: "04",
-    name: "Lytryum — Community Building & Educational Content",
-    eyebrow: "COMMUNITY BUILDING",
-    category: "Community Building · Educational Content · Social Media",
+    name: "Lytryum — Comunidad y contenido educativo",
+    eyebrow: "COMUNIDAD",
+    category: "Comunidad · Contenido educativo · Redes sociales",
     slug: "lytryum",
     caseStudyPath: "/projects/lytryum",
     hasCaseStudy: true,
     description: [
-      "Construcción de comunidad digital desde cero para academia Web3 en español. Desarrollo de contenido educativo, adaptación multicanal y comunicación visual para redes sociales.",
+      "Construcción de comunidad desde cero para academia Web3 en español con contenido educativo y adaptación multicanal.",
     ],
     did: [
       "4 comunidades construidas desde cero",
@@ -117,19 +70,20 @@ const projects: Project[] = [
     ],
     result:
       "4 comunidades construidas desde cero con contenido educativo y crecimiento 100% orgánico.",
-    tags: ["Community", "Education", "Discord", "Organic Growth"],
+    tags: ["Comunidad", "Educación", "Discord", "Crecimiento orgánico"],
     image: lytryum,
+    featured: true,
   },
   {
-    index: "05",
-    name: "Exponencial Cripto Club — Social Media, Events & Visual Content",
-    eyebrow: "SOCIAL CONTENT",
-    category: "Social Media · Events · Visual Content",
+    index: "03",
+    name: "Exponencial Cripto Club — Redes, eventos y contenido visual",
+    eyebrow: "CONTENIDO SOCIAL",
+    category: "Redes sociales · Eventos · Contenido visual",
     slug: "exponencial",
     caseStudyPath: "/projects/exponencial",
     hasCaseStudy: true,
     description: [
-      "Producción de contenido visual, thumbnails, piezas promocionales y materiales para eventos de comunidad cripto. Gestión de contenido multicanal con enfoque en consistencia visual y comunicación digital.",
+      "Contenido visual, thumbnails, piezas promocionales y materiales para eventos de comunidad cripto.",
     ],
     did: [
       "Gestión de contenido en 6+ plataformas",
@@ -141,8 +95,55 @@ const projects: Project[] = [
     ],
     result:
       "Contenido visual para 6+ plataformas, eventos, campañas y comunidad.",
-    tags: ["Social Media", "Events", "Thumbnails", "Video"],
+    tags: ["Redes sociales", "Eventos", "Thumbnails", "Video"],
     image: exponencial,
+    featured: true,
+  },
+  {
+    index: "04",
+    name: "Fidex Capital",
+    eyebrow: "OTROS PROYECTOS DIGITALES",
+    category: "Comunicación digital · Marca · Landing",
+    slug: "fidex",
+    caseStudyPath: "/projects/fidex",
+    hasCaseStudy: true,
+    description: [
+      "Apoyo visual para comunicar una propuesta financiera con claridad, consistencia de marca y adaptación responsive.",
+    ],
+    did: [
+      "Comunicación digital",
+      "Consistencia de marca",
+      "Adaptación responsive",
+      "Jerarquía de contenido",
+    ],
+    result:
+      "Base visual adaptable para presentar valor en desktop y mobile.",
+    tags: ["Comunicación", "Marca", "Responsive"],
+    image: fidex,
+    supporting: true,
+  },
+  {
+    index: "05",
+    name: "Phronesis",
+    eyebrow: "OTROS PROYECTOS DIGITALES",
+    category: "Métricas · Reportes · Claridad de información",
+    slug: "phronesis",
+    caseStudyPath: "/projects/phronesis",
+    hasCaseStudy: true,
+    description: [
+      "Organización visual de métricas y reportes para facilitar lectura rápida de información compleja.",
+    ],
+    did: [
+      "Métricas",
+      "Reportes",
+      "Jerarquía de información",
+      "Claridad visual",
+    ],
+    result:
+      "Estructura clara para leer datos y reportes con rapidez.",
+    tags: ["Métricas", "Reportes", "Información"],
+    image: phronesis,
+    supporting: true,
   },
 ];
 
@@ -157,29 +158,35 @@ export const Work = () => {
           <div className="mb-10 flex items-center justify-between text-xs uppercase tracking-[0.22em] text-muted-foreground">
             <span className="reveal inline-flex items-center gap-3">
               <span className="h-px w-10 bg-accent/60" />
-              03 / Selected Projects
+              03 / Proyectos seleccionados
             </span>
-            <span className="hidden lg:inline">Social media · Reels · Community · Metrics</span>
+            <span className="hidden lg:inline">Redes sociales · Reels · Comunidad · Métricas</span>
           </div>
 
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-end">
             <h2 className="reveal reveal-delay-1 max-w-4xl font-display text-4xl leading-[1.02] tracking-normal text-balance sm:text-5xl lg:col-span-8 lg:text-7xl">
-              Selected Work
+              Proyectos seleccionados
             </h2>
             <p className="reveal reveal-delay-2 max-w-md text-sm leading-relaxed text-muted-foreground lg:col-span-3 lg:col-start-10">
-              Proyectos de social media, contenido visual y comunicación digital para marcas que necesitan consistencia, presencia activa y ejecución medible.
+              Trabajo aplicado en redes, comunidad, newsletters, campañas y comunicación visual.
             </p>
           </div>
         </div>
 
         <div className="space-y-10 lg:space-y-16">
           {projects.map((project, i) => (
-            <ProjectCase
-              key={project.name}
-              project={project}
-              reverse={i % 2 === 1}
-              compact={!project.featured}
-            />
+            <div key={project.name} className="space-y-5">
+              {project.supporting && !projects[i - 1]?.supporting ? (
+                <div className="border-b border-hairline pb-4 text-xs uppercase tracking-[0.22em] text-muted-foreground">
+                  Otros proyectos digitales
+                </div>
+              ) : null}
+              <ProjectCase
+                project={project}
+                reverse={i % 2 === 1}
+                compact={!project.featured}
+              />
+            </div>
           ))}
         </div>
       </div>
@@ -206,7 +213,7 @@ const ProjectCase = ({
         <div className={`relative overflow-hidden ${compact ? "md:col-span-7" : "md:col-span-8"} ${reverse ? "md:order-2" : ""}`}>
           <Link
             to={project.caseStudyPath}
-            aria-label={`Open case study for ${project.name}`}
+            aria-label={`Ver proyecto de ${project.name}`}
             className={`relative block h-full bg-background/35 outline-none focus-visible:ring-1 focus-visible:ring-accent/50 focus-visible:ring-offset-4 focus-visible:ring-offset-background ${compact ? "min-h-[220px] sm:min-h-[280px] md:min-h-[360px]" : "min-h-[240px] sm:min-h-[310px] md:min-h-[420px]"}`}
           >
             <img
@@ -267,10 +274,10 @@ const ProjectCase = ({
               {project.hasCaseStudy ? (
                 <Link
                   to={project.caseStudyPath}
-                  aria-label={`View case study for ${project.name}`}
+                  aria-label={`Ver proyecto de ${project.name}`}
                   className="group/case inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-foreground/70 outline-none transition-colors duration-500 hover:text-foreground focus-visible:text-foreground focus-visible:ring-1 focus-visible:ring-accent/50 focus-visible:ring-offset-4 focus-visible:ring-offset-background"
                 >
-                  <span className="link-underline">View Case Study</span>
+                  <span className="link-underline">Ver proyecto</span>
                   <ArrowUpRight
                     className="h-4 w-4 text-accent/80 transition-transform duration-500 group-hover/case:translate-x-1 group-hover/case:-translate-y-1 group-focus-visible/case:translate-x-1 group-focus-visible/case:-translate-y-1"
                     aria-hidden="true"
@@ -280,11 +287,11 @@ const ProjectCase = ({
                 <button
                   type="button"
                   aria-disabled="true"
-                  aria-label={`View case study for ${project.name} - coming soon`}
+                  aria-label={`Ver proyecto de ${project.name} - próximamente`}
                   data-case-study-path={project.caseStudyPath}
                   className="group/case inline-flex cursor-default items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-foreground/38 outline-none transition-colors duration-500"
                 >
-                  <span>View Case Study</span>
+                  <span>Ver proyecto</span>
                   <ArrowUpRight className="h-4 w-4 text-accent/35" aria-hidden="true" />
                 </button>
               )}

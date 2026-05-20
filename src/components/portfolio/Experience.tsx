@@ -31,7 +31,7 @@ export const Experience = () => {
       <div className="container grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-4">
           <div className="sticky top-32 space-y-3">
-            <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">04 · Experience</span>
+            <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">04 · Experiencia</span>
             <h2 className="font-display text-4xl lg:text-5xl tracking-tight">Trayectoria.</h2>
             <p className="text-sm text-muted-foreground max-w-xs">
               Roles y colaboraciones a lo largo de los últimos años.

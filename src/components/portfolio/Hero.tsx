@@ -88,7 +88,7 @@ export const Hero = () => {
         <div className="max-w-3xl space-y-8 lg:max-w-[43rem] xl:max-w-[47rem] lg:space-y-10">
           <div className="reveal inline-flex items-center gap-3 rounded-full border border-hairline bg-surface/35 px-4 py-2 text-[11px] uppercase tracking-[0.22em] text-muted-foreground backdrop-blur-md">
             <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_18px_hsl(var(--accent)/0.45)]" />
-            Social Media · Reels · Content Design · Community Management · Visual Branding · Short-form Content
+            Redes sociales · Reels · Diseño de contenido · Comunidad · Branding visual · Video corto
           </div>
 
           <h1 className="reveal reveal-delay-1 max-w-[13ch] font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.94] tracking-normal text-balance">
