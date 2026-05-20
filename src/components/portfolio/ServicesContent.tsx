@@ -1,5 +1,4 @@
-import { CalendarDays, Film, FileText, LineChart, MessageCircle, PenTool, Send, Sparkles } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import { ExternalLink, LineChart } from "lucide-react";
 
 const services = [
   "Gestión de redes sociales",
@@ -14,46 +13,65 @@ const services = [
   "Landing pages básicas",
 ];
 
-type Format = {
-  title: string;
-  desc: string;
-  icon: LucideIcon;
-};
+const assetPath = (filename: string) => `${import.meta.env.BASE_URL}assets/${filename}`;
 
-const formats: Format[] = [
+const featuredReels = [
   {
-    title: "Reels / TikTok / Shorts",
-    desc: "Edición de video corto, captions, cortes dinámicos y adaptación visual para contenido educativo o promocional.",
-    icon: Film,
+    title: "Reel — Berachain Market Analysis",
+    src: assetPath("reel-berachain-analysis.mp4"),
+    caption: "Short-form analysis for social media.",
   },
   {
-    title: "Carruseles",
-    desc: "Diseño de contenido secuencial para explicar ideas, comunicar ofertas y mejorar claridad en redes sociales.",
-    icon: Send,
-  },
-  {
-    title: "Thumbnails",
-    desc: "Diseño de portadas y miniaturas para mejorar reconocimiento visual y lectura rápida del contenido.",
-    icon: Sparkles,
-  },
-  {
-    title: "Stories",
-    desc: "Piezas rápidas para promociones, recordatorios, interacción y presencia diaria de marca.",
-    icon: MessageCircle,
-  },
-  {
-    title: "Newsletters",
-    desc: "Contenido editorial, estructura visual y comunicación periódica orientada a retención.",
-    icon: FileText,
-  },
-  {
-    title: "Landing pages básicas",
-    desc: "Páginas simples para presentar servicios, campañas o contenido con estructura clara y visual consistente.",
-    icon: PenTool,
+    title: "Reel — 5 Lupas de la Semana",
+    src: assetPath("reel-5-lupas-semana.mp4"),
+    caption: "Weekly editorial video format.",
   },
 ];
 
-const optionalAsset = `${import.meta.env.BASE_URL}AIRDROPS%202025-Cover.jpg`;
+const visualAssets = [
+  {
+    title: "Mantle Puebla — Event Promotion",
+    caption: "Event promotion content.",
+    src: assetPath("mantle-puebla-event-post.jpg"),
+    alt: "Mantle Puebla event promotion post",
+  },
+  {
+    title: "Travel VYP — Social Media Campaigns",
+    caption: "Social campaign visuals.",
+    src: assetPath("travelvyp-social-campaigns.png"),
+    alt: "Travel VYP social media campaign visuals",
+  },
+  {
+    title: "Content Calendar — Editorial Planning",
+    caption: "Planning and publishing structure.",
+    src: assetPath("content-calendar-editorial-planning.png"),
+    alt: "Editorial planning content calendar",
+  },
+  {
+    title: "Tequila Jalisco — Promotional Social Post",
+    caption: "Promotional social content.",
+    src: assetPath("tequila-jalisco-social-post.jpg"),
+    alt: "Tequila Jalisco promotional social post",
+  },
+  {
+    title: "Print Promotional Materials",
+    caption: "Print and campaign support.",
+    src: assetPath("print-promotional-materials.jpg"),
+    alt: "Print promotional materials",
+  },
+  {
+    title: "Travel VYP — Print Design",
+    caption: "Printed brand materials.",
+    src: assetPath("travelvyp-print-design.jpg"),
+    alt: "Travel VYP print design",
+  },
+];
+
+const brandGuidelines = {
+  title: "Colegio Samuel Juárez — Brand Guidelines",
+  caption: "Brand manual and visual guidelines.",
+  href: assetPath("colegio-samuel-juarez-brand-guidelines.pdf"),
+};
 
 export const ServicesContent = () => {
   return (
@@ -112,51 +130,60 @@ export const ServicesContent = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-5">
-            <div className="overflow-hidden rounded-[1.75rem] border border-hairline bg-surface/20 p-3 shadow-soft lg:col-span-5">
-              <img
-                src={optionalAsset}
-                alt="Airdrops 2025 cover"
-                loading="lazy"
-                width={1200}
-                height={900}
-                className="hidden h-full min-h-[320px] w-full rounded-[1.15rem] object-cover"
-                onLoad={(event) => {
-                  event.currentTarget.classList.remove("hidden");
-                  event.currentTarget.nextElementSibling?.classList.add("hidden");
-                }}
-                onError={(event) => {
-                  event.currentTarget.classList.add("hidden");
-                  event.currentTarget.nextElementSibling?.classList.remove("hidden");
-                }}
-              />
-              <div className="grid min-h-[320px] place-items-center rounded-[1.15rem] border border-hairline bg-background/35 p-8 text-center">
-                <div className="max-w-xs space-y-4">
-                  <span className="mx-auto grid h-10 w-10 place-items-center rounded-full border border-hairline bg-surface/45 text-accent/90">
-                    <CalendarDays className="h-4 w-4" aria-hidden="true" />
-                  </span>
-                  <p className="font-display text-xl text-foreground">AIRDROPS 2025-Cover.jpg</p>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    Placeholder listo para mostrar el asset cuando se agregue al folder de assets.
-                  </p>
-                </div>
-              </div>
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:col-span-5">
+              {featuredReels.map((reel) => (
+                <article
+                  key={reel.title}
+                  className="overflow-hidden rounded-[1.75rem] border border-hairline bg-surface/20 p-3 shadow-soft"
+                >
+                  <video
+                    src={reel.src}
+                    controls
+                    muted
+                    playsInline
+                    preload="metadata"
+                    className="aspect-[9/16] w-full rounded-[1.15rem] bg-background/40 object-cover"
+                    aria-label={reel.title}
+                  />
+                  <div className="px-1 pb-1 pt-5">
+                    <p className="font-display text-xl leading-tight text-foreground">{reel.title}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{reel.caption}</p>
+                  </div>
+                </article>
+              ))}
             </div>
 
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:col-span-7">
-              {formats.map(({ title, desc, icon: Icon }) => (
-                <div
-                  key={title}
-                  className="motion-card group border-t border-hairline py-6 transition-colors hover:border-accent/30"
-                >
-                  <div className="mb-5 flex items-center gap-3">
-                    <span className="grid h-9 w-9 place-items-center rounded-full border border-hairline bg-surface/45 text-accent/90 transition-colors group-hover:border-accent/30">
-                      <Icon className="h-4 w-4" aria-hidden="true" />
-                    </span>
-                    <h3 className="font-display text-lg text-foreground">{title}</h3>
-                  </div>
-                  <p className="text-sm leading-relaxed text-muted-foreground">{desc}</p>
-                </div>
+              {visualAssets.map((item) => (
+                <article key={item.title} className="motion-card group border-t border-hairline py-6 transition-colors hover:border-accent/30">
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    loading="lazy"
+                    decoding="async"
+                    width={900}
+                    height={700}
+                    className="mb-5 aspect-[4/3] w-full rounded-[1.15rem] border border-hairline bg-surface/20 object-cover"
+                  />
+                  <h3 className="font-display text-lg leading-tight text-foreground">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.caption}</p>
+                </article>
               ))}
+
+              <a
+                href={brandGuidelines.href}
+                target="_blank"
+                rel="noreferrer"
+                className="motion-card group border-t border-hairline py-6 transition-colors hover:border-accent/30"
+              >
+                <div className="mb-5 flex aspect-[4/3] w-full items-center justify-center rounded-[1.15rem] border border-hairline bg-surface/20">
+                  <span className="grid h-11 w-11 place-items-center rounded-full border border-hairline bg-surface/45 text-accent/90 transition-colors group-hover:border-accent/30">
+                    <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                  </span>
+                </div>
+                <h3 className="font-display text-lg leading-tight text-foreground">{brandGuidelines.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{brandGuidelines.caption}</p>
+              </a>
             </div>
           </div>
 
