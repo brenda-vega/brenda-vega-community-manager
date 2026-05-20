@@ -37,7 +37,7 @@ export const Contact = () => {
       <div className="container">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="space-y-8 lg:col-span-7 lg:space-y-10">
-            <span className="text-xs uppercase tracking-[0.22em] text-muted-foreground">09 · Contact</span>
+            <span className="text-xs uppercase tracking-[0.22em] text-muted-foreground">07 · Contact</span>
             <h2 className="max-w-4xl font-display text-4xl leading-[1.04] tracking-tight text-balance sm:text-5xl lg:text-6xl">
               Este portfolio muestra cómo el contenido puede sostener presencia, comunidad y comunicación digital con consistencia.
             </h2>

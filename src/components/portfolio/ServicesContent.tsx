@@ -2,14 +2,12 @@ import { ExternalLink, LineChart } from "lucide-react";
 
 const services = [
   "Gestión de redes sociales",
-  "Planeación y calendario editorial",
-  "Diseño de posts, carruseles y stories",
-  "Edición de reels y video corto",
-  "Copywriting para redes",
-  "Adaptación de contenido por plataforma",
+  "Planeación editorial",
+  "Reels y video corto",
+  "Diseño de contenido visual",
   "Community engagement",
-  "Reportes de métricas",
   "Newsletters y contenido editorial",
+  "Métricas y reportes",
   "Landing pages básicas",
 ];
 
@@ -77,31 +75,31 @@ const brandGuidelines = {
 export const ServicesContent = () => {
   return (
     <>
-      <section id="services" className="scroll-reveal relative overflow-hidden border-t border-hairline py-32 lg:py-40">
+      <section id="services" className="scroll-reveal relative overflow-hidden border-t border-hairline py-24 lg:py-32">
         <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-80 bg-gradient-to-b from-accent/6 to-transparent" />
 
         <div className="container">
-          <div className="mb-16 flex items-center justify-between border-b border-hairline pb-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
-            <span>06 · Servicios / Capacidades</span>
+          <div className="mb-12 flex items-center justify-between border-b border-hairline pb-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
+            <span>05 · Qué hago</span>
             <span className="hidden sm:inline">Social media · Content execution</span>
           </div>
 
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-end">
-            <h2 className="max-w-4xl font-display text-5xl leading-[0.96] tracking-normal text-balance sm:text-6xl lg:col-span-8 lg:text-7xl">
-              Servicios / Capacidades
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end">
+            <h2 className="max-w-4xl font-display text-4xl leading-[0.98] tracking-normal text-balance sm:text-5xl lg:col-span-8 lg:text-6xl">
+              Qué hago
             </h2>
             <p className="max-w-md text-sm leading-relaxed text-muted-foreground lg:col-span-3 lg:col-start-10">
-              Ejecución de redes sociales, contenido visual y comunicación digital para sostener presencia, ritmo y claridad entre plataformas.
+              Gestión, producción y seguimiento de contenido para mantener presencia activa y claridad de resultados.
             </p>
           </div>
 
-          <div className="mt-16 grid grid-cols-1 border-y border-hairline sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-12 grid grid-cols-1 border-y border-hairline sm:grid-cols-2 lg:grid-cols-4">
             {services.map((item, index) => (
               <div
                 key={item}
-                className="group border-b border-hairline px-0 py-5 transition-colors hover:border-accent/30 sm:px-5 lg:border-r lg:last:border-r-0"
+                className="group border-b border-hairline px-0 py-4 transition-colors hover:border-accent/30 sm:px-5 lg:border-r lg:[&:nth-child(4n)]:border-r-0"
               >
-                <div className="mb-4 flex items-center justify-between gap-4">
+                <div className="mb-3 flex items-center justify-between gap-4">
                   <span className="font-display text-sm text-muted-foreground/70">{String(index + 1).padStart(2, "0")}</span>
                   <span className="h-1.5 w-1.5 rounded-full bg-accent/70 opacity-70 transition-opacity group-hover:opacity-100" />
                 </div>
@@ -112,21 +110,21 @@ export const ServicesContent = () => {
         </div>
       </section>
 
-      <section id="content-video" className="scroll-reveal relative overflow-hidden border-t border-hairline py-32 lg:py-40">
+      <section id="content-video" className="scroll-reveal relative overflow-hidden border-t border-hairline py-24 lg:py-32">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-grain opacity-20" />
 
         <div className="container">
-          <div className="mb-16 flex items-center justify-between border-b border-hairline pb-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
-            <span>07 · Content & Video</span>
+          <div className="mb-12 flex items-center justify-between border-b border-hairline pb-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
+            <span>06 · Content & Video</span>
             <span className="hidden sm:inline">Reels · Carruseles · Newsletters</span>
           </div>
 
-          <div className="mb-16 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-end">
-            <h2 className="max-w-4xl font-display text-5xl leading-[0.96] tracking-normal text-balance sm:text-6xl lg:col-span-8 lg:text-7xl">
+          <div className="mb-12 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end">
+            <h2 className="max-w-4xl font-display text-4xl leading-[0.98] tracking-normal text-balance sm:text-5xl lg:col-span-8 lg:text-6xl">
               Content & Video
             </h2>
             <p className="max-w-md text-sm leading-relaxed text-muted-foreground lg:col-span-3 lg:col-start-10">
-              Formatos de contenido para redes sociales, campañas y comunicación digital con consistencia visual.
+              Reels, campañas, piezas editoriales y materiales listos para ver en detalle.
             </p>
           </div>
 
