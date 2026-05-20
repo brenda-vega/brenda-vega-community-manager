@@ -176,26 +176,32 @@ export const ServicesContent = () => {
                 rel="noreferrer"
                 className="motion-card group border-t border-hairline py-6 transition-colors hover:border-accent/30"
               >
-                <div className="mb-5 aspect-[4/3] w-full overflow-hidden rounded-[1.15rem] border border-hairline bg-surface/20 p-5">
-                  <div className="flex h-full flex-col justify-between rounded-[0.85rem] border border-hairline bg-background/55 p-5">
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
-                        <p className="text-[0.65rem] uppercase tracking-[0.22em] text-muted-foreground">PDF · Manual</p>
-                        <p className="mt-3 font-display text-2xl leading-none text-foreground">Brand Guidelines</p>
+                <div className="mb-5 aspect-[4/3] w-full overflow-hidden rounded-[1.15rem] border border-hairline bg-surface/20 p-3">
+                  <div className="relative h-full overflow-hidden rounded-[0.95rem] bg-[#ebe6de] text-[#171514] shadow-soft">
+                    <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.72),rgba(255,255,255,0)_42%),radial-gradient(circle_at_82%_18%,rgba(190,147,161,0.46),rgba(190,147,161,0)_32%)]" />
+                    <div className="absolute -bottom-7 -right-5 h-40 w-28 rotate-6 rounded-sm bg-white/88 shadow-[0_22px_50px_rgba(0,0,0,0.28)] sm:h-48 sm:w-36">
+                      <div className="h-8 bg-[#c69aa8]" />
+                      <div className="space-y-2 p-4">
+                        <span className="block h-1.5 w-16 rounded-full bg-[#171514]/70" />
+                        <span className="block h-1 w-20 rounded-full bg-[#171514]/25" />
+                        <span className="block h-1 w-14 rounded-full bg-[#171514]/25" />
                       </div>
-                      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-hairline bg-surface/45 text-accent/90 transition-colors group-hover:border-accent/30">
-                        <ExternalLink className="h-4 w-4" aria-hidden="true" />
-                      </span>
                     </div>
-                    <div className="grid grid-cols-4 gap-2" aria-hidden="true">
-                      <span className="h-10 rounded-full bg-accent/80" />
-                      <span className="h-10 rounded-full bg-foreground/88" />
-                      <span className="h-10 rounded-full bg-muted-foreground/45" />
-                      <span className="h-10 rounded-full border border-hairline bg-surface/70" />
+                    <div className="absolute bottom-5 left-5 right-20 rounded-sm bg-white p-4 shadow-[0_18px_42px_rgba(0,0,0,0.24)] sm:right-24">
+                      <div className="mb-4 flex items-center justify-between gap-3">
+                        <span className="text-[0.58rem] uppercase tracking-[0.24em] text-[#171514]/48">Brand system</span>
+                        <span className="h-6 w-6 rounded-full bg-[#c69aa8]" />
+                      </div>
+                      <p className="font-display text-2xl leading-[0.92] text-[#171514] sm:text-3xl">Colegio Samuel Juárez</p>
+                      <div className="mt-5 grid grid-cols-4 gap-2" aria-hidden="true">
+                        <span className="h-8 rounded-full bg-[#c69aa8]" />
+                        <span className="h-8 rounded-full bg-[#171514]" />
+                        <span className="h-8 rounded-full bg-[#6f6f6b]" />
+                        <span className="h-8 rounded-full border border-[#171514]/15 bg-[#f6f2ea]" />
+                      </div>
                     </div>
-                    <div className="space-y-2" aria-hidden="true">
-                      <span className="block h-px w-full bg-hairline" />
-                      <span className="block h-px w-3/4 bg-hairline" />
+                    <div className="absolute left-5 top-5 rounded-full border border-[#171514]/10 bg-white/72 px-3 py-1 text-[0.62rem] uppercase tracking-[0.22em] text-[#171514]/58">
+                      PDF · Guidelines
                     </div>
                   </div>
                 </div>
