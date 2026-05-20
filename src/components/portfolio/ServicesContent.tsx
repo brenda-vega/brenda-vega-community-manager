@@ -176,13 +176,35 @@ export const ServicesContent = () => {
                 rel="noreferrer"
                 className="motion-card group border-t border-hairline py-6 transition-colors hover:border-accent/30"
               >
-                <div className="mb-5 flex aspect-[4/3] w-full items-center justify-center rounded-[1.15rem] border border-hairline bg-surface/20">
-                  <span className="grid h-11 w-11 place-items-center rounded-full border border-hairline bg-surface/45 text-accent/90 transition-colors group-hover:border-accent/30">
-                    <ExternalLink className="h-4 w-4" aria-hidden="true" />
-                  </span>
+                <div className="mb-5 aspect-[4/3] w-full overflow-hidden rounded-[1.15rem] border border-hairline bg-surface/20 p-5">
+                  <div className="flex h-full flex-col justify-between rounded-[0.85rem] border border-hairline bg-background/55 p-5">
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <p className="text-[0.65rem] uppercase tracking-[0.22em] text-muted-foreground">PDF · Manual</p>
+                        <p className="mt-3 font-display text-2xl leading-none text-foreground">Brand Guidelines</p>
+                      </div>
+                      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-hairline bg-surface/45 text-accent/90 transition-colors group-hover:border-accent/30">
+                        <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                      </span>
+                    </div>
+                    <div className="grid grid-cols-4 gap-2" aria-hidden="true">
+                      <span className="h-10 rounded-full bg-accent/80" />
+                      <span className="h-10 rounded-full bg-foreground/88" />
+                      <span className="h-10 rounded-full bg-muted-foreground/45" />
+                      <span className="h-10 rounded-full border border-hairline bg-surface/70" />
+                    </div>
+                    <div className="space-y-2" aria-hidden="true">
+                      <span className="block h-px w-full bg-hairline" />
+                      <span className="block h-px w-3/4 bg-hairline" />
+                    </div>
+                  </div>
                 </div>
                 <h3 className="font-display text-lg leading-tight text-foreground">{brandGuidelines.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{brandGuidelines.caption}</p>
+                <span className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-accent">
+                  Ver manual
+                  <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+                </span>
               </a>
             </div>
           </div>
