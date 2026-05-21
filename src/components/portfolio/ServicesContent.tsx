@@ -221,7 +221,7 @@ export const ServicesContent = () => {
               {featuredReels.map((reel) => (
                 <article
                   key={reel.title}
-                  className="overflow-hidden rounded-[1.75rem] border border-hairline bg-surface/20 p-3 shadow-soft"
+                  className="overflow-hidden rounded-[1.75rem] border border-hairline bg-surface/16 p-3 shadow-soft"
                 >
                   <video
                     src={reel.src}
@@ -229,7 +229,7 @@ export const ServicesContent = () => {
                     muted
                     playsInline
                     preload="metadata"
-                    className="aspect-[9/16] w-full rounded-[1.15rem] bg-background/40 object-cover"
+                    className="aspect-[9/16] w-full rounded-[1.15rem] bg-background/55 object-cover"
                     aria-label={reel.title}
                   />
                   <div className="px-1 pb-1 pt-5">
@@ -259,7 +259,7 @@ export const ServicesContent = () => {
                       decoding="async"
                       width={900}
                       height={700}
-                      className="mb-5 aspect-[4/3] w-full rounded-[1.15rem] border border-hairline bg-surface/20 object-cover transition-opacity group-hover:opacity-90"
+                      className="mb-5 aspect-[4/3] w-full rounded-[1.15rem] border border-hairline bg-surface/14 object-cover transition-opacity group-hover:opacity-95"
                     />
                   </button>
                   <h3 className="font-display text-lg leading-tight text-foreground">{item.title}</h3>
@@ -284,7 +284,7 @@ export const ServicesContent = () => {
                     decoding="async"
                     width={1200}
                     height={820}
-                    className="mb-5 aspect-[4/3] w-full rounded-[1.15rem] border border-hairline bg-surface/20 object-cover transition-opacity group-hover:opacity-90"
+                    className="mb-5 aspect-[4/3] w-full rounded-[1.15rem] border border-hairline bg-surface/14 object-cover transition-opacity group-hover:opacity-95"
                   />
                 </button>
                 <h3 className="font-display text-lg leading-tight text-foreground">{brandGuidelines.title}</h3>
@@ -324,7 +324,7 @@ const AssetLightbox = ({ asset, onClose }: { asset: PortfolioAsset; onClose: () 
 
   return (
     <div
-      className="fixed inset-0 z-[80] flex items-end justify-center bg-background/86 px-4 py-4 backdrop-blur-xl sm:items-center sm:px-6"
+      className="fixed inset-0 z-[80] flex items-end justify-center bg-background/88 px-4 py-4 backdrop-blur-md sm:items-center sm:px-6"
       role="dialog"
       aria-modal="true"
       aria-labelledby="asset-lightbox-title"
@@ -348,7 +348,7 @@ const AssetLightbox = ({ asset, onClose }: { asset: PortfolioAsset; onClose: () 
         </div>
 
         <div className="grid grid-cols-1 gap-0 lg:grid-cols-[minmax(0,1.45fr)_minmax(20rem,0.55fr)]">
-          <div className="border-b border-hairline bg-surface/16 p-3 lg:border-b-0 lg:border-r lg:p-5">
+          <div className="border-b border-hairline bg-surface/10 p-3 lg:border-b-0 lg:border-r lg:p-5">
             {isVideo ? (
               <video
                 src={asset.src}

@@ -39,18 +39,18 @@
 
     --radius: 1rem;
 
-    --gradient-accent: radial-gradient(circle at 18% 12%, hsl(345 38% 75% / 0.22), transparent 34%),
-                       radial-gradient(circle at 82% 18%, hsl(348 47% 82% / 0.10), transparent 32%),
-                       radial-gradient(circle at 58% 86%, hsl(345 38% 75% / 0.08), transparent 38%);
-    --gradient-hero: radial-gradient(circle at 16% 10%, hsl(345 38% 75% / 0.18), transparent 30%),
-                     radial-gradient(circle at 78% 24%, hsl(348 47% 82% / 0.10), transparent 34%),
+    --gradient-accent: radial-gradient(circle at 18% 12%, hsl(345 24% 70% / 0.10), transparent 34%),
+                       radial-gradient(circle at 82% 18%, hsl(348 32% 78% / 0.05), transparent 32%),
+                       radial-gradient(circle at 58% 86%, hsl(345 24% 70% / 0.04), transparent 38%);
+    --gradient-hero: radial-gradient(circle at 16% 10%, hsl(345 24% 70% / 0.08), transparent 30%),
+                     radial-gradient(circle at 78% 24%, hsl(348 32% 78% / 0.04), transparent 34%),
                      linear-gradient(180deg, hsl(0 0% 5%) 0%, hsl(0 0% 4%) 100%);
-    --gradient-work: radial-gradient(circle at 86% 8%, hsl(345 38% 75% / 0.12), transparent 30rem),
-                     radial-gradient(circle at 12% 42%, hsl(348 47% 82% / 0.07), transparent 28rem),
+    --gradient-work: radial-gradient(circle at 86% 8%, hsl(345 24% 70% / 0.05), transparent 30rem),
+                     radial-gradient(circle at 12% 42%, hsl(348 32% 78% / 0.035), transparent 28rem),
                      linear-gradient(180deg, hsl(0 0% 5%) 0%, hsl(0 0% 6%) 50%, hsl(0 0% 5%) 100%);
     --gradient-text: linear-gradient(180deg, hsl(0 0% 99%) 0%, hsl(0 0% 76%) 100%);
-    --shadow-soft: 0 32px 90px -42px hsl(0 0% 0% / 0.78);
-    --shadow-glow: 0 0 70px -24px hsl(345 38% 75% / 0.32);
+    --shadow-soft: 0 24px 62px -42px hsl(0 0% 0% / 0.68);
+    --shadow-glow: 0 0 42px -28px hsl(345 24% 70% / 0.20);
 
     --font-display: 'General Sans', 'Satoshi', 'Inter', system-ui, sans-serif;
     --font-body: 'Inter', system-ui, sans-serif;
@@ -74,7 +74,7 @@
   body {
     @apply bg-background text-foreground antialiased;
     background:
-      radial-gradient(circle at 50% -20%, hsl(var(--accent) / 0.08), transparent 34rem),
+      radial-gradient(circle at 50% -20%, hsl(var(--accent) / 0.04), transparent 34rem),
       hsl(var(--background));
     font-family: var(--font-body);
     font-feature-settings: "ss01", "cv11";
@@ -122,9 +122,9 @@
   }
 
   .glass-panel {
-    background: linear-gradient(180deg, hsl(var(--surface) / 0.66), hsl(var(--surface) / 0.34));
-    border-color: hsl(var(--border) / 0.10);
-    box-shadow: inset 0 1px 0 hsl(var(--border) / 0.08), var(--shadow-soft);
+    background: linear-gradient(180deg, hsl(var(--surface) / 0.58), hsl(var(--surface) / 0.30));
+    border-color: hsl(var(--border) / 0.09);
+    box-shadow: inset 0 1px 0 hsl(var(--border) / 0.06), var(--shadow-soft);
   }
 
   .glow-accent {
@@ -163,7 +163,7 @@
   }
 
   .motion-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
   }
 
   @keyframes scroll-fade-up {
@@ -200,23 +200,24 @@
   }
 
   .case-study {
-    box-shadow: inset 0 1px 0 hsl(var(--border) / 0.06), 0 34px 100px -70px hsl(0 0% 0% / 0.9);
+    box-shadow: inset 0 1px 0 hsl(var(--border) / 0.05), 0 28px 82px -66px hsl(0 0% 0% / 0.82);
     transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), border-color 0.8s ease, background-color 0.8s ease, box-shadow 0.8s ease;
   }
   .case-study:hover {
-    transform: translateY(-5px);
-    border-color: hsl(var(--accent) / 0.20);
-    background-color: hsl(var(--surface) / 0.40);
-    box-shadow: inset 0 1px 0 hsl(var(--border) / 0.08), 0 42px 120px -76px hsl(345 38% 75% / 0.30);
+    transform: translateY(-3px);
+    border-color: hsl(var(--border) / 0.16);
+    background-color: hsl(var(--surface) / 0.34);
+    box-shadow: inset 0 1px 0 hsl(var(--border) / 0.06), 0 30px 86px -70px hsl(0 0% 0% / 0.86);
   }
 
   .case-study-image {
     transform: scale(1.001);
+    filter: saturate(0.96) contrast(1.01);
     transition: transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1), filter 1.2s ease;
   }
   .case-study:hover .case-study-image {
-    transform: scale(1.026);
-    filter: saturate(1.04) contrast(1.02);
+    transform: scale(1.01);
+    filter: saturate(0.98) contrast(1.01);
   }
 
 
@@ -267,10 +268,10 @@
     inset: 6% 0 -12% 22%;
     z-index: -1;
     background:
-      radial-gradient(circle at 62% 34%, hsl(var(--accent) / 0.28), transparent 28rem),
-      radial-gradient(circle at 84% 58%, hsl(348 47% 82% / 0.13), transparent 22rem);
-    filter: blur(36px);
-    opacity: 0.82;
+      radial-gradient(circle at 62% 34%, hsl(var(--accent) / 0.13), transparent 28rem),
+      radial-gradient(circle at 84% 58%, hsl(348 32% 78% / 0.06), transparent 22rem);
+    filter: blur(28px);
+    opacity: 0.58;
   }
 
   .hero-editorial-overlay,
@@ -283,8 +284,8 @@
   .hero-editorial-overlay {
     inset: 0;
     background:
-      linear-gradient(180deg, hsl(var(--background) / 0.06), hsl(var(--background) / 0.42)),
-      radial-gradient(circle at 70% 32%, hsl(var(--accent) / 0.12), transparent 20rem);
+      linear-gradient(180deg, hsl(var(--background) / 0.08), hsl(var(--background) / 0.46)),
+      radial-gradient(circle at 70% 32%, hsl(var(--accent) / 0.05), transparent 20rem);
   }
 
   .hero-editorial-sidefade {
@@ -324,14 +325,14 @@
 
     .hero-editorial-glow {
       inset: 8% 1% 4% 12%;
-      filter: blur(54px);
-      opacity: 0.72;
+      filter: blur(42px);
+      opacity: 0.52;
     }
 
     .hero-editorial-overlay {
       background:
-        linear-gradient(180deg, hsl(var(--background) / 0.02), hsl(var(--background) / 0.34)),
-        radial-gradient(circle at 70% 38%, hsl(var(--accent) / 0.13), transparent 24rem);
+        linear-gradient(180deg, hsl(var(--background) / 0.04), hsl(var(--background) / 0.38)),
+        radial-gradient(circle at 70% 38%, hsl(var(--accent) / 0.05), transparent 24rem);
     }
 
     .hero-editorial-sidefade {

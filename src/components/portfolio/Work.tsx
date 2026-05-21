@@ -226,7 +226,7 @@ const SupportingProjectCard = ({ project }: { project: Project }) => {
           decoding="async"
           width={900}
           height={640}
-          className="aspect-[4/3] w-full object-cover p-2 opacity-82 transition-opacity duration-500 group-hover:opacity-100"
+          className="aspect-[4/3] w-full object-cover p-1 opacity-90 transition-opacity duration-500 group-hover:opacity-100"
         />
       </Link>
 
@@ -286,7 +286,7 @@ const ProjectCase = ({
           <Link
             to={project.caseStudyPath}
             aria-label={`Ver proyecto de ${project.name}`}
-            className={`relative block h-full bg-background/35 outline-none focus-visible:ring-1 focus-visible:ring-accent/50 focus-visible:ring-offset-4 focus-visible:ring-offset-background ${compact ? "min-h-[220px] sm:min-h-[280px] md:min-h-[360px]" : "min-h-[240px] sm:min-h-[310px] md:min-h-[420px]"}`}
+            className={`relative block h-full bg-background/24 outline-none focus-visible:ring-1 focus-visible:ring-accent/50 focus-visible:ring-offset-4 focus-visible:ring-offset-background ${compact ? "min-h-[220px] sm:min-h-[280px] md:min-h-[360px]" : "min-h-[240px] sm:min-h-[310px] md:min-h-[420px]"}`}
           >
             <img
               src={project.image}
@@ -295,11 +295,11 @@ const ProjectCase = ({
               decoding="async"
               width={1400}
               height={980}
-              className="case-study-image h-full w-full object-contain p-3 sm:p-5 md:p-6 lg:-translate-y-6 lg:p-8"
+              className="case-study-image h-full w-full object-contain p-3 sm:p-5 md:p-6 lg:p-8"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-background/0 to-background/18 opacity-70 transition-opacity duration-700 group-hover:opacity-90" />
-            <div className="absolute inset-0 bg-accent/0 mix-blend-soft-light transition-colors duration-700 group-hover:bg-accent/10" />
-            <div className="absolute left-5 top-5 rounded-full border border-white/10 bg-background/45 px-3 py-1.5 text-[11px] uppercase tracking-[0.2em] text-foreground/80 backdrop-blur-xl">
+            <div className="absolute inset-0 bg-gradient-to-t from-background/34 via-background/0 to-background/10 opacity-55 transition-opacity duration-700 group-hover:opacity-65" />
+            <div className="absolute inset-0 bg-transparent" />
+            <div className="absolute left-5 top-5 rounded-full border border-white/10 bg-background/62 px-3 py-1.5 text-[11px] uppercase tracking-[0.2em] text-foreground/80 backdrop-blur-sm">
               {project.eyebrow}
             </div>
           </Link>
