@@ -69,7 +69,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section id="top" className="relative min-h-screen overflow-hidden pt-[22rem] pb-20 sm:pt-[28rem] lg:pt-40 lg:pb-24">
+    <section id="top" className="relative min-h-screen overflow-hidden pt-[14.5rem] pb-20 sm:pt-[24rem] lg:pt-40 lg:pb-24">
       {/* Soft ambient gradient */}
       <div className="pointer-events-none absolute inset-0 -z-10 bg-hero-radial" />
       <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-accent opacity-55" />
@@ -85,29 +85,29 @@ export const Hero = () => {
       </div>
 
       <div className="container relative z-10">
-        <div className="max-w-3xl space-y-8 lg:max-w-[43rem] xl:max-w-[47rem] lg:space-y-10">
-          <div className="reveal inline-flex items-center gap-3 rounded-full border border-hairline bg-surface/35 px-4 py-2 text-[11px] uppercase tracking-[0.22em] text-muted-foreground backdrop-blur-md">
+        <div className="max-w-3xl space-y-5 sm:space-y-8 lg:max-w-[43rem] xl:max-w-[47rem] lg:space-y-10">
+          <div className="reveal inline-flex items-center gap-3 rounded-full border border-hairline bg-surface/40 px-4 py-2 text-[11px] uppercase tracking-[0.2em] text-foreground/72 backdrop-blur-md">
             <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_18px_hsl(var(--accent)/0.45)]" />
-            Redes sociales · Reels · Diseño de contenido · Comunidad · Branding visual · Video corto
+            Community Manager · Social Media · Reels · Content Creator · Visual Content
           </div>
 
-          <h1 className="reveal reveal-delay-1 max-w-[13ch] font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.94] tracking-normal text-balance">
+          <h1 className="reveal reveal-delay-1 max-w-[13ch] font-display text-[2.9rem] sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.94] tracking-normal text-balance">
             <span className="text-foreground">Community Manager </span>
             <span className="italic font-light text-accent">& Visual Content Designer</span>
           </h1>
 
-          <div className="reveal reveal-delay-2 max-w-2xl space-y-5 text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed text-pretty">
+          <div className="reveal reveal-delay-2 max-w-2xl space-y-3 text-[15px] text-foreground/78 sm:space-y-5 sm:text-lg lg:text-xl leading-relaxed text-pretty">
             <p>
               Gestiono redes sociales, reels, contenido visual y comunicación digital para marcas que necesitan presencia constante y contenido medible.
             </p>
-            <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-foreground/68">
+            <p className="text-[13px] sm:text-base lg:text-lg leading-relaxed text-foreground/72">
               Produzco calendarios editoriales, newsletters, reportes y campañas con ritmo, coherencia visual y comunidad activa.
             </p>
           </div>
 
         </div>
 
-        <div className="reveal reveal-delay-3 mt-8 flex flex-col gap-4 lg:mt-0 lg:grid lg:-translate-y-12 lg:grid-cols-12 lg:items-center xl:-translate-y-14">
+        <div className="reveal reveal-delay-3 mt-6 flex flex-col gap-4 lg:mt-0 lg:grid lg:-translate-y-12 lg:grid-cols-12 lg:items-center xl:-translate-y-14">
           <div className="flex flex-wrap items-center gap-3 sm:gap-4 lg:col-span-5">
             <a
               href="#work"
@@ -131,7 +131,7 @@ export const Hero = () => {
             </a>
           </div>
 
-          <p className="text-[11px] uppercase tracking-[0.16em] text-foreground/48 sm:text-xs lg:hidden">
+          <p className="text-[11px] uppercase tracking-[0.16em] text-foreground/68 sm:text-xs lg:hidden">
             4+ COMUNIDADES · 100+ PIEZAS · 42+ NEWSLETTERS
           </p>
 
