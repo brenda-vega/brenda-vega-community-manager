@@ -147,6 +147,9 @@ const projects: Project[] = [
   },
 ];
 
+const featuredProjects = projects.filter((project) => project.featured);
+const supportingProjects = projects.filter((project) => project.supporting);
+
 export const Work = () => {
   return (
     <section id="work" className="relative overflow-hidden border-t border-hairline py-32 lg:py-44">
@@ -174,23 +177,92 @@ export const Work = () => {
         </div>
 
         <div className="space-y-10 lg:space-y-16">
-          {projects.map((project, i) => (
+          {featuredProjects.map((project, i) => (
             <div key={project.name} className="space-y-5">
-              {project.supporting && !projects[i - 1]?.supporting ? (
-                <div className="border-b border-hairline pb-4 text-xs uppercase tracking-[0.22em] text-muted-foreground">
-                  Otros proyectos digitales
-                </div>
-              ) : null}
               <ProjectCase
                 project={project}
                 reverse={i % 2 === 1}
-                compact={!project.featured}
               />
             </div>
           ))}
         </div>
+
+        <div className="mt-14 border-t border-hairline pt-8 lg:mt-20 lg:pt-10">
+          <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Otros trabajos digitales</p>
+              <h3 className="mt-3 font-display text-2xl leading-tight text-foreground sm:text-3xl">
+                Soporte visual y comunicación digital
+              </h3>
+            </div>
+            <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
+              Piezas secundarias para mostrar claridad visual, apoyo para landing y organización de información.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            {supportingProjects.map((project) => (
+              <SupportingProjectCard key={project.name} project={project} />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
+  );
+};
+
+const SupportingProjectCard = ({ project }: { project: Project }) => {
+  return (
+    <article className="motion-card group grid grid-cols-1 gap-5 border-t border-hairline py-6 transition-colors hover:border-accent/30 sm:grid-cols-[0.85fr_1fr]">
+      <Link
+        to={project.caseStudyPath}
+        aria-label={`Ver proyecto de ${project.name}`}
+        className="relative overflow-hidden rounded-[1.15rem] border border-hairline bg-surface/20 outline-none focus-visible:ring-1 focus-visible:ring-accent/50 focus-visible:ring-offset-4 focus-visible:ring-offset-background"
+      >
+        <img
+          src={project.image}
+          alt={`${project.name} / ${project.category}`}
+          loading="lazy"
+          decoding="async"
+          width={900}
+          height={640}
+          className="aspect-[4/3] w-full object-cover p-2 opacity-82 transition-opacity duration-500 group-hover:opacity-100"
+        />
+      </Link>
+
+      <div className="flex flex-col justify-between gap-5">
+        <div className="space-y-3">
+          <p className="text-[10px] uppercase tracking-[0.18em] text-accent">{project.category}</p>
+          <h4 className="font-display text-xl leading-tight text-foreground">
+            <Link to={project.caseStudyPath} className="transition-colors duration-500 hover:text-accent-soft">
+              {project.name}
+            </Link>
+          </h4>
+          <p className="text-sm leading-relaxed text-muted-foreground">{project.description[0]}</p>
+        </div>
+
+        <div className="space-y-4">
+          <div className="flex flex-wrap gap-1.5">
+            {project.tags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full border border-hairline bg-background/35 px-2.5 py-1 text-[10px] uppercase tracking-[0.11em] text-muted-foreground"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+          <Link
+            to={project.caseStudyPath}
+            aria-label={`Ver proyecto de ${project.name}`}
+            className="group/case inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-foreground/68 outline-none transition-colors duration-500 hover:text-foreground focus-visible:text-foreground"
+          >
+            <span className="link-underline">Ver proyecto</span>
+            <ArrowUpRight className="h-4 w-4 text-accent/80 transition-transform duration-500 group-hover/case:translate-x-1 group-hover/case:-translate-y-1" aria-hidden="true" />
+          </Link>
+        </div>
+      </div>
+    </article>
   );
 };
 
