@@ -79,7 +79,7 @@ export const Skills = () => {
             {tools.map((tool, index) => (
               <div
                 key={tool.name}
-                className="group/tool reveal relative flex aspect-square items-center justify-center rounded-[1.25rem] border border-hairline bg-surface/35 p-3 shadow-soft transition-all duration-500 hover:-translate-y-1 hover:border-accent/25 hover:bg-surface-elevated"
+                className="group/tool reveal relative flex aspect-square items-center justify-center rounded-[1.25rem] border border-hairline bg-surface/35 p-3 shadow-soft transition-all duration-700 hover:-translate-y-0.5 hover:border-accent/20 hover:bg-surface/55"
                 style={{ animationDelay: `${0.04 * index}s` }}
               >
                 <img
@@ -88,9 +88,9 @@ export const Skills = () => {
                   loading="lazy"
                   width={96}
                   height={96}
-                  className="h-12 w-12 rounded-[0.9rem] object-contain transition-transform duration-500 group-hover/tool:scale-105 sm:h-14 sm:w-14"
+                  className="h-12 w-12 rounded-[0.9rem] object-contain transition-opacity duration-700 group-hover/tool:opacity-95 sm:h-14 sm:w-14"
                 />
-                <span className="pointer-events-none absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs text-muted-foreground opacity-0 transition-all duration-500 group-hover/tool:bottom-[-1.7rem] group-hover/tool:opacity-100">
+                <span className="pointer-events-none absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap text-xs text-muted-foreground opacity-0 transition-all duration-700 group-hover/tool:bottom-[-1.7rem] group-hover/tool:opacity-100">
                   {tool.name}
                 </span>
               </div>
@@ -117,7 +117,7 @@ export const Skills = () => {
                   {g.items.map((item) => (
                     <span
                       key={item}
-                      className="rounded-full border border-hairline bg-surface/40 px-3.5 py-1.5 text-sm text-foreground/85 transition-all duration-500 hover:-translate-y-0.5 hover:border-accent/30 hover:bg-surface-elevated hover:text-foreground"
+                      className="rounded-full border border-hairline bg-surface/40 px-3.5 py-1.5 text-sm text-foreground/85 transition-all duration-700 hover:-translate-y-px hover:border-accent/25 hover:bg-surface/60 hover:text-foreground"
                     >
                       {item}
                     </span>

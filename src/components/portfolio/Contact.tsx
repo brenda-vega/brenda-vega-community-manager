@@ -48,7 +48,7 @@ export const Contact = () => {
                 href="https://wa.me/524445492516?text=Hola%20Brenda,%20vi%20tu%20portfolio%20y%20me%20interesa%20hablar%20sobre%20una%20oportunidad%20de%20Community%20Manager%20/%20Social%20Media."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="soft-button inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3.5 text-sm font-medium text-background shadow-glow transition-colors duration-500 hover:bg-accent-soft"
+                className="soft-button inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3.5 text-sm font-medium text-background transition-colors duration-700 hover:bg-accent-soft"
               >
                 Contactar por WhatsApp
                 <MessageCircle className="h-4 w-4" aria-hidden="true" />
@@ -61,7 +61,7 @@ export const Contact = () => {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="soft-button inline-flex items-center gap-2 rounded-full border border-hairline bg-surface/28 px-4 py-2.5 text-[12px] text-foreground/72 transition-colors duration-500 hover:border-accent/30 hover:bg-surface-elevated hover:text-foreground"
+                    className="soft-button inline-flex items-center gap-2 rounded-full border border-hairline bg-surface/28 px-4 py-2.5 text-[12px] text-foreground/72 transition-colors duration-700 hover:border-accent/30 hover:bg-surface/60 hover:text-foreground"
                   >
                     {label}
                     <Icon className="h-3.5 w-3.5 text-accent/80" aria-hidden="true" />
@@ -82,7 +82,7 @@ export const Contact = () => {
           <aside className="self-start rounded-[1.75rem] border border-hairline bg-surface/28 p-7 lg:col-span-4 lg:col-start-9 lg:p-8">
             <div className="mb-7 flex items-center gap-2">
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full rounded-full bg-accent opacity-60 animate-ping" />
+                <span className="absolute inline-flex h-full w-full rounded-full bg-accent/25" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
               </span>
               <span className="text-xs uppercase tracking-[0.18em] text-foreground/88">Disponible para</span>

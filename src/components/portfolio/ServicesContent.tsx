@@ -230,16 +230,16 @@ export const ServicesContent = () => {
               const actionText = item.actionLabel === "Abrir reel" ? "Ver reel" : item.actionLabel ?? "Ver pieza";
 
               return (
-                <article key={item.title} className="motion-card group border-t border-hairline py-5 transition-colors hover:border-accent/30">
+                <article key={item.title} className="motion-card group border-t border-hairline py-5 transition-colors duration-700 hover:border-accent/25">
                   <button type="button" onClick={() => setActiveAsset(item)} className="block w-full text-left" aria-label={`Ver pieza: ${item.title}`}>
-                    <div className="mb-4 aspect-[4/3] w-full overflow-hidden rounded-[1.15rem] border border-hairline bg-surface/14">
+                    <div className="mb-4 aspect-[4/3] w-full overflow-hidden rounded-[1.15rem] border border-hairline bg-surface/15 transition-colors duration-700 group-hover:border-white/15">
                       {isVideo ? (
                         <video
                           src={item.src}
                           muted
                           playsInline
                           preload="metadata"
-                          className="h-full max-h-[18rem] w-full bg-background/55 object-cover sm:max-h-[19rem]"
+                          className="h-full max-h-[18rem] w-full bg-background/55 object-cover opacity-[0.94] transition-opacity duration-700 group-hover:opacity-100 sm:max-h-[19rem]"
                           aria-label={item.title}
                         />
                       ) : (
@@ -250,7 +250,7 @@ export const ServicesContent = () => {
                           decoding="async"
                           width={900}
                           height={700}
-                          className="h-full w-full object-cover transition-opacity group-hover:opacity-95"
+                          className="h-full w-full object-cover opacity-[0.94] transition-opacity duration-700 group-hover:opacity-100"
                         />
                       )}
                     </div>
@@ -258,13 +258,13 @@ export const ServicesContent = () => {
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <p className="text-[10px] uppercase tracking-[0.18em] text-accent">{item.format}</p>
-                      <h3 className="mt-2 font-display text-lg leading-tight text-foreground">{item.title}</h3>
-                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.caption}</p>
+                      <h3 className="mt-2 font-display text-lg leading-tight text-foreground transition-colors duration-700 group-hover:text-foreground">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground transition-colors duration-700 group-hover:text-foreground/72">{item.caption}</p>
                     </div>
                     <button
                       type="button"
                       onClick={() => setActiveAsset(item)}
-                      className="mt-1 grid h-9 w-9 flex-none place-items-center rounded-full border border-hairline bg-surface/20 text-accent transition-colors hover:border-accent/30 hover:text-foreground"
+                      className="mt-1 grid h-9 w-9 flex-none place-items-center rounded-full border border-hairline bg-surface/20 text-accent/80 transition-colors duration-700 hover:border-accent/30 hover:text-foreground group-hover:border-accent/25 group-hover:text-accent"
                       aria-label={actionText}
                     >
                       <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />

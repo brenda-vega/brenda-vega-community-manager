@@ -14,7 +14,7 @@ const cvHref = `${import.meta.env.BASE_URL}CV_VisualDesigner_BrendaVega_2026_v2.
 
 const stats: StatConfig[] = [
   { end: 4, suffix: "+", label: "comunidades activadas" },
-  { end: 100, suffix: "+", label: "piezas visuales" },
+  { end: 100, suffix: "+", label: "assets de contenido" },
   { end: 42, suffix: "+", label: "semanas de newsletter" },
 ];
 
@@ -72,8 +72,8 @@ export const Hero = () => {
     <section id="top" className="relative min-h-screen overflow-hidden pt-[14.5rem] pb-20 sm:pt-[24rem] lg:pt-40 lg:pb-24">
       {/* Soft ambient gradient */}
       <div className="pointer-events-none absolute inset-0 -z-10 bg-hero-radial" />
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-accent opacity-55" />
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-grain opacity-30" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-accent opacity-40" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-grain opacity-[0.24]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-48 bg-gradient-to-t from-background to-transparent" />
 
       <div className="hero-editorial-portrait reveal reveal-delay-2" aria-hidden="true">
@@ -85,23 +85,23 @@ export const Hero = () => {
       </div>
 
       <div className="container relative z-10">
-        <div className="max-w-3xl space-y-5 sm:space-y-8 lg:max-w-[43rem] xl:max-w-[47rem] lg:space-y-10">
-          <div className="reveal inline-flex items-center gap-3 rounded-full border border-hairline bg-surface/40 px-4 py-2 text-[11px] uppercase tracking-[0.2em] text-foreground/72 backdrop-blur-md">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_18px_hsl(var(--accent)/0.45)]" />
-            Community Manager · Social Media · Reels · Content Creator · Visual Content
+        <div className="max-w-3xl space-y-5 sm:space-y-7 lg:max-w-[43rem] xl:max-w-[47rem] lg:space-y-9">
+          <div className="reveal inline-flex items-center gap-3 rounded-full border border-hairline bg-surface/32 px-4 py-2 text-[11px] uppercase tracking-[0.19em] text-foreground/76 backdrop-blur-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent/85" />
+            Community Manager · Content Systems · Reels · Social Media
           </div>
 
-          <h1 className="reveal reveal-delay-1 max-w-[13ch] font-display text-[2.9rem] sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.94] tracking-normal text-balance">
+          <h1 className="reveal reveal-delay-1 max-w-[13ch] font-display text-[2.85rem] sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-normal text-balance">
             <span className="text-foreground">Community Manager </span>
             <span className="italic font-light text-accent">& Visual Content Designer</span>
           </h1>
 
-          <div className="reveal reveal-delay-2 max-w-2xl space-y-3 text-[15px] text-foreground/78 sm:space-y-5 sm:text-lg lg:text-xl leading-relaxed text-pretty">
+          <div className="reveal reveal-delay-2 max-w-2xl space-y-3 text-[15px] text-foreground/82 sm:space-y-4 sm:text-lg lg:text-[1.18rem] leading-relaxed text-pretty">
             <p>
-              Gestiono redes sociales, reels, contenido visual y comunicación digital para marcas que necesitan presencia constante y contenido medible.
+              Gestiono redes sociales, reels y sistemas editoriales para marcas que necesitan presencia constante, comunidad activa y contenido medible.
             </p>
             <p className="text-[13px] sm:text-base lg:text-lg leading-relaxed text-foreground/72">
-              Produzco calendarios editoriales, newsletters, reportes y campañas con ritmo, coherencia visual y comunidad activa.
+              Produzco calendarios, newsletters, reportes y campañas con coherencia visual, ritmo de publicación y lectura clara de resultados.
             </p>
           </div>
 
@@ -115,16 +115,16 @@ export const Hero = () => {
                 event.preventDefault();
                 navigateToHash("#work");
               }}
-              className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3.5 text-sm font-medium text-background shadow-glow soft-button hover:bg-accent-soft"
+              className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3.5 text-sm font-medium text-background soft-button hover:bg-accent-soft"
             >
               Ver proyectos
-              <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
             <a
               href={cvHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-full border border-hairline bg-surface/45 px-6 py-3.5 text-sm text-foreground/90 backdrop-blur-md soft-button hover:border-accent/30 hover:bg-surface-elevated hover:text-foreground"
+              className="group inline-flex items-center gap-2 rounded-full border border-hairline bg-surface/35 px-6 py-3.5 text-sm text-foreground/90 backdrop-blur-sm soft-button hover:border-accent/30 hover:bg-surface/60 hover:text-foreground"
             >
               <Download className="h-4 w-4" />
               Descargar CV
@@ -132,7 +132,7 @@ export const Hero = () => {
           </div>
 
           <p className="text-[11px] uppercase tracking-[0.16em] text-foreground/68 sm:text-xs lg:hidden">
-            4+ COMUNIDADES · 100+ PIEZAS · 42+ NEWSLETTERS
+            4+ COMUNIDADES · 100+ ASSETS · 42+ NEWSLETTERS
           </p>
 
           <div

@@ -207,7 +207,7 @@ export const Work = () => {
 
 const SupportingProjectCard = ({ project }: { project: Project }) => {
   return (
-    <article className="motion-card group grid grid-cols-1 gap-5 border-t border-hairline py-6 transition-colors hover:border-accent/30 sm:grid-cols-[0.85fr_1fr]">
+    <article className="motion-card group grid grid-cols-1 gap-5 border-t border-hairline py-6 transition-colors duration-700 hover:border-accent/25 sm:grid-cols-[0.85fr_1fr]">
       <div
         className="relative overflow-hidden rounded-[1.15rem] border border-hairline bg-surface/20 outline-none focus-visible:ring-1 focus-visible:ring-accent/50 focus-visible:ring-offset-4 focus-visible:ring-offset-background"
       >
@@ -218,7 +218,7 @@ const SupportingProjectCard = ({ project }: { project: Project }) => {
           decoding="async"
           width={900}
           height={640}
-          className="aspect-[4/3] w-full object-cover p-1 opacity-90 transition-opacity duration-500 group-hover:opacity-100"
+          className="aspect-[4/3] w-full object-cover p-1 opacity-[0.92] transition-opacity duration-700 group-hover:opacity-100"
         />
       </div>
 
@@ -245,10 +245,10 @@ const SupportingProjectCard = ({ project }: { project: Project }) => {
           <a
             href="#content-video"
             aria-label={`Ver piezas relacionadas de ${project.name}`}
-            className="group/case inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-foreground/68 outline-none transition-colors duration-500 hover:text-foreground focus-visible:text-foreground"
+            className="group/case inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-foreground/68 outline-none transition-colors duration-700 hover:text-foreground focus-visible:text-foreground"
           >
             <span className="link-underline">Ver piezas</span>
-            <ArrowUpRight className="h-4 w-4 text-accent/80 transition-transform duration-500 group-hover/case:translate-x-1 group-hover/case:-translate-y-1" aria-hidden="true" />
+            <ArrowUpRight className="h-4 w-4 text-accent/72 transition-all duration-700 group-hover/case:translate-x-0.5 group-hover/case:-translate-y-0.5 group-hover/case:text-accent" aria-hidden="true" />
           </a>
         </div>
       </div>
@@ -292,7 +292,7 @@ const ProjectCase = ({
               </div>
             </div>
 
-            <dl className="grid max-w-md grid-cols-1 gap-2.5 border-y border-hairline py-3 text-xs sm:grid-cols-2">
+            <dl className="grid max-w-md grid-cols-1 gap-2.5 border-y border-hairline py-3 text-xs opacity-[0.88] transition-opacity duration-700 group-hover:opacity-100 sm:grid-cols-2">
               {project.role ? <ProjectMeta label="Rol" value={project.role} /> : null}
               {project.formats ? <ProjectMeta label="Formatos" value={project.formats} /> : null}
               {project.responsibilities ? <ProjectMeta label="Responsabilidades" value={project.responsibilities.join(" · ")} /> : null}
@@ -305,11 +305,11 @@ const ProjectCase = ({
             <a
               href="#content-video"
               aria-label={`Ver contenido destacado relacionado con ${project.name}`}
-              className="group/case ml-0 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-foreground/70 outline-none transition-colors duration-500 hover:text-foreground focus-visible:text-foreground sm:ml-2"
+              className="group/case ml-0 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-foreground/70 outline-none transition-colors duration-700 hover:text-foreground focus-visible:text-foreground sm:ml-2"
             >
               <span className="link-underline">Ver piezas</span>
               <ArrowUpRight
-                className="h-4 w-4 text-accent/80 transition-transform duration-500 group-hover/case:translate-x-1 group-hover/case:-translate-y-1"
+                className="h-4 w-4 text-accent/72 transition-all duration-700 group-hover/case:translate-x-0.5 group-hover/case:-translate-y-0.5 group-hover/case:text-accent"
                 aria-hidden="true"
               />
             </a>
@@ -327,7 +327,7 @@ const ProjectCase = ({
               height={980}
               className="case-study-image h-full w-full object-contain p-3 sm:p-5 md:p-6 lg:p-8"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/34 via-background/0 to-background/10 opacity-55 transition-opacity duration-700 group-hover:opacity-65" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/34 via-background/0 to-background/10 opacity-55 transition-opacity duration-1000 group-hover:opacity-60" />
             <div className="absolute inset-0 bg-transparent" />
           </div>
         </div>
