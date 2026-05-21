@@ -23,12 +23,23 @@ type Tool = {
 const groups: SkillGroup[] = [
   {
     title: "Social Media",
-    items: ["Community Management", "Calendarios editoriales", "Engagement", "Crecimiento orgánico", "Métricas y reportes", "Social media design"],
+    items: ["Community Management", "Social media content", "Calendarios editoriales", "Engagement", "Crecimiento orgánico", "Métricas y reportes"],
   },
   {
-    title: "Contenido Visual",
-    items: ["Content Design", "Reels", "Short-form video", "Piezas multiformato", "Visual branding", "Adaptación por canal"],
+    title: "Content Systems",
+    items: ["Reels educativos", "Short-form video", "Newsletter semanal", "Campañas sociales", "Adaptación por canal", "Visual communication"],
   },
+];
+
+const recruiterTools = [
+  "Canva",
+  "Meta Business Suite",
+  "Metricool",
+  "GA4",
+  "Excel / Google Sheets",
+  "CapCut",
+  "Premiere",
+  "Figma",
 ];
 
 const tools: Tool[] = [
@@ -45,7 +56,7 @@ const tools: Tool[] = [
 
 const groupIcons: Record<string, LucideIcon> = {
   "Social Media": Palette,
-  "Contenido Visual": Type,
+  "Content Systems": Type,
 };
 
 export const Skills = () => {
@@ -54,20 +65,20 @@ export const Skills = () => {
       <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-80 bg-gradient-to-b from-white/[0.035] to-transparent" />
       <div className="container">
         <div className="mb-16 flex items-center justify-between border-b border-hairline pb-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
-          <span>05 · Capabilities</span>
-          <span className="hidden sm:inline">Social media · Content design · Tools</span>
+          <span>05 · Habilidades</span>
+          <span className="hidden sm:inline">Social media · Content systems · Tools</span>
         </div>
 
         <div className="mb-20 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-end">
           <h2 className="max-w-4xl font-display text-5xl leading-[0.96] tracking-normal text-balance sm:text-6xl lg:col-span-8 lg:text-7xl">
-            Skills & tools for social media execution.
+            Herramientas para contenido, comunidad y ejecución social.
           </h2>
           <p className="max-w-md text-sm leading-relaxed text-muted-foreground lg:col-span-3 lg:col-start-10">
-            Herramientas de producción, diseño y colaboración para planear, crear y medir contenido visual entre formatos y canales.
+            Producción, planeación y medición con herramientas que reclutadores y equipos de marketing reconocen rápido.
           </p>
         </div>
 
-        <div className="mb-20 border-y border-hairline py-8">
+        <div className="mb-12 border-y border-hairline py-8">
           <div className="mb-6 flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
             <span className="grid h-8 w-8 place-items-center rounded-full border border-hairline bg-surface/45 text-accent/90">
               <Sparkles className="h-3.5 w-3.5" aria-hidden="true" strokeWidth={1.7} />
@@ -94,6 +105,20 @@ export const Skills = () => {
                   {tool.name}
                 </span>
               </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mb-20 border-b border-hairline pb-8">
+          <p className="mb-4 text-[11px] uppercase tracking-[0.22em] text-muted-foreground">Stack operativo</p>
+          <div className="flex flex-wrap gap-2">
+            {recruiterTools.map((tool) => (
+              <span
+                key={tool}
+                className="rounded-full border border-hairline bg-background/35 px-3.5 py-1.5 text-sm text-foreground/82"
+              >
+                {tool}
+              </span>
             ))}
           </div>
         </div>

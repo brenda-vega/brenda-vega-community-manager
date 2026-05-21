@@ -3,25 +3,25 @@ const items = [
     role: "Community Manager & Visual Content Designer",
     company: "Kairos Research",
     period: "2023 — Actualidad",
-    desc: "Gestión de social media, newsletter, infografías, videos cortos y comunicación digital para una marca enfocada en análisis Web3.",
+    desc: "Gestión de social media, newsletter semanal, infografías, reels y reportes para sostener presencia activa y lectura de comunidad.",
   },
   {
     role: "Community Builder & Content Designer",
     company: "Lytryum",
     period: "2022 — 2023",
-    desc: "Construcción de comunidad, contenido educativo, adaptación multicanal y comunicación visual para academia Web3 en español.",
+    desc: "Construcción de comunidad, contenido educativo, adaptación multicanal y comunicación editorial para academia digital en español.",
   },
   {
     role: "Social Media & Visual Content Designer",
     company: "Exponencial Cripto Club",
     period: "2021 — 2023",
-    desc: "Producción de thumbnails, piezas promocionales, videos y contenido visual para eventos, redes sociales y comunidad.",
+    desc: "Producción de thumbnails, piezas promocionales, videos y campañas sociales para eventos, redes y comunidad.",
   },
   {
     role: "Community & Content Support",
     company: "Freelance",
     period: "2018 — Actualidad",
-    desc: "Apoyo en contenido digital, consistencia de marca, calendarios editoriales y materiales visuales para marcas y negocios.",
+    desc: "Apoyo en contenido digital, ecommerce, campañas turísticas, consistencia de marca, calendarios editoriales y materiales promocionales.",
   },
 ];
 
@@ -34,7 +34,7 @@ export const Experience = () => {
             <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">04 · Experiencia</span>
             <h2 className="font-display text-4xl lg:text-5xl tracking-tight">Trayectoria.</h2>
             <p className="text-sm text-muted-foreground max-w-xs">
-              Roles y colaboraciones a lo largo de los últimos años.
+              Roles, formatos y contextos de trabajo aplicados a contenido, comunidad y comunicación visual.
             </p>
           </div>
         </div>
