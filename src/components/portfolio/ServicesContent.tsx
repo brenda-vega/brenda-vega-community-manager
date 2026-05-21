@@ -167,6 +167,18 @@ const visualAssets: PortfolioAsset[] = [
     channel: "Instagram / Facebook",
   },
   {
+    title: "Hotel Matices — Facebook Travel Campaign",
+    caption: "Campaña visual para promoción turística.",
+    src: assetPath("facebook-travel-campaign-hotel-matices.png"),
+    alt: "Hotel Matices Facebook travel campaign",
+    format: "Social Media Campaign / Facebook Ads",
+    objective: "Comunicación comercial y captación en temporada promocional bajo lineamientos de Facebook Ads.",
+    role: "Diseño de campaña visual, adaptación a restricciones de texto y comunicación promocional.",
+    responsibilities: ["Diseño de pieza para pauta", "Adaptación a lineamientos de plataforma", "Comunicación comercial turística"],
+    tools: "Photoshop, Meta Ads, Facebook",
+    channel: "Facebook Ads / Social Media",
+  },
+  {
     title: "Tuksa — Travel Marketing Digital Campaign",
     caption: "Campaña digital para promoción turística.",
     src: assetPath("travel-marketing-digital-campaign-tuksa.png"),
