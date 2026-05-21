@@ -15,6 +15,7 @@ type Project = {
   result?: string;
   role?: string;
   formats?: string;
+  responsibilities?: string[];
   tools?: string;
   tags: string[];
   image: string;
@@ -27,9 +28,9 @@ const projects: Project[] = [
     index: "01",
     name: "Kairos Research — Redes sociales, newsletter y contenido visual",
     eyebrow: "SOCIAL MEDIA",
-    category: "Redes sociales · Newsletter · Contenido visual",
+    category: "Redes sociales · Newsletter · Sistema editorial",
     description: [
-      "Ejecución multiformato para una marca Web3: redes, newsletter, infografías y video corto.",
+      "Sistema editorial multiformato para redes, newsletter, infografías y video corto con seguimiento de comunidad.",
     ],
     did: [
       "+129% crecimiento orgánico de comunidad",
@@ -42,7 +43,8 @@ const projects: Project[] = [
     result:
       "+129% crecimiento orgánico · 30-35% open rate · +100 piezas visuales",
     role: "Community Manager & Visual Content Designer",
-    formats: "Redes sociales, newsletter, infografías, reels",
+    formats: "Newsletter semanal, reels educativos, infografías, contenido diario",
+    responsibilities: ["Calendario editorial", "Adaptación para redes", "Comunicación educativa"],
     tools: "Metricool, CapCut, Premiere Pro, Photoshop",
     tags: ["Redes sociales", "Newsletter", "Reels", "Infografías"],
     image: kairos,
@@ -54,7 +56,7 @@ const projects: Project[] = [
     eyebrow: "COMUNIDAD",
     category: "Comunidad · Contenido educativo · Redes sociales",
     description: [
-      "Comunidad educativa Web3 desde cero con contenido multicanal en español.",
+      "Construcción de comunidad educativa con contenido multicanal, piezas editoriales y comunicación clara en español.",
     ],
     did: [
       "4 comunidades construidas desde cero",
@@ -67,7 +69,8 @@ const projects: Project[] = [
     result:
       "4 comunidades desde cero · +50 piezas educativas · crecimiento 100% orgánico",
     role: "Community Builder & Content Designer",
-    formats: "Discord, LinkedIn, YouTube, Instagram",
+    formats: "Contenido educativo, posts, videos, comunidad, piezas multicanal",
+    responsibilities: ["Community engagement", "Contenido educativo", "Adaptación multiplataforma"],
     tools: "Canva, Photoshop, Discord, Notion",
     tags: ["Comunidad", "Educación", "Discord", "Crecimiento orgánico"],
     image: lytryum,
@@ -77,9 +80,9 @@ const projects: Project[] = [
     index: "03",
     name: "Exponencial Cripto Club — Redes, eventos y contenido visual",
     eyebrow: "CONTENIDO SOCIAL",
-    category: "Redes sociales · Eventos · Contenido visual",
+    category: "Redes sociales · Eventos · Campañas",
     description: [
-      "Contenido visual y soporte multicanal para eventos, campañas y comunidad cripto.",
+      "Campañas sociales, materiales para eventos y piezas multicanal para activar comunidad y presencia digital.",
     ],
     did: [
       "Gestión de contenido en 6+ plataformas",
@@ -92,7 +95,8 @@ const projects: Project[] = [
     result:
       "6+ plataformas · eventos y campañas · thumbnails, videos y piezas sociales",
     role: "Social Media & Visual Content Designer",
-    formats: "Eventos, thumbnails, posts, videos, campañas",
+    formats: "Posts, thumbnails, videos, materiales de evento, campañas sociales",
+    responsibilities: ["Piezas promocionales", "Comunicación de eventos", "Consistencia por canal"],
     tools: "Photoshop, Illustrator, Canva, CapCut",
     tags: ["Redes sociales", "Eventos", "Thumbnails", "Video"],
     image: exponencial,
@@ -102,9 +106,9 @@ const projects: Project[] = [
     index: "04",
     name: "Fidex — Digital Product Support",
     eyebrow: "OTROS PROYECTOS DIGITALES",
-    category: "Landing pages · Soporte visual digital",
+    category: "Landing pages · Comunicación digital",
     description: [
-      "Organización visual y claridad de información financiera para web y producto digital.",
+      "Estructura visual para comunicar información financiera con claridad en web y producto digital.",
     ],
     did: [
       "Landing pages y soporte visual digital",
@@ -122,9 +126,9 @@ const projects: Project[] = [
     index: "05",
     name: "Phronesis — Educational Visual System",
     eyebrow: "OTROS PROYECTOS DIGITALES",
-    category: "Sistema visual educativo · Assets digitales",
+    category: "Sistema editorial educativo · Assets digitales",
     description: [
-      "Comunicación de contenido educativo y estructura editorial para plataforma digital.",
+      "Organización editorial y assets digitales para comunicar contenido educativo en plataforma.",
     ],
     did: [
       "Sistema visual educativo y assets digitales",
@@ -164,7 +168,7 @@ export const Work = () => {
               Proyectos seleccionados
             </h2>
             <p className="reveal reveal-delay-2 max-w-md text-sm leading-relaxed text-muted-foreground lg:col-span-3 lg:col-start-10">
-              Trabajo aplicado en redes, comunidad, newsletters, campañas y comunicación visual.
+              Trabajo aplicado en contenido editorial, comunidad, campañas sociales y sistemas de comunicación digital.
             </p>
           </div>
         </div>
@@ -182,11 +186,11 @@ export const Work = () => {
             <div>
               <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Otros trabajos digitales</p>
               <h3 className="mt-3 font-display text-2xl leading-tight text-foreground sm:text-3xl">
-                Soporte visual y comunicación digital
+                Comunicación digital y soporte editorial
               </h3>
             </div>
             <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Piezas secundarias para mostrar claridad visual, apoyo para landing y organización de información.
+              Piezas de apoyo para landing, educación y organización de información sin competir con el trabajo de contenido.
             </p>
           </div>
 
@@ -291,6 +295,7 @@ const ProjectCase = ({
             <dl className="grid max-w-md grid-cols-1 gap-2.5 border-y border-hairline py-3 text-xs sm:grid-cols-2">
               {project.role ? <ProjectMeta label="Rol" value={project.role} /> : null}
               {project.formats ? <ProjectMeta label="Formatos" value={project.formats} /> : null}
+              {project.responsibilities ? <ProjectMeta label="Responsabilidades" value={project.responsibilities.join(" · ")} /> : null}
               <ProjectMeta label="Resultados" value={project.did.slice(0, 3).join(" · ")} />
               {project.tools ? <ProjectMeta label="Herramientas" value={project.tools} /> : null}
             </dl>

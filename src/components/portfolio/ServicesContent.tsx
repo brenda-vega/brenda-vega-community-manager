@@ -17,10 +17,10 @@ type PortfolioAsset = {
 };
 
 const contentSystems = [
-  "Calendario editorial",
-  "Newsletter",
-  "Adaptación multiplataforma",
-  "Planificación visual de contenido",
+  "Calendario editorial y ritmo de publicación",
+  "Newsletter y contenido de retención",
+  "Adaptación cross-platform por canal",
+  "Organización visual de campañas y assets",
 ];
 
 const assetPath = (filename: string) => `${import.meta.env.BASE_URL}assets/${filename}`;
@@ -29,11 +29,11 @@ const featuredReels = [
   {
     title: "Reel — Berachain Market Analysis",
     src: assetPath("reel-berachain-analysis.mp4"),
-    caption: "Análisis en video corto para redes.",
+    caption: "Reel educativo para awareness y engagement.",
     alt: "Berachain market analysis reel",
     format: "Reel educativo / short-form",
     objective: "Engagement y awareness sobre tendencias Web3.",
-    role: "Edición de video, adaptación visual y contenido short-form.",
+    role: "Edición de video, estructura narrativa y adaptación para redes.",
     tools: "CapCut, Premiere Pro, Adobe Podcast, Metricool",
     channel: "TikTok / Instagram Reels",
     type: "video" as const,
@@ -42,11 +42,11 @@ const featuredReels = [
   {
     title: "Reel — 5 Lupas de la Semana",
     src: assetPath("reel-5-lupas-semana.mp4"),
-    caption: "Formato editorial semanal en video.",
+    caption: "Resumen editorial semanal para retención.",
     alt: "5 Lupas de la Semana reel",
     format: "Reel editorial / resumen semanal",
     objective: "Retención y comunicación de contenido educativo.",
-    role: "Edición de video, estructura visual y adaptación para redes.",
+    role: "Edición, jerarquía visual y adaptación de contenido educativo.",
     tools: "CapCut, Premiere Pro, Photoshop, Metricool",
     channel: "TikTok / Instagram Reels",
     type: "video" as const,
@@ -57,43 +57,43 @@ const featuredReels = [
 const visualAssets: PortfolioAsset[] = [
   {
     title: "Mantle Puebla — Event Promotion",
-    caption: "Promoción de evento para comunidad Web3.",
+    caption: "Campaña social para evento de comunidad.",
     src: assetPath("mantle-puebla-event-post.jpg"),
     alt: "Mantle Puebla event promotion post",
-    format: "Post promocional para evento",
+    format: "Campaña social / post de evento",
     objective: "Awareness y comunicación visual para comunidad/evento.",
-    role: "Diseño de pieza promocional y adaptación visual.",
+    role: "Diseño de pieza promocional y adaptación para redes.",
     tools: "Canva, Photoshop, Illustrator",
     channel: "Instagram / Redes sociales",
   },
   {
     title: "Travel VYP — Social Media Campaigns",
-    caption: "Visuales para campaña social.",
+    caption: "Campaña social para servicios turísticos.",
     src: assetPath("travelvyp-social-campaigns.png"),
     alt: "Travel VYP social media campaign visuals",
-    format: "Contenido promocional para redes sociales",
+    format: "Campaña social / contenido promocional",
     objective: "Promoción de servicios turísticos y presencia digital.",
-    role: "Diseño de contenido visual y adaptación para campañas.",
+    role: "Diseño de contenido y adaptación para campañas sociales.",
     tools: "Photoshop, Illustrator, Canva",
     channel: "Instagram / Facebook",
   },
   {
-    title: "Content Calendar — Editorial Planning",
-    caption: "Estructura de publicación.",
+    title: "Content Calendar — Sistema editorial",
+    caption: "Planeación de publicaciones y consistencia.",
     src: assetPath("content-calendar-editorial-planning.png"),
     alt: "Editorial planning content calendar",
-    format: "Planeación editorial y calendario de contenido",
+    format: "Calendario editorial / sistema de contenido",
     objective: "Organización de publicaciones y consistencia de contenido.",
-    role: "Estructuración de contenido y planificación editorial.",
+    role: "Estructuración editorial, organización de formatos y planificación.",
     tools: "Notion, Google Sheets, Excel, Metricool",
     channel: "Instagram / LinkedIn / Newsletter",
   },
   {
     title: "Tequila Jalisco — Promotional Social Post",
-    caption: "Post promocional para campaña turística.",
+    caption: "Pieza promocional para campaña turística.",
     src: assetPath("tequila-jalisco-social-post.jpg"),
     alt: "Tequila Jalisco promotional social post",
-    format: "Pieza promocional para redes sociales",
+    format: "Campaña social / post promocional",
     objective: "Promoción visual y reconocimiento de marca.",
     role: "Diseño de contenido promocional.",
     tools: "Photoshop, Illustrator",
@@ -101,35 +101,35 @@ const visualAssets: PortfolioAsset[] = [
   },
   {
     title: "Materiales promocionales impresos",
-    caption: "Materiales de apoyo para campaña.",
+    caption: "Assets de campaña para puntos de contacto.",
     src: assetPath("print-promotional-materials.jpg"),
     alt: "Print promotional materials",
-    format: "Material promocional",
+    format: "Content asset / material promocional",
     objective: "Apoyar campaña con materiales visuales consistentes.",
-    role: "Diseño y adaptación de piezas de marca.",
+    role: "Adaptación de piezas de campaña y comunicación de marca.",
     channel: "Campaña / Punto de contacto",
   },
   {
     title: "Lytryum — AI NFT Collection",
-    caption: "AI-generated NFT collection visuals and mockups.",
+    caption: "Visuales digitales para colección NFT.",
     src: assetPath("travelvyp-print-design.jpg"),
-    alt: "Lytryum AI NFT collection visuals and mockups",
+    alt: "Lytryum AI NFT collection digital visuals",
     format: "Colección visual NFT generada con IA",
-    objective: "Comunicación visual y producción de assets digitales.",
-    role: "Producción visual, mockups y dirección de piezas.",
+    objective: "Producción de assets digitales para comunidad Web3.",
+    role: "Producción visual, dirección de piezas y organización de assets.",
     tools: "Midjourney, Photoshop, Illustrator, ChatGPT",
     channel: "Discord / Redes sociales / Comunidad Web3",
   },
 ];
 
 const brandGuidelines: PortfolioAsset = {
-  title: "Colegio Samuel Juárez — Brand Guidelines",
-  caption: "Manual de identidad visual.",
+  title: "Colegio Samuel Juárez — Sistema de identidad",
+  caption: "Lineamientos para comunicación institucional.",
   src: assetPath("manual_identidad_colegio.jpeg"),
   alt: "Colegio Samuel Juárez brand guidelines preview",
-  format: "Manual de identidad",
+  format: "Sistema visual institucional",
   objective: "Mantener consistencia gráfica y lineamientos de marca.",
-  role: "Diseño y organización de sistema visual institucional.",
+  role: "Organización de lineamientos visuales para comunicación institucional.",
   tools: "Illustrator, Photoshop, InDesign",
   channel: "Comunicación institucional / Material digital",
   actionLabel: "Ver manual",
@@ -167,7 +167,7 @@ export const ServicesContent = () => {
         <div className="container">
           <div className="mb-12 flex items-center justify-between border-b border-hairline pb-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
             <span>05 · Qué hago</span>
-            <span className="hidden sm:inline">Redes sociales · Ejecución de contenido</span>
+            <span className="hidden sm:inline">Editorial · Cross-platform · Campañas</span>
           </div>
 
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end">
@@ -175,7 +175,7 @@ export const ServicesContent = () => {
               Sistema de contenido
             </h2>
             <p className="max-w-md text-sm leading-relaxed text-muted-foreground lg:col-span-3 lg:col-start-10">
-              Planeación, adaptación y seguimiento para sostener presencia activa sin duplicar esfuerzos por canal.
+              Calendarios, newsletters y assets organizados para sostener campañas, ecommerce, turismo, comunidad e institucional.
             </p>
           </div>
 
@@ -202,7 +202,7 @@ export const ServicesContent = () => {
         <div className="container">
           <div className="mb-10 flex items-center justify-between border-b border-hairline pb-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
             <span>06 · Contenido y video</span>
-            <span className="hidden sm:inline">Assets seleccionados</span>
+            <span className="hidden sm:inline">Campañas · Reels · Sistemas editoriales</span>
           </div>
 
           <div className="mb-10 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end">
@@ -210,7 +210,7 @@ export const ServicesContent = () => {
               Contenido y video
             </h2>
             <p className="max-w-md text-sm leading-relaxed text-muted-foreground lg:col-span-3 lg:col-start-10">
-              Reels, campañas, piezas editoriales y materiales listos para ver en detalle.
+              Reels educativos, campañas sociales, sistemas editoriales y assets de marca listos para revisar por formato.
             </p>
           </div>
 
@@ -268,7 +268,7 @@ export const ServicesContent = () => {
           <div className="mt-10 border-t border-hairline pt-6 text-sm text-muted-foreground/82">
             <span className="inline-flex items-center gap-2">
               <LineChart className="h-4 w-4 text-accent" aria-hidden="true" />
-              Producción pensada para ejecución, consistencia y lectura de resultados.
+              Producción pensada para canales, consistencia editorial y lectura rápida de resultados.
             </span>
           </div>
         </div>
