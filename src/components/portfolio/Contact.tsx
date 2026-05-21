@@ -37,11 +37,8 @@ export const Contact = () => {
           <div className="space-y-7 lg:col-span-7 lg:space-y-8">
             <span className="text-xs uppercase tracking-[0.22em] text-background/62">06 · Contacto</span>
             <h2 className="max-w-4xl font-display text-4xl leading-[1.04] tracking-normal text-balance text-background sm:text-5xl lg:text-6xl">
-              Lista para ejecutar social media, contenido y campañas.
+              Disponible para proyectos de Community Management, contenido visual y sistemas editoriales para marcas digitales.
             </h2>
-            <p className="max-w-2xl text-base leading-relaxed text-background/72 text-pretty lg:text-lg">
-              Community Manager para redes sociales, reels, editorial content, newsletter, campaign assets y reportes para marcas que necesitan presencia activa.
-            </p>
 
             <div className="space-y-5 pt-1 sm:pt-2">
               <a
@@ -50,7 +47,7 @@ export const Contact = () => {
                 rel="noopener noreferrer"
                 className="soft-button inline-flex items-center gap-2 rounded-full bg-background px-8 py-4 text-sm font-semibold text-foreground shadow-soft transition-colors duration-700 hover:bg-background/88"
               >
-                Contactar por WhatsApp
+                WhatsApp
                 <MessageCircle className="h-4 w-4" aria-hidden="true" />
               </a>
 

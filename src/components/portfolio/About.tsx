@@ -1,6 +1,6 @@
 export const About = () => {
-  const clientSignals = ["Kairos Research", "Lytryum", "Exponencial", "Travel VYP", "Colegio Samuel Juárez", "Hotel Matices"];
-  const toolSignals = ["Canva", "Meta Business Suite", "Metricool", "GA4", "Excel / Google Sheets", "CapCut", "Premiere", "Figma"];
+  const clientSignals = ["Kairos Research", "Lytryum", "Exponencial Cripto Club", "Turismo", "Branding institucional", "Ecommerce"];
+  const toolSignals = ["Canva", "Figma", "Photoshop", "CapCut", "Premiere", "GA4", "Search Console", "Metricool", "Meta Business Suite", "Notion"];
 
   return (
     <section id="about" className="relative overflow-hidden border-t border-hairline py-24 lg:py-28">
@@ -16,14 +16,17 @@ export const About = () => {
             <div className="space-y-5">
               <span className="font-display text-5xl leading-none text-foreground/8 sm:text-6xl">02</span>
               <h2 className="max-w-sm font-display text-2xl leading-tight text-foreground sm:text-3xl">
-                Social media con criterio editorial y ejecución constante.
+                Contenido, comunicación visual y sistemas editoriales.
               </h2>
             </div>
           </div>
           <div className="lg:col-span-7 lg:col-start-6">
             <div className="space-y-6 border-l border-hairline pl-6 text-base leading-relaxed text-muted-foreground text-pretty sm:pl-8 lg:text-lg">
               <p>
-                Trabajo contenido, comunidad y comunicación visual para marcas de tecnología, educación digital, turismo y ecommerce, conectando calendarios editoriales, reels, newsletter, campaign assets y reportes en sistemas de contenido claros.
+                Trabajo en la intersección entre contenido, comunicación visual y sistemas editoriales para marcas digitales y proyectos tecnológicos.
+              </p>
+              <p>
+                He colaborado en ecosistemas de contenido para Kairos Research, Lytryum, Exponencial Cripto Club y proyectos de turismo, branding institucional y ecommerce, desarrollando piezas orientadas a comunicación, organización visual y distribución multi-plataforma.
               </p>
 
               <div className="grid gap-7 border-y border-hairline py-6 text-sm leading-relaxed lg:grid-cols-2">

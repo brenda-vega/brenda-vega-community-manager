@@ -18,10 +18,22 @@ type PortfolioAsset = {
 };
 
 const contentSystems = [
-  "Calendario editorial y ritmo de publicación",
-  "Newsletter y contenido de retención",
-  "Adaptación cross-platform por canal",
-  "Organización visual de campañas y assets",
+  {
+    title: "Contenido editorial y social media",
+    description: "Sistemas visuales para newsletters, campañas, reels y contenido educativo.",
+  },
+  {
+    title: "Adaptación multi-plataforma",
+    description: "Contenido optimizado para redes sociales, newsletters, blogs y formatos digitales.",
+  },
+  {
+    title: "Organización de contenido",
+    description: "Calendarios editoriales, estructura visual y sistemas de publicación recurrente.",
+  },
+  {
+    title: "Comunicación visual estratégica",
+    description: "Diseño orientado a claridad, retención visual y objetivos de marketing.",
+  },
 ];
 
 const assetPath = (filename: string) => `${import.meta.env.BASE_URL}assets/${filename}`;
@@ -337,14 +349,15 @@ export const ServicesContent = () => {
           <div className="mt-8 grid grid-cols-1 border-y border-hairline sm:grid-cols-2 lg:grid-cols-4">
             {contentSystems.map((item, index) => (
               <div
-                key={item}
+                key={item.title}
                 className="group border-b border-hairline px-0 py-3.5 transition-colors hover:border-accent/30 sm:px-5 lg:border-r lg:[&:nth-child(4n)]:border-r-0"
               >
                 <div className="mb-2 flex items-center justify-between gap-4">
                   <span className="font-display text-sm text-muted-foreground/70">{String(index + 1).padStart(2, "0")}</span>
                   <span className="h-1.5 w-1.5 rounded-full bg-accent/70 opacity-70 transition-opacity group-hover:opacity-100" />
                 </div>
-                <p className="text-sm leading-relaxed text-foreground/82">{item}</p>
+                <h3 className="text-sm font-medium leading-snug text-foreground/88">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
               </div>
             ))}
           </div>

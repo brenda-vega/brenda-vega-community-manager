@@ -98,10 +98,10 @@ export const Hero = () => {
 
           <div className="reveal reveal-delay-2 max-w-2xl space-y-3 text-[15px] text-foreground/82 sm:text-lg lg:text-[1.08rem] leading-relaxed text-pretty">
             <p>
-              Gestiono redes sociales, reels y sistemas editoriales para marcas que necesitan presencia constante, comunidad activa y contenido medible.
+              Diseño sistemas de contenido y comunicación visual para marcas digitales, combinando estrategia, contenido editorial y ejecución multi-plataforma.
             </p>
             <p className="text-[13px] leading-relaxed text-foreground/70 sm:text-base">
-              Visual Content Designer como soporte estratégico para calendarios, newsletters, campaign assets y multi-platform content.
+              Visual Content Designer · Editorial Content · Community Systems
             </p>
           </div>
 
