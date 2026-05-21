@@ -33,7 +33,7 @@ const projects: Project[] = [
     caseStudyPath: "/projects/kairos",
     hasCaseStudy: true,
     description: [
-      "Social media, newsletter, infografías y videos cortos para una marca Web3.",
+      "Ejecución multiformato para una marca Web3: redes, newsletter, infografías y video corto.",
     ],
     did: [
       "+129% crecimiento orgánico de comunidad",
@@ -44,7 +44,7 @@ const projects: Project[] = [
       "Adaptación multiformato",
     ],
     result:
-      "+129% crecimiento orgánico, 30-35% open rate y más de 100 piezas visuales producidas.",
+      "+129% crecimiento orgánico · 30-35% open rate · +100 piezas visuales",
     tags: ["Redes sociales", "Newsletter", "Reels", "Infografías"],
     image: kairos,
     featured: true,
@@ -58,7 +58,7 @@ const projects: Project[] = [
     caseStudyPath: "/projects/lytryum",
     hasCaseStudy: true,
     description: [
-      "Comunidad desde cero para academia Web3 en español con contenido educativo multicanal.",
+      "Comunidad educativa Web3 desde cero con contenido multicanal en español.",
     ],
     did: [
       "4 comunidades construidas desde cero",
@@ -69,7 +69,7 @@ const projects: Project[] = [
       "Adaptación multicanal",
     ],
     result:
-      "4 comunidades construidas desde cero con contenido educativo y crecimiento 100% orgánico.",
+      "4 comunidades desde cero · +50 piezas educativas · crecimiento 100% orgánico",
     tags: ["Comunidad", "Educación", "Discord", "Crecimiento orgánico"],
     image: lytryum,
     featured: true,
@@ -83,7 +83,7 @@ const projects: Project[] = [
     caseStudyPath: "/projects/exponencial",
     hasCaseStudy: true,
     description: [
-      "Contenido visual, thumbnails y piezas promocionales para eventos de comunidad cripto.",
+      "Contenido visual y soporte multicanal para eventos, campañas y comunidad cripto.",
     ],
     did: [
       "Gestión de contenido en 6+ plataformas",
@@ -94,7 +94,7 @@ const projects: Project[] = [
       "Consistencia visual",
     ],
     result:
-      "Contenido visual para 6+ plataformas, eventos, campañas y comunidad.",
+      "6+ plataformas · eventos y campañas · thumbnails, videos y piezas sociales",
     tags: ["Redes sociales", "Eventos", "Thumbnails", "Video"],
     image: exponencial,
     featured: true,
@@ -254,6 +254,15 @@ const ProjectCase = ({
                 <p className="max-w-sm border-l border-accent/50 pl-3 text-sm leading-relaxed text-foreground/86 text-pretty">
                   {project.result}
                 </p>
+              ) : null}
+              {project.featured ? (
+                <div className="grid max-w-sm grid-cols-1 gap-2 border-y border-hairline py-3">
+                  {project.did.slice(0, 3).map((item) => (
+                    <p key={item} className="text-[11px] uppercase leading-snug tracking-[0.12em] text-foreground/72">
+                      {item}
+                    </p>
+                  ))}
+                </div>
               ) : null}
               <div className="max-w-sm space-y-3 text-sm leading-relaxed text-muted-foreground text-pretty">
                 {project.description.map((paragraph) => (
