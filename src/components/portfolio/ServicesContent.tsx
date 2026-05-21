@@ -29,7 +29,7 @@ const featuredReels = [
 const visualAssets = [
   {
     title: "Mantle Puebla — Promoción de evento",
-    caption: "Pieza para campaña y convocatoria.",
+    caption: "Promoción de evento para comunidad Web3.",
     src: assetPath("mantle-puebla-event-post.jpg"),
     alt: "Mantle Puebla event promotion post",
   },
@@ -47,21 +47,21 @@ const visualAssets = [
   },
   {
     title: "Tequila Jalisco — Post promocional",
-    caption: "Contenido promocional para redes.",
+    caption: "Post promocional para campaña turística.",
     src: assetPath("tequila-jalisco-social-post.jpg"),
     alt: "Tequila Jalisco promotional social post",
   },
   {
     title: "Materiales promocionales impresos",
-    caption: "Soporte visual para campaña.",
+    caption: "Materiales de apoyo para campaña.",
     src: assetPath("print-promotional-materials.jpg"),
     alt: "Print promotional materials",
   },
   {
-    title: "Travel VYP — Diseño impreso",
-    caption: "Material de marca impreso.",
+    title: "Lytryum — AI NFT Collection",
+    caption: "AI-generated NFT collection visuals and mockups.",
     src: assetPath("travelvyp-print-design.jpg"),
-    alt: "Travel VYP print design",
+    alt: "Lytryum AI NFT collection visuals and mockups",
   },
 ];
 
