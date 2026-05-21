@@ -17,49 +17,49 @@ const featuredReels = [
   {
     title: "Reel — Berachain Market Analysis",
     src: assetPath("reel-berachain-analysis.mp4"),
-    caption: "Short-form analysis for social media.",
+    caption: "Análisis en video corto para redes.",
   },
   {
     title: "Reel — 5 Lupas de la Semana",
     src: assetPath("reel-5-lupas-semana.mp4"),
-    caption: "Weekly editorial video format.",
+    caption: "Formato editorial semanal en video.",
   },
 ];
 
 const visualAssets = [
   {
-    title: "Mantle Puebla — Event Promotion",
-    caption: "Event promotion content.",
+    title: "Mantle Puebla — Promoción de evento",
+    caption: "Pieza para campaña y convocatoria.",
     src: assetPath("mantle-puebla-event-post.jpg"),
     alt: "Mantle Puebla event promotion post",
   },
   {
     title: "Travel VYP — Campañas en redes sociales",
-    caption: "Social campaign visuals.",
+    caption: "Visuales para campaña social.",
     src: assetPath("travelvyp-social-campaigns.png"),
     alt: "Travel VYP social media campaign visuals",
   },
   {
-    title: "Content Calendar — Editorial Planning",
-    caption: "Planning and publishing structure.",
+    title: "Calendario de contenido — Planeación editorial",
+    caption: "Estructura de publicación.",
     src: assetPath("content-calendar-editorial-planning.png"),
     alt: "Editorial planning content calendar",
   },
   {
-    title: "Tequila Jalisco — Promotional Social Post",
-    caption: "Promotional social content.",
+    title: "Tequila Jalisco — Post promocional",
+    caption: "Contenido promocional para redes.",
     src: assetPath("tequila-jalisco-social-post.jpg"),
     alt: "Tequila Jalisco promotional social post",
   },
   {
-    title: "Print Promotional Materials",
-    caption: "Print and campaign support.",
+    title: "Materiales promocionales impresos",
+    caption: "Soporte visual para campaña.",
     src: assetPath("print-promotional-materials.jpg"),
     alt: "Print promotional materials",
   },
   {
-    title: "Travel VYP — Print Design",
-    caption: "Printed brand materials.",
+    title: "Travel VYP — Diseño impreso",
+    caption: "Material de marca impreso.",
     src: assetPath("travelvyp-print-design.jpg"),
     alt: "Travel VYP print design",
   },
@@ -67,7 +67,7 @@ const visualAssets = [
 
 const brandGuidelines = {
   title: "Colegio Samuel Juárez — Brand Guidelines",
-  caption: "Brand manual and visual guidelines.",
+  caption: "Manual de identidad visual.",
   preview: assetPath("manual_identidad_colegio.jpeg"),
   href: assetPath("colegio-samuel-juarez-brand-guidelines.pdf"),
 };

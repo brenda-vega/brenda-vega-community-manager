@@ -6,9 +6,9 @@ const services = [
   "Community Manager",
   "Social Media Manager",
   "Content Creator",
-  "Visual Content Designer",
-  "Marketing Assistant",
-  "Social Media Designer",
+  "Visual Content",
+  "Comunicación editorial",
+  "Métricas y reportes",
 ];
 
 const secondaryLinks = [
@@ -31,18 +31,18 @@ const secondaryLinks = [
 
 export const Contact = () => {
   return (
-    <section id="contact" className="scroll-reveal relative border-t border-hairline py-24 sm:py-28 lg:py-40">
+    <section id="contact" className="scroll-reveal relative border-t border-hairline py-20 sm:py-24 lg:py-32">
       <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-96 bg-gradient-to-b from-accent/6 to-transparent" />
 
       <div className="container">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
-          <div className="space-y-8 lg:col-span-7 lg:space-y-10">
+          <div className="space-y-7 lg:col-span-7 lg:space-y-8">
             <span className="text-xs uppercase tracking-[0.22em] text-muted-foreground">07 · Contacto</span>
             <h2 className="max-w-4xl font-display text-4xl leading-[1.04] tracking-tight text-balance sm:text-5xl lg:text-6xl">
-              Este portfolio muestra cómo el contenido puede sostener presencia, comunidad y comunicación digital con consistencia.
+              ¿Necesitas presencia activa, contenido visual y comunicación editorial?
             </h2>
             <p className="max-w-2xl text-base leading-relaxed text-muted-foreground text-pretty lg:text-lg">
-              Estoy disponible para apoyar marcas que necesitan gestión de redes, contenido visual, reels, calendarios editoriales y reportes claros de ejecución.
+              Disponible para gestión de redes sociales, reels, contenido visual, calendarios editoriales y reportes claros de ejecución.
             </p>
 
             <div className="space-y-5 pt-1 sm:pt-2">
@@ -99,7 +99,7 @@ export const Contact = () => {
           </aside>
         </div>
 
-        <footer className="mt-24 flex flex-col items-start justify-between gap-4 border-t border-hairline pt-8 text-xs sm:flex-row sm:items-center lg:mt-32 lg:pt-10">
+        <footer className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-hairline pt-8 text-xs sm:flex-row sm:items-center lg:mt-24 lg:pt-10">
           <p className="text-foreground/55">© 2026 Brenda Vega · Community Manager</p>
           <p className="text-foreground/68">Community Manager · Redes sociales · Reels · Contenido visual · Comunicación digital</p>
         </footer>
