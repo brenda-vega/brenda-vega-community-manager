@@ -1,9 +1,4 @@
 import { ArrowUpRight } from "lucide-react";
-import kairos from "@/assets/kairos-research-product-visual-system.png";
-import lytryum from "@/assets/lytryum-web3-education-brand-system.png";
-import exponencial from "@/assets/exponencial-event-campaign-design.png";
-import fidex from "@/assets/fidex-capital-fintech-ui-design.png";
-import phronesis from "@/assets/phronesis-fintech-dashboard-product-design.png";
 
 type Project = {
   index: string;
@@ -20,8 +15,9 @@ type Project = {
   tags: string[];
   image: string;
   featured?: boolean;
-  supporting?: boolean;
 };
+
+const assetPath = (filename: string) => `${import.meta.env.BASE_URL}assets/${filename}`;
 
 const projects: Project[] = [
   {
@@ -47,7 +43,7 @@ const projects: Project[] = [
     responsibilities: ["Calendario editorial", "Adaptación para redes", "Comunicación educativa"],
     tools: "Metricool, CapCut, Premiere Pro, Photoshop",
     tags: ["Redes sociales", "Newsletter", "Reels", "Infografías"],
-    image: kairos,
+    image: assetPath("    web3-editorial-content-system-kairos.png"),
     featured: true,
   },
   {
@@ -73,7 +69,7 @@ const projects: Project[] = [
     responsibilities: ["Community engagement", "Contenido educativo", "Adaptación multiplataforma"],
     tools: "Canva, Photoshop, Discord, Notion",
     tags: ["Comunidad", "Educación", "Discord", "Crecimiento orgánico"],
-    image: lytryum,
+    image: assetPath("    web3-education-content-system-lytryum.png"),
     featured: true,
   },
   {
@@ -99,53 +95,12 @@ const projects: Project[] = [
     responsibilities: ["Piezas promocionales", "Comunicación de eventos", "Consistencia por canal"],
     tools: "Photoshop, Illustrator, Canva, CapCut",
     tags: ["Redes sociales", "Eventos", "Thumbnails", "Video"],
-    image: exponencial,
+    image: assetPath("crypto-community-content-system-exponencial.png"),
     featured: true,
-  },
-  {
-    index: "04",
-    name: "Fidex — Digital Product Support",
-    eyebrow: "OTROS PROYECTOS DIGITALES",
-    category: "Landing pages · Comunicación digital",
-    description: [
-      "Estructura visual para comunicar información financiera con claridad en web y producto digital.",
-    ],
-    did: [
-      "Landing pages y soporte visual digital",
-      "Diseño de interfaces y estructura visual",
-      "Figma, Framer, Illustrator",
-      "Web / Producto digital",
-    ],
-    result:
-      "Landing pages y soporte visual digital para información financiera.",
-    tags: ["Landing", "Figma", "Framer"],
-    image: fidex,
-    supporting: true,
-  },
-  {
-    index: "05",
-    name: "Phronesis — Educational Visual System",
-    eyebrow: "OTROS PROYECTOS DIGITALES",
-    category: "Sistema editorial educativo · Assets digitales",
-    description: [
-      "Organización editorial y assets digitales para comunicar contenido educativo en plataforma.",
-    ],
-    did: [
-      "Sistema visual educativo y assets digitales",
-      "Diseño visual y organización de contenido",
-      "Figma, Photoshop, Illustrator",
-      "Plataforma digital / Contenido educativo",
-    ],
-    result:
-      "Sistema visual educativo y assets digitales para contenido editorial.",
-    tags: ["Educación", "Assets", "Figma"],
-    image: phronesis,
-    supporting: true,
   },
 ];
 
 const featuredProjects = projects.filter((project) => project.featured);
-const supportingProjects = projects.filter((project) => project.supporting);
 
 export const Work = () => {
   return (
@@ -181,78 +136,8 @@ export const Work = () => {
           ))}
         </div>
 
-        <div className="mt-14 border-t border-hairline pt-8 lg:mt-20 lg:pt-10">
-          <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Otros trabajos digitales</p>
-              <h3 className="mt-3 font-display text-2xl leading-tight text-foreground sm:text-3xl">
-                Comunicación digital y soporte editorial
-              </h3>
-            </div>
-            <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Piezas de apoyo para landing, educación y organización de información sin competir con el trabajo de contenido.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            {supportingProjects.map((project) => (
-              <SupportingProjectCard key={project.name} project={project} />
-            ))}
-          </div>
-        </div>
       </div>
     </section>
-  );
-};
-
-const SupportingProjectCard = ({ project }: { project: Project }) => {
-  return (
-    <article className="motion-card group grid grid-cols-1 gap-5 border-t border-hairline py-6 transition-colors duration-700 hover:border-accent/25 sm:grid-cols-[0.85fr_1fr]">
-      <div
-        className="relative overflow-hidden rounded-[1.15rem] border border-hairline bg-surface/20 outline-none focus-visible:ring-1 focus-visible:ring-accent/50 focus-visible:ring-offset-4 focus-visible:ring-offset-background"
-      >
-        <img
-          src={project.image}
-          alt={`${project.name} / ${project.category}`}
-          loading="lazy"
-          decoding="async"
-          width={900}
-          height={640}
-          className="aspect-[4/3] w-full object-cover p-1 opacity-[0.92] transition-opacity duration-700 group-hover:opacity-100"
-        />
-      </div>
-
-      <div className="flex flex-col justify-between gap-5">
-        <div className="space-y-3">
-          <p className="text-[10px] uppercase tracking-[0.18em] text-accent">{project.category}</p>
-          <h4 className="font-display text-xl leading-tight text-foreground">
-            {project.name}
-          </h4>
-          <p className="text-sm leading-relaxed text-muted-foreground">{project.description[0]}</p>
-        </div>
-
-        <div className="space-y-4">
-          <div className="flex flex-wrap gap-1.5">
-            {project.tags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full border border-hairline bg-background/35 px-2.5 py-1 text-[10px] uppercase tracking-[0.11em] text-muted-foreground"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-          <a
-            href="#content-video"
-            aria-label={`Ver piezas relacionadas de ${project.name}`}
-            className="group/case inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-foreground/68 outline-none transition-colors duration-700 hover:text-foreground focus-visible:text-foreground"
-          >
-            <span className="link-underline">Ver piezas</span>
-            <ArrowUpRight className="h-4 w-4 text-accent/72 transition-all duration-700 group-hover/case:translate-x-0.5 group-hover/case:-translate-y-0.5 group-hover/case:text-accent" aria-hidden="true" />
-          </a>
-        </div>
-      </div>
-    </article>
   );
 };
 
