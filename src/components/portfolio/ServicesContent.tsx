@@ -9,6 +9,7 @@ type PortfolioAsset = {
   format: string;
   objective: string;
   role: string;
+  tools?: string;
   channel: string;
   type?: "image" | "video";
   actionLabel?: string;
@@ -34,10 +35,11 @@ const featuredReels = [
     src: assetPath("reel-berachain-analysis.mp4"),
     caption: "Análisis en video corto para redes.",
     alt: "Berachain market analysis reel",
-    format: "Reel / Short-form video",
-    objective: "Contenido educativo para lectura rápida de mercado.",
-    role: "Edición, ritmo visual y adaptación para redes.",
-    channel: "TikTok / Reels / Shorts",
+    format: "Reel educativo / short-form",
+    objective: "Engagement y awareness sobre tendencias Web3.",
+    role: "Edición de video, adaptación visual y contenido short-form.",
+    tools: "CapCut, Premiere Pro, Adobe Podcast, Metricool",
+    channel: "TikTok / Instagram Reels",
     type: "video" as const,
     actionLabel: "Abrir reel",
   },
@@ -46,10 +48,11 @@ const featuredReels = [
     src: assetPath("reel-5-lupas-semana.mp4"),
     caption: "Formato editorial semanal en video.",
     alt: "5 Lupas de la Semana reel",
-    format: "Reel / Serie editorial",
-    objective: "Resumen semanal para comunidad y redes.",
-    role: "Edición, captions y estructura visual.",
-    channel: "TikTok / Reels / Shorts",
+    format: "Reel editorial / resumen semanal",
+    objective: "Retención y comunicación de contenido educativo.",
+    role: "Edición de video, estructura visual y adaptación para redes.",
+    tools: "CapCut, Premiere Pro, Photoshop, Metricool",
+    channel: "TikTok / Instagram Reels",
     type: "video" as const,
     actionLabel: "Abrir reel",
   },
@@ -57,43 +60,47 @@ const featuredReels = [
 
 const visualAssets: PortfolioAsset[] = [
   {
-    title: "Mantle Puebla — Promoción de evento",
+    title: "Mantle Puebla — Event Promotion",
     caption: "Promoción de evento para comunidad Web3.",
     src: assetPath("mantle-puebla-event-post.jpg"),
     alt: "Mantle Puebla event promotion post",
-    format: "Post promocional",
-    objective: "Convocatoria y awareness para evento de comunidad.",
-    role: "Diseño de pieza y adaptación visual para campaña.",
-    channel: "Redes sociales",
+    format: "Post promocional para evento",
+    objective: "Awareness y comunicación visual para comunidad/evento.",
+    role: "Diseño de pieza promocional y adaptación visual.",
+    tools: "Canva, Photoshop, Illustrator",
+    channel: "Instagram / Redes sociales",
   },
   {
-    title: "Travel VYP — Campañas en redes sociales",
+    title: "Travel VYP — Social Media Campaigns",
     caption: "Visuales para campaña social.",
     src: assetPath("travelvyp-social-campaigns.png"),
     alt: "Travel VYP social media campaign visuals",
-    format: "Campaña social",
-    objective: "Promoción de ofertas y presencia de marca.",
-    role: "Diseño de piezas para publicación y lectura rápida.",
+    format: "Contenido promocional para redes sociales",
+    objective: "Promoción de servicios turísticos y presencia digital.",
+    role: "Diseño de contenido visual y adaptación para campañas.",
+    tools: "Photoshop, Illustrator, Canva",
     channel: "Instagram / Facebook",
   },
   {
-    title: "Calendario de contenido — Planeación editorial",
+    title: "Content Calendar — Editorial Planning",
     caption: "Estructura de publicación.",
     src: assetPath("content-calendar-editorial-planning.png"),
     alt: "Editorial planning content calendar",
-    format: "Calendario editorial",
-    objective: "Organizar publicaciones por canal, formato y objetivo.",
-    role: "Planeación, estructura de contenido y seguimiento.",
-    channel: "Redes sociales / Gestión interna",
+    format: "Planeación editorial y calendario de contenido",
+    objective: "Organización de publicaciones y consistencia de contenido.",
+    role: "Estructuración de contenido y planificación editorial.",
+    tools: "Notion, Google Sheets, Excel, Metricool",
+    channel: "Instagram / LinkedIn / Newsletter",
   },
   {
-    title: "Tequila Jalisco — Post promocional",
+    title: "Tequila Jalisco — Promotional Social Post",
     caption: "Post promocional para campaña turística.",
     src: assetPath("tequila-jalisco-social-post.jpg"),
     alt: "Tequila Jalisco promotional social post",
-    format: "Post promocional",
-    objective: "Comunicar oferta y destino de forma visual.",
-    role: "Diseño de pieza para campaña en redes.",
+    format: "Pieza promocional para redes sociales",
+    objective: "Promoción visual y reconocimiento de marca.",
+    role: "Diseño de contenido promocional.",
+    tools: "Photoshop, Illustrator",
     channel: "Instagram / Facebook",
   },
   {
@@ -111,10 +118,11 @@ const visualAssets: PortfolioAsset[] = [
     caption: "AI-generated NFT collection visuals and mockups.",
     src: assetPath("travelvyp-print-design.jpg"),
     alt: "Lytryum AI NFT collection visuals and mockups",
-    format: "Digital assets / Mockups",
-    objective: "Presentar producción visual para colección NFT.",
-    role: "Producción visual, mockups y experimentación con IA.",
-    channel: "Web3 / Comunidad digital",
+    format: "Colección visual NFT generada con IA",
+    objective: "Comunicación visual y producción de assets digitales.",
+    role: "Producción visual, mockups y dirección de piezas.",
+    tools: "Midjourney, Photoshop, Illustrator, ChatGPT",
+    channel: "Discord / Redes sociales / Comunidad Web3",
   },
 ];
 
@@ -124,9 +132,10 @@ const brandGuidelines: PortfolioAsset = {
   src: assetPath("manual_identidad_colegio.jpeg"),
   alt: "Colegio Samuel Juárez brand guidelines preview",
   format: "Manual de identidad",
-  objective: "Documentar lineamientos visuales para consistencia de marca.",
-  role: "Diseño, estructura visual y presentación del sistema.",
-  channel: "Branding / Comunicación institucional",
+  objective: "Mantener consistencia gráfica y lineamientos de marca.",
+  role: "Diseño y organización de sistema visual institucional.",
+  tools: "Illustrator, Photoshop, InDesign",
+  channel: "Comunicación institucional / Material digital",
   actionLabel: "Ver manual",
   actionHref: assetPath("colegio-samuel-juarez-brand-guidelines.pdf"),
 };
@@ -373,6 +382,7 @@ const AssetLightbox = ({ asset, onClose }: { asset: PortfolioAsset; onClose: () 
               <dl className="space-y-4 border-y border-hairline py-5 text-sm">
                 <AssetMeta label="Objetivo" value={asset.objective} />
                 <AssetMeta label="Rol" value={asset.role} />
+                {asset.tools ? <AssetMeta label="Herramientas" value={asset.tools} /> : null}
                 <AssetMeta label="Canal" value={asset.channel} />
               </dl>
             </div>
