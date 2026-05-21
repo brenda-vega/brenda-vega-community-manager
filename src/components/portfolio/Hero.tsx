@@ -93,7 +93,7 @@ export const Hero = () => {
 
           <h1 className="reveal reveal-delay-1 max-w-[14ch] font-display text-[2.65rem] leading-[0.96] tracking-normal text-balance sm:text-[3.7rem] lg:text-[4.85rem] xl:text-[5.65rem]">
             <span className="block text-foreground">Community Manager</span>
-            <span className="block italic font-light text-accent">Social Media & Visual Content</span>
+            <span className="block text-[0.5em] italic font-light leading-[1.08] text-accent">Social Media & Visual Content</span>
           </h1>
 
           <div className="reveal reveal-delay-2 max-w-2xl space-y-3 text-[15px] text-foreground/82 sm:text-lg lg:text-[1.08rem] leading-relaxed text-pretty">
