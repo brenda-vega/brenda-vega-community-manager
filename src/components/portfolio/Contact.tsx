@@ -7,13 +7,11 @@ const services = [
   "Social Media Manager",
   "Content Creator",
   "Visual Content Designer",
-  "Comunicación editorial",
-  "Métricas y reportes",
 ];
 
 const secondaryLinks = [
   {
-    label: "LinkedIn",
+    label: "Ver LinkedIn",
     href: "https://www.linkedin.com/in/brendavega012/",
     icon: ArrowUpRight,
   },
@@ -31,7 +29,7 @@ const secondaryLinks = [
 
 export const Contact = () => {
   return (
-    <section id="contact" className="scroll-reveal relative border-t border-hairline py-20 sm:py-24 lg:py-32">
+    <section id="contact" className="scroll-reveal relative scroll-mt-24 border-t border-hairline py-20 sm:py-24 lg:py-32">
       <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-96 bg-gradient-to-b from-accent/6 to-transparent" />
 
       <div className="container">
@@ -39,15 +37,15 @@ export const Contact = () => {
           <div className="space-y-7 lg:col-span-7 lg:space-y-8">
             <span className="text-xs uppercase tracking-[0.22em] text-muted-foreground">07 · Contacto</span>
             <h2 className="max-w-4xl font-display text-4xl leading-[1.04] tracking-tight text-balance sm:text-5xl lg:text-6xl">
-              Disponible para social media, contenido visual y comunicación editorial.
+              Disponible para Community Manager, Social Media y contenido visual.
             </h2>
             <p className="max-w-2xl text-base leading-relaxed text-muted-foreground text-pretty lg:text-lg">
-              Community Manager, Social Media, Content Creator y Visual Content Designer para marcas que necesitan ejecución clara.
+              Ejecución de redes sociales, reels, calendarios editoriales, contenido visual y reportes para marcas que necesitan presencia activa.
             </p>
 
             <div className="space-y-5 pt-1 sm:pt-2">
               <a
-                href="https://wa.me/524445492516?text=Hola%20Brenda,%20vi%20tu%20portfolio%20y%20me%20interesa%20hablar%20sobre%20un%20proyecto."
+                href="https://wa.me/524445492516?text=Hola%20Brenda,%20vi%20tu%20portfolio%20y%20me%20interesa%20hablar%20sobre%20una%20oportunidad%20de%20Community%20Manager%20/%20Social%20Media."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="soft-button inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3.5 text-sm font-medium text-background shadow-glow transition-colors duration-500 hover:bg-accent-soft"
@@ -77,6 +75,7 @@ export const Contact = () => {
                 <MapPin className="h-4 w-4 text-accent" aria-hidden="true" />
                 San Luis Potosí, México - Disponible para Remoto
               </span>
+              <span>Social media · Reels · Content Creator · Visual Content Designer</span>
             </div>
           </div>
 
@@ -101,7 +100,7 @@ export const Contact = () => {
 
         <footer className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-hairline pt-8 text-xs sm:flex-row sm:items-center lg:mt-24 lg:pt-10">
           <p className="text-foreground/55">© 2026 Brenda Vega · Community Manager</p>
-          <p className="text-foreground/68">Community Manager · Redes sociales · Reels · Contenido visual · Comunicación digital</p>
+          <p className="text-foreground/68">Community Manager · Social Media · Content Creator · Visual Content Designer</p>
         </footer>
       </div>
     </section>
