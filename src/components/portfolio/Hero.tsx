@@ -85,23 +85,23 @@ export const Hero = () => {
       </div>
 
       <div className="container relative z-10">
-        <div className="max-w-3xl space-y-5 sm:space-y-7 lg:max-w-[43rem] xl:max-w-[47rem] lg:space-y-9">
+        <div className="max-w-3xl space-y-5 sm:space-y-6 lg:max-w-[43rem] xl:max-w-[47rem] lg:space-y-7">
           <div className="reveal inline-flex items-center gap-3 rounded-full border border-hairline bg-surface/32 px-4 py-2 text-[11px] uppercase tracking-[0.19em] text-foreground/76 backdrop-blur-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-accent/85" />
             Community Manager · Content Systems · Reels · Social Media
           </div>
 
-          <h1 className="reveal reveal-delay-1 max-w-[13ch] font-display text-[2.85rem] sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-normal text-balance">
-            <span className="text-foreground">Community Manager </span>
-            <span className="italic font-light text-accent">& Visual Content Designer</span>
+          <h1 className="reveal reveal-delay-1 max-w-[14ch] font-display text-[2.65rem] leading-[0.96] tracking-normal text-balance sm:text-[3.7rem] lg:text-[4.85rem] xl:text-[5.65rem]">
+            <span className="block text-foreground">Community Manager</span>
+            <span className="block italic font-light text-accent">Social Media & Visual Content</span>
           </h1>
 
-          <div className="reveal reveal-delay-2 max-w-2xl space-y-3 text-[15px] text-foreground/82 sm:space-y-4 sm:text-lg lg:text-[1.18rem] leading-relaxed text-pretty">
+          <div className="reveal reveal-delay-2 max-w-2xl space-y-3 text-[15px] text-foreground/82 sm:text-lg lg:text-[1.08rem] leading-relaxed text-pretty">
             <p>
               Gestiono redes sociales, reels y sistemas editoriales para marcas que necesitan presencia constante, comunidad activa y contenido medible.
             </p>
-            <p className="text-[13px] sm:text-base lg:text-lg leading-relaxed text-foreground/72">
-              Produzco calendarios, newsletters, reportes y campañas con coherencia visual, ritmo de publicación y lectura clara de resultados.
+            <p className="text-[13px] leading-relaxed text-foreground/70 sm:text-base">
+              Visual Content Designer como soporte estratégico para calendarios, newsletters, campaign assets y multi-platform content.
             </p>
           </div>
 

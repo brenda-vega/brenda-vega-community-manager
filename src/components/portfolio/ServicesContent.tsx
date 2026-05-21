@@ -316,31 +316,31 @@ export const ServicesContent = () => {
 
   return (
     <>
-      <section id="services" className="scroll-reveal relative overflow-hidden border-t border-hairline py-20 lg:py-24">
+      <section id="services" className="scroll-reveal relative overflow-hidden border-t border-hairline py-14 lg:py-16">
         <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-80 bg-gradient-to-b from-accent/6 to-transparent" />
 
         <div className="container">
-          <div className="mb-12 flex items-center justify-between border-b border-hairline pb-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
-            <span>05 · Qué hago</span>
-            <span className="hidden sm:inline">Editorial · Cross-platform · Campañas</span>
+          <div className="mb-8 flex items-center justify-between border-b border-hairline pb-4 text-xs uppercase tracking-[0.22em] text-muted-foreground">
+            <span>04 · Qué hago</span>
+            <span className="hidden sm:inline">Editorial Content · Multi-platform Content</span>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end">
-            <h2 className="max-w-4xl font-display text-4xl leading-[0.98] tracking-normal text-balance sm:text-5xl lg:col-span-8 lg:text-6xl">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-end">
+            <h2 className="max-w-3xl font-display text-3xl leading-[1.02] tracking-normal text-balance sm:text-4xl lg:col-span-7 lg:text-5xl">
               Sistema de contenido
             </h2>
-            <p className="max-w-md text-sm leading-relaxed text-muted-foreground lg:col-span-3 lg:col-start-10">
-              Calendarios, newsletters y assets organizados para sostener campañas, ecommerce, turismo, comunidad e institucional.
+            <p className="max-w-md text-sm leading-relaxed text-muted-foreground lg:col-span-4 lg:col-start-9">
+              Organización editorial para sostener social media, newsletter y campaign assets sin perder ritmo ni consistencia.
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 border-y border-hairline sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid grid-cols-1 border-y border-hairline sm:grid-cols-2 lg:grid-cols-4">
             {contentSystems.map((item, index) => (
               <div
                 key={item}
-                className="group border-b border-hairline px-0 py-4 transition-colors hover:border-accent/30 sm:px-5 lg:border-r lg:[&:nth-child(4n)]:border-r-0"
+                className="group border-b border-hairline px-0 py-3.5 transition-colors hover:border-accent/30 sm:px-5 lg:border-r lg:[&:nth-child(4n)]:border-r-0"
               >
-                <div className="mb-3 flex items-center justify-between gap-4">
+                <div className="mb-2 flex items-center justify-between gap-4">
                   <span className="font-display text-sm text-muted-foreground/70">{String(index + 1).padStart(2, "0")}</span>
                   <span className="h-1.5 w-1.5 rounded-full bg-accent/70 opacity-70 transition-opacity group-hover:opacity-100" />
                 </div>
@@ -356,7 +356,7 @@ export const ServicesContent = () => {
 
         <div className="container">
           <div className="mb-10 flex items-center justify-between border-b border-hairline pb-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
-            <span>06 · Contenido y video</span>
+            <span>05 · Contenido y video</span>
             <span className="hidden sm:inline">Campañas · Reels · Sistemas editoriales</span>
           </div>
 
