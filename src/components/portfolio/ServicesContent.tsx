@@ -42,28 +42,28 @@ const featuredReels = [
   {
     title: "Reel — Berachain Market Analysis",
     src: assetPath("    crypto-market-analysis-reel-berachain.mp4"),
-    caption: "Reel educativo para awareness sobre tendencias Web3.",
+    caption: "Contenido corto enfocado en análisis visual de mercado y comunicación educativa para plataformas sociales de formato corto.",
     alt: "Berachain market analysis reel",
-    format: "Reel educativo / short-form",
-    objective: "Engagement y awareness sobre tendencias Web3 mediante contenido breve y distribuible.",
-    role: "Edición de video, adaptación visual y contenido short-form.",
-    responsibilities: ["Edición de video corto", "Adaptación visual para redes", "Estructura de contenido educativo"],
-    tools: "CapCut, Premiere Pro, Adobe Podcast, Metricool",
-    channel: "TikTok / Instagram Reels",
+    format: "Educational Reel / Market Analysis",
+    objective: "Simplificar información compleja para formatos de consumo rápido y contenido recurrente.",
+    role: "Edición de video, dirección visual y adaptación multi-plataforma.",
+    responsibilities: ["Edición de video", "Dirección visual", "Adaptación multi-plataforma"],
+    tools: "CapCut · Premiere Pro · Photoshop · Adobe Podcast · Metricool",
+    channel: "TikTok · Instagram Reels · YouTube Shorts",
     type: "video" as const,
     actionLabel: "Ver reel",
   },
   {
     title: "Reel — 5 Lupas de la Semana",
     src: assetPath("    weekly-web3-news-reel-kairos.mp4"),
-    caption: "Resumen editorial semanal para retención.",
+    caption: "Resumen visual semanal enfocado en noticias y análisis del ecosistema Web3 para contenido de alta frecuencia.",
     alt: "5 Lupas de la Semana reel",
-    format: "Reel editorial / resumen semanal",
-    objective: "Retención y comunicación de contenido educativo con lectura rápida de temas clave.",
-    role: "Edición de video, estructura visual y adaptación para redes.",
-    responsibilities: ["Edición de resumen semanal", "Jerarquía visual", "Adaptación educativa para reels"],
-    tools: "CapCut, Premiere Pro, Photoshop, Metricool",
-    channel: "TikTok / Instagram Reels",
+    format: "Weekly News Reel",
+    objective: "Mantener ritmo editorial y distribución constante de contenido para comunidad digital.",
+    role: "Edición de video, estructura visual y adaptación multi-plataforma.",
+    responsibilities: ["Edición de video", "Estructura visual", "Adaptación multi-plataforma"],
+    tools: "CapCut · Premiere Pro · Photoshop · Metricool",
+    channel: "TikTok · Instagram Reels · YouTube Shorts",
     type: "video" as const,
     actionLabel: "Ver reel",
   },
@@ -72,51 +72,51 @@ const featuredReels = [
 const visualAssets: PortfolioAsset[] = [
   {
     title: "Kairos — Newsletter Editorial Design",
-    caption: "Sistema editorial para comunicación semanal.",
+    caption: "Sistema visual para newsletter semanal enfocado en análisis Web3, contenido editorial y distribución multi-plataforma.",
     src: assetPath("    web3-newsletter-editorial-design-kairos.png"),
     alt: "Kairos Web3 newsletter editorial design",
-    format: "Newsletter semanal / contenido editorial",
-    objective: "Retención y distribución digital de contenido Web3 mediante una estructura editorial clara.",
-    role: "Organización editorial, adaptación visual e integración de piezas educativas.",
-    responsibilities: ["Estructura visual de newsletter", "Jerarquía de contenido", "Adaptación editorial semanal"],
-    tools: "Canva, Notion, Metricool, GA4",
-    channel: "Newsletter / Email / Editorial Content",
+    format: "Editorial Content System",
+    objective: "Mejorar claridad visual y consistencia de comunicación para contenido recurrente.",
+    role: "Diseño editorial, estructura visual y adaptación de contenido.",
+    responsibilities: ["Diseño editorial", "Estructura visual", "Adaptación de contenido"],
+    tools: "Beehiiv · Figma · Photoshop · Canva",
+    channel: "Newsletter / Social Media",
   },
   {
     title: "Kairos — Editorial Blog System",
-    caption: "Apoyo editorial, SEO y portadas para blog.",
+    caption: "Apoyo en organización editorial y estructura de contenido para artículos Web3, incluyendo keyword mapping, revisión de indexación y adaptación visual de portadas e infografías previo a la transición hacia newsletters.",
     src: assetPath("web3-editorial-blog-system-kairos.png"),
     alt: "Kairos Web3 editorial blog content system",
     format: "Editorial Content Support",
-    objective: "Organización editorial para artículos Web3, soporte SEO y distribución previa a la transición hacia newsletters.",
-    role: "Keyword mapping, revisión de indexación y adaptación visual de portadas e infografías.",
-    responsibilities: ["Organización editorial", "Keyword mapping", "Revisión en Google Search Console", "Adaptación visual para portadas"],
-    tools: "Google Search Console, Ubersuggest, GA4, Canva, Notion",
-    channel: "Blog / Search / Editorial Content",
+    objective: "Mejorar organización de contenido y distribución editorial digital.",
+    role: "Soporte editorial y adaptación visual de contenido.",
+    responsibilities: ["Soporte editorial", "Adaptación visual", "Organización de contenido"],
+    tools: "Google Search Console · Ubersuggest · GA4 · Canva · Notion",
+    channel: "Blog / Editorial Content",
   },
   {
     title: "Content Calendar — Editorial Planning",
-    caption: "Planeación de publicaciones y consistencia.",
+    caption: "Sistema de organización visual para planificación de contenido y publicaciones recurrentes.",
     src: assetPath("    social-media-editorial-content-calendar.png"),
     alt: "Social media editorial content calendar",
-    format: "Calendario editorial / sistema de contenido",
-    objective: "Organización de publicaciones, formatos y consistencia de contenido por canal.",
-    role: "Estructuración de contenido, calendario editorial y seguimiento de publicaciones.",
-    responsibilities: ["Planeación editorial", "Organización por canal", "Seguimiento de consistencia"],
-    tools: "Notion, Google Sheets, Excel, Metricool",
-    channel: "Instagram / LinkedIn / Newsletter",
+    format: "Content System",
+    objective: "Mantener consistencia editorial y estructura multi-plataforma.",
+    role: "Planeación visual y organización de contenido.",
+    responsibilities: ["Planeación visual", "Organización de contenido", "Estructura multi-plataforma"],
+    tools: "Notion · Canva · Google Sheets",
+    channel: "Editorial Workflow",
   },
   {
     title: "Storyboard — Social Media Video System",
-    caption: "Estructura previa para video social.",
+    caption: "Storyboard visual para planeación de contenido en video y estructura narrativa para redes sociales.",
     src: assetPath("    social-media-video-storyboard-system.png"),
     alt: "Social media video storyboard system",
-    format: "Storyboard / sistema de video social",
-    objective: "Ordenar narrativa, cortes y mensajes clave antes de producir contenido short-form.",
-    role: "Planeación visual, estructura narrativa y adaptación de contenido para video.",
-    responsibilities: ["Storyboarding", "Organización de secuencia", "Adaptación para video corto"],
-    tools: "Canva, CapCut, Notion",
-    channel: "TikTok / Instagram Reels / Shorts",
+    format: "Content Planning",
+    objective: "Mejorar claridad narrativa y producción de contenido audiovisual.",
+    role: "Conceptualización visual y estructura narrativa.",
+    responsibilities: ["Conceptualización visual", "Estructura narrativa", "Planeación de contenido audiovisual"],
+    tools: "Photoshop · Canva · CapCut",
+    channel: "Social Media / Video Content",
   },
   {
     title: "Kairos — Monthly Report Editorial Design",
@@ -132,15 +132,15 @@ const visualAssets: PortfolioAsset[] = [
   },
   {
     title: "Dulce Felicidad — Shopify Product Catalog",
-    caption: "Catálogo digital para ecommerce.",
+    caption: "Desarrollo visual y estructural de ecommerce para catálogo digital, contenido comercial y organización de productos dentro de Shopify.",
     src: assetPath("shopify-product-catalog-design-dulce-felicidad.png"),
     alt: "Dulce Felicidad Shopify product catalog design",
-    format: "Catálogo ecommerce / contenido de producto",
-    objective: "Organizar productos, mensajes comerciales y lectura visual para apoyar captación y compra.",
-    role: "Diseño de catálogo, estructura visual y adaptación para ecommerce.",
-    responsibilities: ["Organización de productos", "Diseño de catálogo", "Comunicación comercial"],
-    tools: "Shopify, Canva, Photoshop",
-    channel: "Shopify / Ecommerce / Social Media",
+    format: "Ecommerce Content System",
+    objective: "Mejorar experiencia visual, navegación y comunicación de productos para entorno ecommerce.",
+    role: "Diseño visual, estructura de contenido y configuración de catálogo digital.",
+    responsibilities: ["Diseño visual", "Estructura de contenido", "Configuración de catálogo digital"],
+    tools: "Shopify · Photoshop · Canva",
+    channel: "Ecommerce · Social Media",
   },
   {
     title: "Dulce Felicidad — LinkedIn Content Design",
@@ -156,75 +156,75 @@ const visualAssets: PortfolioAsset[] = [
   },
   {
     title: "Mantle Puebla — Event Promotion",
-    caption: "Campaña social para evento de comunidad.",
+    caption: "Campaña visual para difusión de evento y comunicación de comunidad Web3 en plataformas sociales.",
     src: assetPath("social-media-event-campaign-mantle-puebla.png"),
     alt: "Mantle Puebla social media event campaign",
-    format: "Campaña social / evento",
-    objective: "Awareness y comunicación visual para comunidad y evento.",
-    role: "Diseño de pieza promocional, adaptación visual y comunicación de evento.",
-    responsibilities: ["Diseño de campaña social", "Adaptación para redes", "Comunicación de evento"],
-    tools: "Canva, Photoshop, Illustrator",
-    channel: "Instagram / Redes sociales",
+    format: "Social Campaign",
+    objective: "Generar awareness y difusión de evento para comunidad digital.",
+    role: "Diseño visual y adaptación de contenido promocional.",
+    responsibilities: ["Diseño visual", "Adaptación de contenido promocional", "Difusión de evento"],
+    tools: "Canva · Photoshop",
+    channel: "X · LinkedIn · Instagram",
   },
   {
-    title: "Travel Agency — Social Media Campaign",
-    caption: "Campaña promocional para servicios turísticos.",
+    title: "Travel VYP — Social Media Campaign",
+    caption: "Contenido visual para campañas promocionales y comunicación digital enfocada en turismo y difusión comercial.",
     src: assetPath("    travel-agency-social-media-campaign.png"),
     alt: "Travel agency social media campaign",
-    format: "Campaña social / turismo",
-    objective: "Promoción de servicios turísticos, comunicación comercial y presencia digital.",
-    role: "Diseño de contenido visual y adaptación para campañas.",
-    responsibilities: ["Diseño de campaña social", "Adaptación Instagram/Facebook", "Comunicación de oferta turística"],
-    tools: "Photoshop, Illustrator, Canva",
-    channel: "Instagram / Facebook",
+    format: "Social Media Campaign",
+    objective: "Mejorar presencia visual y consistencia de contenido para redes sociales.",
+    role: "Diseño de contenido y adaptación visual para campañas digitales.",
+    responsibilities: ["Diseño de contenido", "Adaptación visual", "Campañas digitales"],
+    tools: "Photoshop · Illustrator",
+    channel: "Facebook · Instagram",
   },
   {
-    title: "Hotel Matices — Facebook Travel Campaign",
-    caption: "Campaña visual para promoción turística.",
+    title: "Sol & Mar — Facebook Travel Campaign",
+    caption: "Campaña visual para promoción turística en redes sociales, diseñada bajo lineamientos visuales y restricciones de texto para campañas en Facebook Ads.",
     src: assetPath("facebook-travel-campaign-hotel-matices.png"),
     alt: "Hotel Matices Facebook travel campaign",
     format: "Social Media Campaign / Facebook Ads",
-    objective: "Comunicación comercial y captación en temporada promocional bajo lineamientos de Facebook Ads.",
-    role: "Diseño de campaña visual, adaptación a restricciones de texto y comunicación promocional.",
-    responsibilities: ["Diseño de pieza para pauta", "Adaptación a lineamientos de plataforma", "Comunicación comercial turística"],
-    tools: "Photoshop, Meta Ads, Facebook",
-    channel: "Facebook Ads / Social Media",
+    objective: "Mejorar captación visual y comunicación comercial para promociones de temporada.",
+    role: "Diseño promocional y adaptación para pauta digital.",
+    responsibilities: ["Diseño promocional", "Adaptación para pauta digital", "Comunicación comercial"],
+    tools: "Photoshop · Meta Ads · Facebook",
+    channel: "Facebook Ads · Social Media",
   },
   {
     title: "Tuksa — Travel Marketing Digital Campaign",
-    caption: "Campaña digital para promoción turística.",
+    caption: "Sistema visual para contenido turístico y comunicación multi-formato, incluyendo medios impresos, banners promocionales, piezas para redes sociales, comunicación vía correo y adaptación de mascota para campañas estacionales.",
     src: assetPath("travel-marketing-digital-campaign-tuksa.png"),
     alt: "Tuksa travel marketing digital campaign",
-    format: "Campaña digital / travel marketing",
-    objective: "Apoyar captación y distribución digital con comunicación visual para turismo.",
-    role: "Diseño de campaña, adaptación de formatos y soporte visual para redes.",
-    responsibilities: ["Comunicación comercial", "Adaptación multiplataforma", "Diseño de campaña"],
-    tools: "Canva, Photoshop, Meta Business Suite",
-    channel: "Facebook / Instagram / Social Media",
+    format: "Tourism Content System",
+    objective: "Mantener consistencia visual y fortalecer relación con clientes mediante contenido recurrente y promocional.",
+    role: "Diseño visual, adaptación multi-formato y comunicación promocional.",
+    responsibilities: ["Diseño visual", "Adaptación multi-formato", "Comunicación promocional"],
+    tools: "Photoshop · Illustrator",
+    channel: "Social Media · Email · Print",
   },
   {
-    title: "Colegio Samuel Juárez — Brand Guidelines Design",
-    caption: "Sistema visual para comunicación institucional.",
+    title: "Colegio Samuel Juárez — Brand Identity System",
+    caption: "Manual de identidad visual y sistema gráfico institucional para comunicación digital e impresa.",
     src: assetPath("    school-brand-guidelines-design.png"),
     alt: "School brand guidelines design",
-    format: "Sistema de identidad / comunicación institucional",
-    objective: "Ordenar lineamientos visuales para sostener consistencia gráfica en materiales institucionales.",
-    role: "Diseño y organización de sistema visual institucional.",
-    responsibilities: ["Sistema de identidad", "Lineamientos visuales", "Consistencia institucional"],
-    tools: "Illustrator, Photoshop, InDesign",
-    channel: "Comunicación institucional / Material digital",
+    format: "Brand Identity System",
+    objective: "Establecer lineamientos visuales consistentes para la institución.",
+    role: "Diseño editorial y sistema visual de marca.",
+    responsibilities: ["Diseño editorial", "Sistema visual de marca", "Lineamientos institucionales"],
+    tools: "Illustrator · Photoshop · InDesign",
+    channel: "Brand Guidelines / Print",
   },
   {
-    title: "Lytryum — AI NFT Collection",
-    caption: "Visuales digitales para colección NFT.",
+    title: "Lytryum — Educational NFT Collection",
+    caption: "Sistema visual de NFTs educativos para certificaciones digitales, incluyendo clasificación, taxonomía visual y definición de características cualitativas para assets del ecosistema Lytryum.",
     src: assetPath("ai-generated-nft-collection-lytryum.jpg"),
     alt: "Lytryum AI generated NFT collection",
-    format: "Colección visual NFT generada con IA",
-    objective: "Comunicación visual y producción de assets digitales para comunidad Web3.",
-    role: "Producción visual, mockups y dirección de piezas.",
-    responsibilities: ["Producción de assets digitales", "Dirección de piezas", "Organización visual para comunidad"],
-    tools: "Midjourney, Photoshop, Illustrator, ChatGPT",
-    channel: "Discord / Redes sociales / Comunidad Web3",
+    format: "Educational NFT Collection",
+    objective: "Apoyar engagement y estructura visual del sistema de certificaciones digitales.",
+    role: "Dirección visual, conceptualización y generación de assets NFT.",
+    responsibilities: ["Dirección visual", "Conceptualización", "Generación de assets NFT"],
+    tools: "Midjourney · Photoshop · IA Generativa",
+    channel: "Community · Digital Assets",
   },
   {
     title: "Coquito — Bakery Brand Identity",
@@ -264,41 +264,41 @@ const visualAssets: PortfolioAsset[] = [
   },
   {
     title: "Fidex — Digital Product Support",
-    caption: "Sistema digital para claridad financiera.",
+    caption: "Sistema visual para dashboards financieros enfocado en organización responsive de información, layouts modulares, modales y experiencia dark/light para producto digital.",
     src: assetPath("fintech-dashboard-ui-system-fidex.png"),
     alt: "Fidex fintech dashboard UI system",
-    format: "UI/Product Support / Digital System",
-    objective: "Organizar información financiera con claridad visual para web y producto digital.",
-    role: "Diseño de interfaces, estructura visual y soporte de comunicación digital.",
-    responsibilities: ["Estructura de interfaz", "Claridad de información", "Soporte visual digital"],
-    tools: "Figma, Framer, Illustrator",
-    channel: "Web / Producto digital",
+    format: "UI / Fintech System",
+    objective: "Mejorar claridad visual y estructura de información financiera en múltiples dispositivos.",
+    role: "Diseño UI, layouts responsive y estructura visual de componentes.",
+    responsibilities: ["Diseño UI", "Layouts responsive", "Estructura visual de componentes"],
+    tools: "Figma · Framer · Photoshop",
+    channel: "UI / Product",
   },
   {
     title: "Phronesis — Learning Platform System",
-    caption: "Sistema educativo para contenido digital.",
+    caption: "Sistema visual para plataforma educativa enfocado en síntesis de información, layouts editoriales, modales y organización visual de contenido para experiencia de aprendizaje digital.",
     src: assetPath("web3-learning-platform-ui-system-phronesis.png"),
     alt: "Phronesis Web3 learning platform UI system",
-    format: "Learning Platform System / UI Content",
-    objective: "Organizar contenido educativo y navegación visual para una plataforma de aprendizaje Web3.",
-    role: "Diseño visual, organización de contenido y soporte editorial para plataforma.",
-    responsibilities: ["Sistema educativo", "Organización editorial", "Diseño de interfaz"],
-    tools: "Figma, Photoshop, Illustrator",
-    channel: "Plataforma digital / Contenido educativo",
+    format: "Learning Platform System",
+    objective: "Mejorar claridad educativa y estructura visual de contenido complejo.",
+    role: "Diseño UI, organización editorial y síntesis visual de información.",
+    responsibilities: ["Diseño UI", "Organización editorial", "Síntesis visual de información"],
+    tools: "Figma · Framer · Photoshop",
+    channel: "UI / Educational Platform",
   },
 ];
 
 const brandGuidelines: PortfolioAsset = {
-  title: "Colegio Samuel Juárez — Sistema de identidad",
-  caption: "Lineamientos para comunicación institucional.",
+  title: "Colegio Samuel Juárez — Brand Identity System",
+  caption: "Manual de identidad visual y sistema gráfico institucional para comunicación digital e impresa.",
   src: assetPath("school-brand-guidelines.jpeg"),
   alt: "Colegio Samuel Juárez brand guidelines preview",
-  format: "Manual de identidad visual",
-  objective: "Mantener consistencia gráfica y lineamientos de marca.",
-  role: "Organización de lineamientos visuales para comunicación institucional.",
-  responsibilities: ["Sistema de identidad", "Lineamientos de uso", "Comunicación institucional consistente"],
-  tools: "Illustrator, Photoshop, InDesign",
-  channel: "Comunicación institucional / Material digital",
+  format: "Brand Identity System",
+  objective: "Establecer lineamientos visuales consistentes para la institución.",
+  role: "Diseño editorial y sistema visual de marca.",
+  responsibilities: ["Diseño editorial", "Sistema visual de marca", "Lineamientos institucionales"],
+  tools: "Illustrator · Photoshop · InDesign",
+  channel: "Brand Guidelines / Print",
   actionLabel: "Ver manual",
   actionHref: assetPath("colegio-samuel-juarez-brand-guidelines.pdf"),
 };
@@ -385,11 +385,11 @@ export const ServicesContent = () => {
           <div className="grid grid-cols-1 gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
             {selectedAssets.map((item) => {
               const isVideo = item.type === "video";
-              const actionText = item.actionLabel === "Abrir reel" ? "Ver reel" : item.actionLabel ?? "Ver pieza";
+              const actionText = `Abrir ficha de ${item.title}`;
 
               return (
                 <article key={item.title} className="motion-card group border-t border-hairline py-5 transition-colors duration-700 hover:border-accent/25">
-                  <button type="button" onClick={() => setActiveAsset(item)} className="block w-full text-left" aria-label={`Ver pieza: ${item.title}`}>
+                  <button type="button" onClick={() => setActiveAsset(item)} className="block w-full text-left" aria-label={`Abrir ficha: ${item.title}`}>
                     <div className="mb-4 aspect-[4/3] w-full overflow-hidden rounded-[1.15rem] border border-hairline bg-surface/15 transition-colors duration-700 group-hover:border-white/15">
                       {isVideo ? (
                         <video
@@ -452,7 +452,8 @@ export const ServicesContent = () => {
 const AssetLightbox = ({ asset, onClose }: { asset: PortfolioAsset; onClose: () => void }) => {
   const isVideo = asset.type === "video";
   const actionHref = asset.actionHref ?? asset.src;
-  const actionLabel = asset.actionLabel ?? (isVideo ? "Ver reel" : "Ver pieza");
+  const showAction = isVideo || Boolean(asset.actionHref);
+  const actionLabel = asset.actionLabel ?? "Ver reel";
 
   return (
     <div
@@ -467,7 +468,7 @@ const AssetLightbox = ({ asset, onClose }: { asset: PortfolioAsset; onClose: () 
         }
       }}
     >
-      <div className="max-h-[92vh] w-full max-w-6xl overflow-y-auto rounded-[1.25rem] border border-hairline bg-[#080808] shadow-soft">
+      <div className="max-h-[92vh] w-full max-w-7xl overflow-y-auto rounded-[1.25rem] border border-hairline bg-[#080808] shadow-soft">
         <div className="flex items-center justify-between border-b border-hairline px-5 py-4 sm:px-6">
           <p className="text-[11px] uppercase tracking-[0.22em] text-foreground/58">Ficha de contenido</p>
           <button
@@ -480,15 +481,15 @@ const AssetLightbox = ({ asset, onClose }: { asset: PortfolioAsset; onClose: () 
           </button>
         </div>
 
-        <div className="grid grid-cols-1 gap-0 lg:grid-cols-[minmax(0,1fr)_24rem]">
-          <div className="border-b border-hairline bg-black/34 p-3 lg:border-b-0 lg:border-r lg:p-5">
+        <div className="grid grid-cols-1 gap-0 lg:grid-cols-2">
+          <div className="flex items-center border-b border-hairline bg-black/34 p-3 lg:min-h-[34rem] lg:border-b-0 lg:border-r lg:p-6">
             {isVideo ? (
               <video
                 src={asset.src}
                 controls
                 playsInline
                 preload="metadata"
-                className="max-h-[72vh] w-full rounded-[1rem] bg-background object-contain"
+                className="max-h-[64vh] w-full rounded-[1rem] bg-background object-contain lg:max-h-[32rem]"
                 aria-label={asset.title}
               />
             ) : (
@@ -497,12 +498,12 @@ const AssetLightbox = ({ asset, onClose }: { asset: PortfolioAsset; onClose: () 
                 alt={asset.alt}
                 loading="eager"
                 decoding="async"
-                className="max-h-[72vh] w-full rounded-[1rem] bg-background object-contain"
+                className="max-h-[64vh] w-full rounded-[1rem] bg-background object-contain lg:max-h-[32rem]"
               />
             )}
           </div>
 
-          <div className="flex flex-col justify-between gap-7 p-6 lg:p-8">
+          <div className="flex flex-col justify-between gap-7 p-6 lg:p-9">
             <div className="space-y-6">
               <div className="space-y-3 border-b border-hairline pb-5">
                 <h3 id="asset-lightbox-title" className="font-display text-2xl leading-tight text-foreground text-pretty sm:text-3xl">
@@ -516,34 +517,24 @@ const AssetLightbox = ({ asset, onClose }: { asset: PortfolioAsset; onClose: () 
 
               <div className="space-y-5 text-sm">
                 <AssetMeta label="Objetivo" value={asset.objective} />
-
-                <div>
-                  <p className="text-[10px] uppercase tracking-[0.18em] text-foreground/48">Responsabilidades</p>
-                  <ul className="mt-3 space-y-2">
-                    {asset.responsibilities.map((item) => (
-                      <li key={item} className="flex gap-3 leading-relaxed text-foreground/84">
-                        <span className="mt-2 h-1 w-1 flex-none rounded-full bg-accent/80" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
+                <AssetMeta label="Rol" value={asset.role} />
                 {asset.tools ? <AssetMeta label="Herramientas" value={asset.tools} /> : null}
-                <AssetMeta label="Canal" value={asset.channel} />
+                <AssetMeta label="Canal / plataforma" value={asset.channel} />
               </div>
             </div>
 
             <div className="flex flex-wrap items-center gap-3">
-              <a
-                href={actionHref}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-3 text-sm font-medium text-background transition-colors hover:bg-accent-soft"
-              >
-                {actionLabel}
-                <ExternalLink className="h-4 w-4" aria-hidden="true" />
-              </a>
+              {showAction ? (
+                <a
+                  href={actionHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-3 text-sm font-medium text-background transition-colors hover:bg-accent-soft"
+                >
+                  {actionLabel}
+                  <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                </a>
+              ) : null}
               <button
                 type="button"
                 onClick={onClose}
