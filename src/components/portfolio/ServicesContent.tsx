@@ -16,15 +16,11 @@ type PortfolioAsset = {
   actionHref?: string;
 };
 
-const services = [
-  "Gestión de redes sociales",
-  "Planeación editorial",
-  "Reels y video corto",
-  "Diseño de contenido visual",
-  "Community engagement",
-  "Newsletters y contenido editorial",
-  "Métricas y reportes",
-  "Landing pages básicas",
+const contentSystems = [
+  "Calendario editorial",
+  "Newsletter",
+  "Adaptación multiplataforma",
+  "Planificación visual de contenido",
 ];
 
 const assetPath = (filename: string) => `${import.meta.env.BASE_URL}assets/${filename}`;
@@ -140,6 +136,8 @@ const brandGuidelines: PortfolioAsset = {
   actionHref: assetPath("colegio-samuel-juarez-brand-guidelines.pdf"),
 };
 
+const selectedAssets: PortfolioAsset[] = [...featuredReels, ...visualAssets, brandGuidelines];
+
 export const ServicesContent = () => {
   const [activeAsset, setActiveAsset] = useState<PortfolioAsset | null>(null);
 
@@ -163,7 +161,7 @@ export const ServicesContent = () => {
 
   return (
     <>
-      <section id="services" className="scroll-reveal relative overflow-hidden border-t border-hairline py-24 lg:py-32">
+      <section id="services" className="scroll-reveal relative overflow-hidden border-t border-hairline py-20 lg:py-24">
         <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-80 bg-gradient-to-b from-accent/6 to-transparent" />
 
         <div className="container">
@@ -174,15 +172,15 @@ export const ServicesContent = () => {
 
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end">
             <h2 className="max-w-4xl font-display text-4xl leading-[0.98] tracking-normal text-balance sm:text-5xl lg:col-span-8 lg:text-6xl">
-              Qué hago
+              Sistema de contenido
             </h2>
             <p className="max-w-md text-sm leading-relaxed text-muted-foreground lg:col-span-3 lg:col-start-10">
-              Gestión, producción y seguimiento de contenido para mantener presencia activa y claridad de resultados.
+              Planeación, adaptación y seguimiento para sostener presencia activa sin duplicar esfuerzos por canal.
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 border-y border-hairline sm:grid-cols-2 lg:grid-cols-4">
-            {services.map((item, index) => (
+          <div className="mt-10 grid grid-cols-1 border-y border-hairline sm:grid-cols-2 lg:grid-cols-4">
+            {contentSystems.map((item, index) => (
               <div
                 key={item}
                 className="group border-b border-hairline px-0 py-4 transition-colors hover:border-accent/30 sm:px-5 lg:border-r lg:[&:nth-child(4n)]:border-r-0"
@@ -198,16 +196,16 @@ export const ServicesContent = () => {
         </div>
       </section>
 
-      <section id="content-video" className="scroll-reveal relative overflow-hidden border-t border-hairline py-24 lg:py-32">
+      <section id="content-video" className="scroll-reveal relative overflow-hidden border-t border-hairline py-20 lg:py-28">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-grain opacity-20" />
 
         <div className="container">
-          <div className="mb-12 flex items-center justify-between border-b border-hairline pb-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
+          <div className="mb-10 flex items-center justify-between border-b border-hairline pb-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
             <span>06 · Contenido y video</span>
-            <span className="hidden sm:inline">Reels · Carruseles · Newsletters</span>
+            <span className="hidden sm:inline">Assets seleccionados</span>
           </div>
 
-          <div className="mb-12 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end">
+          <div className="mb-10 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end">
             <h2 className="max-w-4xl font-display text-4xl leading-[0.98] tracking-normal text-balance sm:text-5xl lg:col-span-8 lg:text-6xl">
               Contenido y video
             </h2>
@@ -216,92 +214,58 @@ export const ServicesContent = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-5">
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:col-span-5">
-              {featuredReels.map((reel) => (
-                <article
-                  key={reel.title}
-                  className="overflow-hidden rounded-[1.75rem] border border-hairline bg-surface/16 p-3 shadow-soft"
-                >
-                  <video
-                    src={reel.src}
-                    controls
-                    muted
-                    playsInline
-                    preload="metadata"
-                    className="aspect-[9/16] w-full rounded-[1.15rem] bg-background/55 object-cover"
-                    aria-label={reel.title}
-                  />
-                  <div className="px-1 pb-1 pt-5">
-                    <p className="font-display text-xl leading-tight text-foreground">{reel.title}</p>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{reel.caption}</p>
+          <div className="grid grid-cols-1 gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+            {selectedAssets.map((item) => {
+              const isVideo = item.type === "video";
+              const actionText = item.actionLabel === "Abrir reel" ? "Ver reel" : item.actionLabel ?? "Ver pieza";
+
+              return (
+                <article key={item.title} className="motion-card group border-t border-hairline py-5 transition-colors hover:border-accent/30">
+                  <button type="button" onClick={() => setActiveAsset(item)} className="block w-full text-left" aria-label={`Ver pieza: ${item.title}`}>
+                    <div className="mb-4 aspect-[4/3] w-full overflow-hidden rounded-[1.15rem] border border-hairline bg-surface/14">
+                      {isVideo ? (
+                        <video
+                          src={item.src}
+                          muted
+                          playsInline
+                          preload="metadata"
+                          className="h-full max-h-[18rem] w-full bg-background/55 object-cover sm:max-h-[19rem]"
+                          aria-label={item.title}
+                        />
+                      ) : (
+                        <img
+                          src={item.src}
+                          alt={item.alt}
+                          loading="lazy"
+                          decoding="async"
+                          width={900}
+                          height={700}
+                          className="h-full w-full object-cover transition-opacity group-hover:opacity-95"
+                        />
+                      )}
+                    </div>
+                  </button>
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <p className="text-[10px] uppercase tracking-[0.18em] text-accent">{item.format}</p>
+                      <h3 className="mt-2 font-display text-lg leading-tight text-foreground">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.caption}</p>
+                    </div>
                     <button
                       type="button"
-                      onClick={() => setActiveAsset(reel)}
-                      className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-accent"
+                      onClick={() => setActiveAsset(item)}
+                      className="mt-1 grid h-9 w-9 flex-none place-items-center rounded-full border border-hairline bg-surface/20 text-accent transition-colors hover:border-accent/30 hover:text-foreground"
+                      aria-label={actionText}
                     >
-                      Ver reel
                       <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
                     </button>
                   </div>
                 </article>
-              ))}
-            </div>
-
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:col-span-7">
-              {visualAssets.map((item) => (
-                <article key={item.title} className="motion-card group border-t border-hairline py-6 transition-colors hover:border-accent/30">
-                  <button type="button" onClick={() => setActiveAsset(item)} className="block w-full text-left" aria-label={`Ver pieza: ${item.title}`}>
-                    <img
-                      src={item.src}
-                      alt={item.alt}
-                      loading="lazy"
-                      decoding="async"
-                      width={900}
-                      height={700}
-                      className="mb-5 aspect-[4/3] w-full rounded-[1.15rem] border border-hairline bg-surface/14 object-cover transition-opacity group-hover:opacity-95"
-                    />
-                  </button>
-                  <h3 className="font-display text-lg leading-tight text-foreground">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.caption}</p>
-                  <button
-                    type="button"
-                    onClick={() => setActiveAsset(item)}
-                    className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-accent"
-                  >
-                    Ver pieza
-                    <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
-                  </button>
-                </article>
-              ))}
-
-              <article className="motion-card group border-t border-hairline py-6 transition-colors hover:border-accent/30">
-                <button type="button" onClick={() => setActiveAsset(brandGuidelines)} className="block w-full text-left" aria-label={`Ver manual: ${brandGuidelines.title}`}>
-                  <img
-                    src={brandGuidelines.src}
-                    alt={brandGuidelines.alt}
-                    loading="lazy"
-                    decoding="async"
-                    width={1200}
-                    height={820}
-                    className="mb-5 aspect-[4/3] w-full rounded-[1.15rem] border border-hairline bg-surface/14 object-cover transition-opacity group-hover:opacity-95"
-                  />
-                </button>
-                <h3 className="font-display text-lg leading-tight text-foreground">{brandGuidelines.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{brandGuidelines.caption}</p>
-                <button
-                  type="button"
-                  onClick={() => setActiveAsset(brandGuidelines)}
-                  className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-accent"
-                >
-                  Ver manual
-                  <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
-                </button>
-              </article>
-            </div>
+              );
+            })}
           </div>
 
-          <div className="mt-12 border-t border-hairline pt-6 text-sm text-muted-foreground/82">
+          <div className="mt-10 border-t border-hairline pt-6 text-sm text-muted-foreground/82">
             <span className="inline-flex items-center gap-2">
               <LineChart className="h-4 w-4 text-accent" aria-hidden="true" />
               Producción pensada para ejecución, consistencia y lectura de resultados.

@@ -7,11 +7,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { scrollToHash } from "@/lib/scroll";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
-import Kairos from "./pages/projects/Kairos.tsx";
-import Fidex from "./pages/projects/Fidex.tsx";
-import Phronesis from "./pages/projects/Phronesis.tsx";
-import Lytryum from "./pages/projects/Lytryum.tsx";
-import Exponencial from "./pages/projects/Exponencial.tsx";
 
 const queryClient = new QueryClient();
 
@@ -39,11 +34,6 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/projects/kairos" element={<Kairos />} />
-          <Route path="/projects/fidex" element={<Fidex />} />
-          <Route path="/projects/phronesis" element={<Phronesis />} />
-          <Route path="/projects/lytryum" element={<Lytryum />} />
-          <Route path="/projects/exponencial" element={<Exponencial />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -1,5 +1,4 @@
 import { ArrowUpRight } from "lucide-react";
-import { Link } from "react-router-dom";
 import kairos from "@/assets/kairos-research-product-visual-system.png";
 import lytryum from "@/assets/lytryum-web3-education-brand-system.png";
 import exponencial from "@/assets/exponencial-event-campaign-design.png";
@@ -11,12 +10,12 @@ type Project = {
   name: string;
   eyebrow: string;
   category: string;
-  slug: string;
-  caseStudyPath: string;
-  hasCaseStudy?: boolean;
   description: string[];
   did: string[];
   result?: string;
+  role?: string;
+  formats?: string;
+  tools?: string;
   tags: string[];
   image: string;
   featured?: boolean;
@@ -29,9 +28,6 @@ const projects: Project[] = [
     name: "Kairos Research — Redes sociales, newsletter y contenido visual",
     eyebrow: "SOCIAL MEDIA",
     category: "Redes sociales · Newsletter · Contenido visual",
-    slug: "kairos",
-    caseStudyPath: "/projects/kairos",
-    hasCaseStudy: true,
     description: [
       "Ejecución multiformato para una marca Web3: redes, newsletter, infografías y video corto.",
     ],
@@ -45,6 +41,9 @@ const projects: Project[] = [
     ],
     result:
       "+129% crecimiento orgánico · 30-35% open rate · +100 piezas visuales",
+    role: "Community Manager & Visual Content Designer",
+    formats: "Redes sociales, newsletter, infografías, reels",
+    tools: "Metricool, CapCut, Premiere Pro, Photoshop",
     tags: ["Redes sociales", "Newsletter", "Reels", "Infografías"],
     image: kairos,
     featured: true,
@@ -54,9 +53,6 @@ const projects: Project[] = [
     name: "Lytryum — Comunidad y contenido educativo",
     eyebrow: "COMUNIDAD",
     category: "Comunidad · Contenido educativo · Redes sociales",
-    slug: "lytryum",
-    caseStudyPath: "/projects/lytryum",
-    hasCaseStudy: true,
     description: [
       "Comunidad educativa Web3 desde cero con contenido multicanal en español.",
     ],
@@ -70,6 +66,9 @@ const projects: Project[] = [
     ],
     result:
       "4 comunidades desde cero · +50 piezas educativas · crecimiento 100% orgánico",
+    role: "Community Builder & Content Designer",
+    formats: "Discord, LinkedIn, YouTube, Instagram",
+    tools: "Canva, Photoshop, Discord, Notion",
     tags: ["Comunidad", "Educación", "Discord", "Crecimiento orgánico"],
     image: lytryum,
     featured: true,
@@ -79,9 +78,6 @@ const projects: Project[] = [
     name: "Exponencial Cripto Club — Redes, eventos y contenido visual",
     eyebrow: "CONTENIDO SOCIAL",
     category: "Redes sociales · Eventos · Contenido visual",
-    slug: "exponencial",
-    caseStudyPath: "/projects/exponencial",
-    hasCaseStudy: true,
     description: [
       "Contenido visual y soporte multicanal para eventos, campañas y comunidad cripto.",
     ],
@@ -95,6 +91,9 @@ const projects: Project[] = [
     ],
     result:
       "6+ plataformas · eventos y campañas · thumbnails, videos y piezas sociales",
+    role: "Social Media & Visual Content Designer",
+    formats: "Eventos, thumbnails, posts, videos, campañas",
+    tools: "Photoshop, Illustrator, Canva, CapCut",
     tags: ["Redes sociales", "Eventos", "Thumbnails", "Video"],
     image: exponencial,
     featured: true,
@@ -104,9 +103,6 @@ const projects: Project[] = [
     name: "Fidex — Digital Product Support",
     eyebrow: "OTROS PROYECTOS DIGITALES",
     category: "Landing pages · Soporte visual digital",
-    slug: "fidex",
-    caseStudyPath: "/projects/fidex",
-    hasCaseStudy: true,
     description: [
       "Organización visual y claridad de información financiera para web y producto digital.",
     ],
@@ -127,9 +123,6 @@ const projects: Project[] = [
     name: "Phronesis — Educational Visual System",
     eyebrow: "OTROS PROYECTOS DIGITALES",
     category: "Sistema visual educativo · Assets digitales",
-    slug: "phronesis",
-    caseStudyPath: "/projects/phronesis",
-    hasCaseStudy: true,
     description: [
       "Comunicación de contenido educativo y estructura editorial para plataforma digital.",
     ],
@@ -152,13 +145,13 @@ const supportingProjects = projects.filter((project) => project.supporting);
 
 export const Work = () => {
   return (
-    <section id="work" className="relative overflow-hidden border-t border-hairline py-32 lg:py-44">
+    <section id="work" className="relative overflow-hidden border-t border-hairline py-24 lg:py-32">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-work-radial" />
       <div className="pointer-events-none absolute inset-0 -z-10 bg-grain opacity-20" />
 
       <div className="container">
-        <div className="mb-20 border-b border-hairline pb-12 lg:mb-24">
-          <div className="mb-10 flex items-center justify-between text-xs uppercase tracking-[0.22em] text-muted-foreground">
+        <div className="mb-12 border-b border-hairline pb-10 lg:mb-14">
+          <div className="mb-8 flex items-center justify-between text-xs uppercase tracking-[0.22em] text-muted-foreground">
             <span className="reveal inline-flex items-center gap-3">
               <span className="h-px w-10 bg-accent/60" />
               03 / Proyectos seleccionados
@@ -167,7 +160,7 @@ export const Work = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-end">
-            <h2 className="reveal reveal-delay-1 max-w-4xl font-display text-4xl leading-[1.02] tracking-normal text-balance sm:text-5xl lg:col-span-8 lg:text-7xl">
+            <h2 className="reveal reveal-delay-1 max-w-4xl font-display text-4xl leading-[1.02] tracking-normal text-balance sm:text-5xl lg:col-span-8 lg:text-6xl">
               Proyectos seleccionados
             </h2>
             <p className="reveal reveal-delay-2 max-w-md text-sm leading-relaxed text-muted-foreground lg:col-span-3 lg:col-start-10">
@@ -176,13 +169,10 @@ export const Work = () => {
           </div>
         </div>
 
-        <div className="space-y-10 lg:space-y-16">
-          {featuredProjects.map((project, i) => (
+        <div className="space-y-6 lg:space-y-8">
+          {featuredProjects.map((project) => (
             <div key={project.name} className="space-y-5">
-              <ProjectCase
-                project={project}
-                reverse={i % 2 === 1}
-              />
+              <ProjectCase project={project} />
             </div>
           ))}
         </div>
@@ -214,9 +204,7 @@ export const Work = () => {
 const SupportingProjectCard = ({ project }: { project: Project }) => {
   return (
     <article className="motion-card group grid grid-cols-1 gap-5 border-t border-hairline py-6 transition-colors hover:border-accent/30 sm:grid-cols-[0.85fr_1fr]">
-      <Link
-        to={project.caseStudyPath}
-        aria-label={`Ver proyecto de ${project.name}`}
+      <div
         className="relative overflow-hidden rounded-[1.15rem] border border-hairline bg-surface/20 outline-none focus-visible:ring-1 focus-visible:ring-accent/50 focus-visible:ring-offset-4 focus-visible:ring-offset-background"
       >
         <img
@@ -228,15 +216,13 @@ const SupportingProjectCard = ({ project }: { project: Project }) => {
           height={640}
           className="aspect-[4/3] w-full object-cover p-1 opacity-90 transition-opacity duration-500 group-hover:opacity-100"
         />
-      </Link>
+      </div>
 
       <div className="flex flex-col justify-between gap-5">
         <div className="space-y-3">
           <p className="text-[10px] uppercase tracking-[0.18em] text-accent">{project.category}</p>
           <h4 className="font-display text-xl leading-tight text-foreground">
-            <Link to={project.caseStudyPath} className="transition-colors duration-500 hover:text-accent-soft">
-              {project.name}
-            </Link>
+            {project.name}
           </h4>
           <p className="text-sm leading-relaxed text-muted-foreground">{project.description[0]}</p>
         </div>
@@ -252,14 +238,14 @@ const SupportingProjectCard = ({ project }: { project: Project }) => {
               </span>
             ))}
           </div>
-          <Link
-            to={project.caseStudyPath}
-            aria-label={`Ver proyecto de ${project.name}`}
+          <a
+            href="#content-video"
+            aria-label={`Ver piezas relacionadas de ${project.name}`}
             className="group/case inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-foreground/68 outline-none transition-colors duration-500 hover:text-foreground focus-visible:text-foreground"
           >
-            <span className="link-underline">Ver proyecto</span>
+            <span className="link-underline">Ver piezas</span>
             <ArrowUpRight className="h-4 w-4 text-accent/80 transition-transform duration-500 group-hover/case:translate-x-1 group-hover/case:-translate-y-1" aria-hidden="true" />
-          </Link>
+          </a>
         </div>
       </div>
     </article>
@@ -268,26 +254,65 @@ const SupportingProjectCard = ({ project }: { project: Project }) => {
 
 const ProjectCase = ({
   project,
-  reverse,
-  compact,
 }: {
   project: Project;
-  reverse?: boolean;
-  compact?: boolean;
 }) => {
   return (
     <article
-      className={`case-study group reveal relative overflow-hidden border border-hairline bg-surface/25 ${
-        compact ? "rounded-[1.5rem]" : "rounded-[1.75rem]"
-      }`}
+      className="case-study group reveal relative overflow-hidden rounded-[1.5rem] border border-hairline bg-surface/25"
     >
-      <div className={`grid grid-cols-1 md:grid-cols-12 ${compact ? "md:min-h-[430px] lg:min-h-[500px]" : "md:min-h-[500px] lg:min-h-[610px]"}`}>
-        <div className={`relative overflow-hidden ${compact ? "md:col-span-7" : "md:col-span-8"} ${reverse ? "md:order-2" : ""}`}>
-          <Link
-            to={project.caseStudyPath}
-            aria-label={`Ver proyecto de ${project.name}`}
-            className={`relative block h-full bg-background/24 outline-none focus-visible:ring-1 focus-visible:ring-accent/50 focus-visible:ring-offset-4 focus-visible:ring-offset-background ${compact ? "min-h-[220px] sm:min-h-[280px] md:min-h-[360px]" : "min-h-[240px] sm:min-h-[310px] md:min-h-[420px]"}`}
-          >
+      <div className="grid grid-cols-1 md:min-h-[390px] md:grid-cols-12 lg:min-h-[430px]">
+        <div className="flex flex-col justify-between gap-5 p-6 sm:p-7 md:col-span-5 md:p-8 lg:p-8">
+          <div className="space-y-4">
+            <div className="flex items-start justify-between gap-6">
+              <span className="font-display text-[1.7rem] leading-none text-foreground/[0.055] sm:text-4xl md:text-5xl md:text-foreground/[0.065]">{project.index}</span>
+              <span className="rounded-full border border-hairline bg-background/35 px-3 py-1.5 text-[10px] uppercase tracking-[0.18em] text-foreground/70">
+                {project.eyebrow}
+              </span>
+            </div>
+
+            <div className="space-y-3.5">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-accent sm:text-[11px]">{project.category}</p>
+              <h3 className="font-display text-2xl leading-[1.08] tracking-normal text-foreground text-pretty sm:text-3xl lg:text-[2rem]">
+                {project.name}
+              </h3>
+              {project.result ? (
+                <p className="max-w-sm border-l border-accent/50 pl-3 text-sm leading-snug text-foreground/86 text-pretty">
+                  {project.result}
+                </p>
+              ) : null}
+              <div className="max-w-sm text-sm leading-relaxed text-muted-foreground text-pretty">
+                {project.description.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            </div>
+
+            <dl className="grid max-w-md grid-cols-1 gap-2.5 border-y border-hairline py-3 text-xs sm:grid-cols-2">
+              {project.role ? <ProjectMeta label="Rol" value={project.role} /> : null}
+              {project.formats ? <ProjectMeta label="Formatos" value={project.formats} /> : null}
+              <ProjectMeta label="Resultados" value={project.did.slice(0, 3).join(" · ")} />
+              {project.tools ? <ProjectMeta label="Herramientas" value={project.tools} /> : null}
+            </dl>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href="#content-video"
+              aria-label={`Ver contenido destacado relacionado con ${project.name}`}
+              className="group/case ml-0 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-foreground/70 outline-none transition-colors duration-500 hover:text-foreground focus-visible:text-foreground sm:ml-2"
+            >
+              <span className="link-underline">Ver piezas</span>
+              <ArrowUpRight
+                className="h-4 w-4 text-accent/80 transition-transform duration-500 group-hover/case:translate-x-1 group-hover/case:-translate-y-1"
+                aria-hidden="true"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div className="relative overflow-hidden md:col-span-7">
+          <div className="relative block h-full min-h-[220px] bg-background/24 sm:min-h-[280px] md:min-h-[390px]">
             <img
               src={project.image}
               alt={`${project.name} / ${project.category}`}
@@ -299,93 +324,16 @@ const ProjectCase = ({
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/34 via-background/0 to-background/10 opacity-55 transition-opacity duration-700 group-hover:opacity-65" />
             <div className="absolute inset-0 bg-transparent" />
-            <div className="absolute left-5 top-5 rounded-full border border-white/10 bg-background/62 px-3 py-1.5 text-[11px] uppercase tracking-[0.2em] text-foreground/80 backdrop-blur-sm">
-              {project.eyebrow}
-            </div>
-          </Link>
-        </div>
-
-        <div
-          className={`flex flex-col justify-between gap-8 p-6 sm:p-7 md:p-8 lg:gap-12 lg:p-12 ${
-            compact ? "md:col-span-5" : "md:col-span-4"
-          } ${reverse ? "md:order-1" : ""}`}
-        >
-          <div className="space-y-6 md:space-y-7 lg:space-y-8">
-            <div className="flex items-start justify-between gap-6">
-              <span className="font-display text-[1.7rem] leading-none text-foreground/[0.055] sm:text-4xl md:text-5xl md:text-foreground/[0.065] lg:text-6xl lg:text-foreground/[0.075]">{project.index}</span>
-            </div>
-
-            <div className="space-y-3.5 md:space-y-4">
-              <p className="text-[10px] uppercase tracking-[0.2em] text-accent sm:text-[11px] md:tracking-[0.22em]">{project.category}</p>
-              <h3 className="font-display text-2xl leading-[1.08] tracking-normal text-foreground text-pretty sm:text-3xl md:text-4xl md:text-balance lg:text-5xl">
-                <Link to={project.caseStudyPath} className="outline-none transition-colors duration-500 hover:text-accent-soft focus-visible:text-accent-soft">
-                  {project.name}
-                </Link>
-              </h3>
-              {project.result ? (
-                <p className="max-w-sm border-l border-accent/50 pl-3 text-sm leading-relaxed text-foreground/86 text-pretty">
-                  {project.result}
-                </p>
-              ) : null}
-              {project.featured ? (
-                <div className="grid max-w-sm grid-cols-1 gap-2 border-y border-hairline py-3">
-                  {project.did.slice(0, 3).map((item) => (
-                    <p key={item} className="text-[11px] uppercase leading-snug tracking-[0.12em] text-foreground/72">
-                      {item}
-                    </p>
-                  ))}
-                </div>
-              ) : null}
-              <div className="max-w-sm space-y-3 text-sm leading-relaxed text-muted-foreground text-pretty">
-                {project.description.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className="space-y-5 md:space-y-6">
-            <div className="flex flex-wrap gap-1.5 sm:gap-2">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full border border-hairline bg-background/35 px-2.5 py-1 text-[10px] uppercase tracking-[0.11em] text-muted-foreground transition-colors duration-500 group-hover:border-accent/20 group-hover:text-foreground/78 sm:px-3 sm:text-[11px] sm:tracking-[0.12em]"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
-              {project.hasCaseStudy ? (
-                <Link
-                  to={project.caseStudyPath}
-                  aria-label={`Ver proyecto de ${project.name}`}
-                  className="group/case inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-foreground/70 outline-none transition-colors duration-500 hover:text-foreground focus-visible:text-foreground focus-visible:ring-1 focus-visible:ring-accent/50 focus-visible:ring-offset-4 focus-visible:ring-offset-background"
-                >
-                  <span className="link-underline">Ver proyecto</span>
-                  <ArrowUpRight
-                    className="h-4 w-4 text-accent/80 transition-transform duration-500 group-hover/case:translate-x-1 group-hover/case:-translate-y-1 group-focus-visible/case:translate-x-1 group-focus-visible/case:-translate-y-1"
-                    aria-hidden="true"
-                  />
-                </Link>
-              ) : (
-                <button
-                  type="button"
-                  aria-disabled="true"
-                  aria-label={`Ver proyecto de ${project.name} - próximamente`}
-                  data-case-study-path={project.caseStudyPath}
-                  className="group/case inline-flex cursor-default items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-foreground/38 outline-none transition-colors duration-500"
-                >
-                  <span>Ver proyecto</span>
-                  <ArrowUpRight className="h-4 w-4 text-accent/35" aria-hidden="true" />
-                </button>
-              )}
-
-            </div>
           </div>
         </div>
       </div>
     </article>
   );
 };
+
+const ProjectMeta = ({ label, value }: { label: string; value: string }) => (
+  <div>
+    <dt className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">{label}</dt>
+    <dd className="mt-1 leading-snug text-foreground/82">{value}</dd>
+  </div>
+);
