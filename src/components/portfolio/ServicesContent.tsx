@@ -1,4 +1,19 @@
-import { ExternalLink, LineChart } from "lucide-react";
+import { ExternalLink, LineChart, X } from "lucide-react";
+import { useEffect, useState } from "react";
+
+type PortfolioAsset = {
+  title: string;
+  caption: string;
+  src: string;
+  alt: string;
+  format: string;
+  objective: string;
+  role: string;
+  channel: string;
+  type?: "image" | "video";
+  actionLabel?: string;
+  actionHref?: string;
+};
 
 const services = [
   "Gestión de redes sociales",
@@ -18,61 +33,125 @@ const featuredReels = [
     title: "Reel — Berachain Market Analysis",
     src: assetPath("reel-berachain-analysis.mp4"),
     caption: "Análisis en video corto para redes.",
+    alt: "Berachain market analysis reel",
+    format: "Reel / Short-form video",
+    objective: "Contenido educativo para lectura rápida de mercado.",
+    role: "Edición, ritmo visual y adaptación para redes.",
+    channel: "TikTok / Reels / Shorts",
+    type: "video" as const,
+    actionLabel: "Abrir reel",
   },
   {
     title: "Reel — 5 Lupas de la Semana",
     src: assetPath("reel-5-lupas-semana.mp4"),
     caption: "Formato editorial semanal en video.",
+    alt: "5 Lupas de la Semana reel",
+    format: "Reel / Serie editorial",
+    objective: "Resumen semanal para comunidad y redes.",
+    role: "Edición, captions y estructura visual.",
+    channel: "TikTok / Reels / Shorts",
+    type: "video" as const,
+    actionLabel: "Abrir reel",
   },
 ];
 
-const visualAssets = [
+const visualAssets: PortfolioAsset[] = [
   {
     title: "Mantle Puebla — Promoción de evento",
     caption: "Promoción de evento para comunidad Web3.",
     src: assetPath("mantle-puebla-event-post.jpg"),
     alt: "Mantle Puebla event promotion post",
+    format: "Post promocional",
+    objective: "Convocatoria y awareness para evento de comunidad.",
+    role: "Diseño de pieza y adaptación visual para campaña.",
+    channel: "Redes sociales",
   },
   {
     title: "Travel VYP — Campañas en redes sociales",
     caption: "Visuales para campaña social.",
     src: assetPath("travelvyp-social-campaigns.png"),
     alt: "Travel VYP social media campaign visuals",
+    format: "Campaña social",
+    objective: "Promoción de ofertas y presencia de marca.",
+    role: "Diseño de piezas para publicación y lectura rápida.",
+    channel: "Instagram / Facebook",
   },
   {
     title: "Calendario de contenido — Planeación editorial",
     caption: "Estructura de publicación.",
     src: assetPath("content-calendar-editorial-planning.png"),
     alt: "Editorial planning content calendar",
+    format: "Calendario editorial",
+    objective: "Organizar publicaciones por canal, formato y objetivo.",
+    role: "Planeación, estructura de contenido y seguimiento.",
+    channel: "Redes sociales / Gestión interna",
   },
   {
     title: "Tequila Jalisco — Post promocional",
     caption: "Post promocional para campaña turística.",
     src: assetPath("tequila-jalisco-social-post.jpg"),
     alt: "Tequila Jalisco promotional social post",
+    format: "Post promocional",
+    objective: "Comunicar oferta y destino de forma visual.",
+    role: "Diseño de pieza para campaña en redes.",
+    channel: "Instagram / Facebook",
   },
   {
     title: "Materiales promocionales impresos",
     caption: "Materiales de apoyo para campaña.",
     src: assetPath("print-promotional-materials.jpg"),
     alt: "Print promotional materials",
+    format: "Material promocional",
+    objective: "Apoyar campaña con materiales visuales consistentes.",
+    role: "Diseño y adaptación de piezas de marca.",
+    channel: "Campaña / Punto de contacto",
   },
   {
     title: "Lytryum — AI NFT Collection",
     caption: "AI-generated NFT collection visuals and mockups.",
     src: assetPath("travelvyp-print-design.jpg"),
     alt: "Lytryum AI NFT collection visuals and mockups",
+    format: "Digital assets / Mockups",
+    objective: "Presentar producción visual para colección NFT.",
+    role: "Producción visual, mockups y experimentación con IA.",
+    channel: "Web3 / Comunidad digital",
   },
 ];
 
-const brandGuidelines = {
+const brandGuidelines: PortfolioAsset = {
   title: "Colegio Samuel Juárez — Brand Guidelines",
   caption: "Manual de identidad visual.",
-  preview: assetPath("manual_identidad_colegio.jpeg"),
-  href: assetPath("colegio-samuel-juarez-brand-guidelines.pdf"),
+  src: assetPath("manual_identidad_colegio.jpeg"),
+  alt: "Colegio Samuel Juárez brand guidelines preview",
+  format: "Manual de identidad",
+  objective: "Documentar lineamientos visuales para consistencia de marca.",
+  role: "Diseño, estructura visual y presentación del sistema.",
+  channel: "Branding / Comunicación institucional",
+  actionLabel: "Ver manual",
+  actionHref: assetPath("colegio-samuel-juarez-brand-guidelines.pdf"),
 };
 
 export const ServicesContent = () => {
+  const [activeAsset, setActiveAsset] = useState<PortfolioAsset | null>(null);
+
+  useEffect(() => {
+    if (!activeAsset) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setActiveAsset(null);
+      }
+    };
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [activeAsset]);
+
   return (
     <>
       <section id="services" className="scroll-reveal relative overflow-hidden border-t border-hairline py-24 lg:py-32">
@@ -147,15 +226,14 @@ export const ServicesContent = () => {
                   <div className="px-1 pb-1 pt-5">
                     <p className="font-display text-xl leading-tight text-foreground">{reel.title}</p>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{reel.caption}</p>
-                    <a
-                      href={reel.src}
-                      target="_blank"
-                      rel="noreferrer"
+                    <button
+                      type="button"
+                      onClick={() => setActiveAsset(reel)}
                       className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-accent"
                     >
                       Ver reel
                       <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
-                    </a>
+                    </button>
                   </div>
                 </article>
               ))}
@@ -164,7 +242,7 @@ export const ServicesContent = () => {
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:col-span-7">
               {visualAssets.map((item) => (
                 <article key={item.title} className="motion-card group border-t border-hairline py-6 transition-colors hover:border-accent/30">
-                  <a href={item.src} target="_blank" rel="noreferrer" aria-label={`Ver pieza: ${item.title}`}>
+                  <button type="button" onClick={() => setActiveAsset(item)} className="block w-full text-left" aria-label={`Ver pieza: ${item.title}`}>
                     <img
                       src={item.src}
                       alt={item.alt}
@@ -174,44 +252,42 @@ export const ServicesContent = () => {
                       height={700}
                       className="mb-5 aspect-[4/3] w-full rounded-[1.15rem] border border-hairline bg-surface/20 object-cover transition-opacity group-hover:opacity-90"
                     />
-                  </a>
+                  </button>
                   <h3 className="font-display text-lg leading-tight text-foreground">{item.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.caption}</p>
-                  <a
-                    href={item.src}
-                    target="_blank"
-                    rel="noreferrer"
+                  <button
+                    type="button"
+                    onClick={() => setActiveAsset(item)}
                     className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-accent"
                   >
                     Ver pieza
                     <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
-                  </a>
+                  </button>
                 </article>
               ))}
 
               <article className="motion-card group border-t border-hairline py-6 transition-colors hover:border-accent/30">
-                <a href={brandGuidelines.preview} target="_blank" rel="noreferrer" aria-label={`Ver pieza: ${brandGuidelines.title}`}>
+                <button type="button" onClick={() => setActiveAsset(brandGuidelines)} className="block w-full text-left" aria-label={`Ver manual: ${brandGuidelines.title}`}>
                   <img
-                    src={brandGuidelines.preview}
-                    alt="Colegio Samuel Juárez brand guidelines preview"
+                    src={brandGuidelines.src}
+                    alt={brandGuidelines.alt}
                     loading="lazy"
                     decoding="async"
                     width={1200}
                     height={820}
                     className="mb-5 aspect-[4/3] w-full rounded-[1.15rem] border border-hairline bg-surface/20 object-cover transition-opacity group-hover:opacity-90"
                   />
-                </a>
+                </button>
                 <h3 className="font-display text-lg leading-tight text-foreground">{brandGuidelines.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{brandGuidelines.caption}</p>
-                <a
-                  href={brandGuidelines.href}
-                  target="_blank"
-                  rel="noreferrer"
+                <button
+                  type="button"
+                  onClick={() => setActiveAsset(brandGuidelines)}
                   className="mt-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-accent"
                 >
                   Ver manual
                   <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
-                </a>
+                </button>
               </article>
             </div>
           </div>
@@ -224,6 +300,111 @@ export const ServicesContent = () => {
           </div>
         </div>
       </section>
+
+      {activeAsset ? (
+        <AssetLightbox asset={activeAsset} onClose={() => setActiveAsset(null)} />
+      ) : null}
     </>
   );
 };
+
+const AssetLightbox = ({ asset, onClose }: { asset: PortfolioAsset; onClose: () => void }) => {
+  const isVideo = asset.type === "video";
+  const actionHref = asset.actionHref ?? asset.src;
+  const actionLabel = asset.actionLabel ?? "Abrir archivo";
+
+  return (
+    <div
+      className="fixed inset-0 z-[80] flex items-end justify-center bg-background/86 px-4 py-4 backdrop-blur-xl sm:items-center sm:px-6"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="asset-lightbox-title"
+      onMouseDown={(event) => {
+        if (event.target === event.currentTarget) {
+          onClose();
+        }
+      }}
+    >
+      <div className="max-h-[92vh] w-full max-w-6xl overflow-y-auto rounded-[1.5rem] border border-hairline bg-background/96 shadow-soft">
+        <div className="flex items-center justify-between border-b border-hairline px-5 py-4 sm:px-6">
+          <p className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">Vista de pieza</p>
+          <button
+            type="button"
+            onClick={onClose}
+            className="grid h-9 w-9 place-items-center rounded-full border border-hairline bg-surface/35 text-foreground/80 transition-colors hover:border-accent/30 hover:text-foreground"
+            aria-label="Cerrar vista"
+          >
+            <X className="h-4 w-4" aria-hidden="true" />
+          </button>
+        </div>
+
+        <div className="grid grid-cols-1 gap-0 lg:grid-cols-[minmax(0,1.45fr)_minmax(20rem,0.55fr)]">
+          <div className="border-b border-hairline bg-surface/16 p-3 lg:border-b-0 lg:border-r lg:p-5">
+            {isVideo ? (
+              <video
+                src={asset.src}
+                controls
+                playsInline
+                preload="metadata"
+                className="max-h-[72vh] w-full rounded-[1.15rem] bg-background object-contain"
+                aria-label={asset.title}
+              />
+            ) : (
+              <img
+                src={asset.src}
+                alt={asset.alt}
+                loading="eager"
+                decoding="async"
+                className="max-h-[72vh] w-full rounded-[1.15rem] bg-background object-contain"
+              />
+            )}
+          </div>
+
+          <div className="flex flex-col justify-between gap-8 p-6 lg:p-8">
+            <div className="space-y-5">
+              <div className="space-y-3">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-accent">{asset.format}</p>
+                <h3 id="asset-lightbox-title" className="font-display text-2xl leading-tight text-foreground sm:text-3xl">
+                  {asset.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">{asset.caption}</p>
+              </div>
+
+              <dl className="space-y-4 border-y border-hairline py-5 text-sm">
+                <AssetMeta label="Objetivo" value={asset.objective} />
+                <AssetMeta label="Rol" value={asset.role} />
+                <AssetMeta label="Canal" value={asset.channel} />
+              </dl>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href={actionHref}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-3 text-sm font-medium text-background shadow-glow transition-colors hover:bg-accent-soft"
+              >
+                {actionLabel}
+                <ExternalLink className="h-4 w-4" aria-hidden="true" />
+              </a>
+              <button
+                type="button"
+                onClick={onClose}
+                className="inline-flex items-center gap-2 rounded-full border border-hairline bg-surface/28 px-5 py-3 text-sm text-foreground/76 transition-colors hover:border-accent/30 hover:text-foreground"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const AssetMeta = ({ label, value }: { label: string; value: string }) => (
+  <div>
+    <dt className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">{label}</dt>
+    <dd className="mt-1 leading-relaxed text-foreground/82">{value}</dd>
+  </div>
+);
