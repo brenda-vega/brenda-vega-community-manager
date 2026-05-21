@@ -9,6 +9,7 @@ type PortfolioAsset = {
   format: string;
   objective: string;
   role: string;
+  responsibilities: string[];
   tools?: string;
   channel: string;
   type?: "image" | "video";
@@ -34,6 +35,7 @@ const featuredReels = [
     format: "Reel educativo / short-form",
     objective: "Engagement y awareness sobre tendencias Web3.",
     role: "Edición de video, estructura narrativa y adaptación para redes.",
+    responsibilities: ["Edición de video corto", "Estructura narrativa", "Adaptación visual para redes"],
     tools: "CapCut, Premiere Pro, Adobe Podcast, Metricool",
     channel: "TikTok / Instagram Reels",
     type: "video" as const,
@@ -47,6 +49,7 @@ const featuredReels = [
     format: "Reel editorial / resumen semanal",
     objective: "Retención y comunicación de contenido educativo.",
     role: "Edición, jerarquía visual y adaptación de contenido educativo.",
+    responsibilities: ["Edición de resumen semanal", "Jerarquía visual", "Adaptación educativa para reels"],
     tools: "CapCut, Premiere Pro, Photoshop, Metricool",
     channel: "TikTok / Instagram Reels",
     type: "video" as const,
@@ -61,8 +64,9 @@ const visualAssets: PortfolioAsset[] = [
     src: assetPath("mantle-puebla-event-post.jpg"),
     alt: "Mantle Puebla event promotion post",
     format: "Campaña social / post de evento",
-    objective: "Awareness y comunicación visual para comunidad/evento.",
+    objective: "Awareness y comunicación para comunidad/evento.",
     role: "Diseño de pieza promocional y adaptación para redes.",
+    responsibilities: ["Diseño de post promocional", "Adaptación para redes", "Comunicación de evento"],
     tools: "Canva, Photoshop, Illustrator",
     channel: "Instagram / Redes sociales",
   },
@@ -74,6 +78,7 @@ const visualAssets: PortfolioAsset[] = [
     format: "Campaña social / contenido promocional",
     objective: "Promoción de servicios turísticos y presencia digital.",
     role: "Diseño de contenido y adaptación para campañas sociales.",
+    responsibilities: ["Diseño de campaña social", "Adaptación Instagram/Facebook", "Comunicación de servicios"],
     tools: "Photoshop, Illustrator, Canva",
     channel: "Instagram / Facebook",
   },
@@ -85,6 +90,7 @@ const visualAssets: PortfolioAsset[] = [
     format: "Calendario editorial / sistema de contenido",
     objective: "Organización de publicaciones y consistencia de contenido.",
     role: "Estructuración editorial, organización de formatos y planificación.",
+    responsibilities: ["Planeación editorial", "Organización de formatos", "Seguimiento de consistencia"],
     tools: "Notion, Google Sheets, Excel, Metricool",
     channel: "Instagram / LinkedIn / Newsletter",
   },
@@ -96,6 +102,7 @@ const visualAssets: PortfolioAsset[] = [
     format: "Campaña social / post promocional",
     objective: "Promoción visual y reconocimiento de marca.",
     role: "Diseño de contenido promocional.",
+    responsibilities: ["Diseño de post promocional", "Comunicación de campaña", "Adaptación para redes"],
     tools: "Photoshop, Illustrator",
     channel: "Instagram / Facebook",
   },
@@ -107,6 +114,7 @@ const visualAssets: PortfolioAsset[] = [
     format: "Content asset / material promocional",
     objective: "Apoyar campaña con materiales visuales consistentes.",
     role: "Adaptación de piezas de campaña y comunicación de marca.",
+    responsibilities: ["Adaptación de assets de campaña", "Consistencia de marca", "Comunicación en puntos de contacto"],
     channel: "Campaña / Punto de contacto",
   },
   {
@@ -117,6 +125,7 @@ const visualAssets: PortfolioAsset[] = [
     format: "Colección visual NFT generada con IA",
     objective: "Producción de assets digitales para comunidad Web3.",
     role: "Producción visual, dirección de piezas y organización de assets.",
+    responsibilities: ["Producción de assets digitales", "Dirección de piezas", "Organización visual para comunidad"],
     tools: "Midjourney, Photoshop, Illustrator, ChatGPT",
     channel: "Discord / Redes sociales / Comunidad Web3",
   },
@@ -130,6 +139,7 @@ const brandGuidelines: PortfolioAsset = {
   format: "Sistema visual institucional",
   objective: "Mantener consistencia gráfica y lineamientos de marca.",
   role: "Organización de lineamientos visuales para comunicación institucional.",
+  responsibilities: ["Sistema de identidad", "Lineamientos de uso", "Comunicación institucional consistente"],
   tools: "Illustrator, Photoshop, InDesign",
   channel: "Comunicación institucional / Material digital",
   actionLabel: "Ver manual",
@@ -288,7 +298,8 @@ const AssetLightbox = ({ asset, onClose }: { asset: PortfolioAsset; onClose: () 
 
   return (
     <div
-      className="fixed inset-0 z-[80] flex items-end justify-center bg-background/88 px-4 py-4 backdrop-blur-md sm:items-center sm:px-6"
+      className="fixed inset-0 z-[80] flex items-end justify-center px-4 py-4 backdrop-blur-[2px] sm:items-center sm:px-6"
+      style={{ backgroundColor: "rgb(0 0 0 / 0.92)" }}
       role="dialog"
       aria-modal="true"
       aria-labelledby="asset-lightbox-title"
@@ -298,28 +309,28 @@ const AssetLightbox = ({ asset, onClose }: { asset: PortfolioAsset; onClose: () 
         }
       }}
     >
-      <div className="max-h-[92vh] w-full max-w-6xl overflow-y-auto rounded-[1.5rem] border border-hairline bg-background/96 shadow-soft">
+      <div className="max-h-[92vh] w-full max-w-6xl overflow-y-auto rounded-[1.25rem] border border-hairline bg-[#080808] shadow-soft">
         <div className="flex items-center justify-between border-b border-hairline px-5 py-4 sm:px-6">
-          <p className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">Vista de pieza</p>
+          <p className="text-[11px] uppercase tracking-[0.22em] text-foreground/58">Ficha de contenido</p>
           <button
             type="button"
             onClick={onClose}
-            className="grid h-9 w-9 place-items-center rounded-full border border-hairline bg-surface/35 text-foreground/80 transition-colors hover:border-accent/30 hover:text-foreground"
+            className="grid h-9 w-9 place-items-center rounded-full border border-hairline bg-surface/18 text-foreground/78 transition-colors hover:border-accent/30 hover:text-foreground"
             aria-label="Cerrar vista"
           >
             <X className="h-4 w-4" aria-hidden="true" />
           </button>
         </div>
 
-        <div className="grid grid-cols-1 gap-0 lg:grid-cols-[minmax(0,1.45fr)_minmax(20rem,0.55fr)]">
-          <div className="border-b border-hairline bg-surface/10 p-3 lg:border-b-0 lg:border-r lg:p-5">
+        <div className="grid grid-cols-1 gap-0 lg:grid-cols-[minmax(0,1fr)_24rem]">
+          <div className="border-b border-hairline bg-black/34 p-3 lg:border-b-0 lg:border-r lg:p-5">
             {isVideo ? (
               <video
                 src={asset.src}
                 controls
                 playsInline
                 preload="metadata"
-                className="max-h-[72vh] w-full rounded-[1.15rem] bg-background object-contain"
+                className="max-h-[72vh] w-full rounded-[1rem] bg-background object-contain"
                 aria-label={asset.title}
               />
             ) : (
@@ -328,27 +339,41 @@ const AssetLightbox = ({ asset, onClose }: { asset: PortfolioAsset; onClose: () 
                 alt={asset.alt}
                 loading="eager"
                 decoding="async"
-                className="max-h-[72vh] w-full rounded-[1.15rem] bg-background object-contain"
+                className="max-h-[72vh] w-full rounded-[1rem] bg-background object-contain"
               />
             )}
           </div>
 
-          <div className="flex flex-col justify-between gap-8 p-6 lg:p-8">
-            <div className="space-y-5">
-              <div className="space-y-3">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-accent">{asset.format}</p>
-                <h3 id="asset-lightbox-title" className="font-display text-2xl leading-tight text-foreground sm:text-3xl">
+          <div className="flex flex-col justify-between gap-7 p-6 lg:p-8">
+            <div className="space-y-6">
+              <div className="space-y-3 border-b border-hairline pb-5">
+                <h3 id="asset-lightbox-title" className="font-display text-2xl leading-tight text-foreground text-pretty sm:text-3xl">
                   {asset.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">{asset.caption}</p>
+                <div className="space-y-2">
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-accent">{asset.format}</p>
+                  <p className="text-sm leading-relaxed text-foreground/72">{asset.caption}</p>
+                </div>
               </div>
 
-              <dl className="space-y-4 border-y border-hairline py-5 text-sm">
+              <div className="space-y-5 text-sm">
                 <AssetMeta label="Objetivo" value={asset.objective} />
-                <AssetMeta label="Rol" value={asset.role} />
+
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.18em] text-foreground/48">Responsabilidades</p>
+                  <ul className="mt-3 space-y-2">
+                    {asset.responsibilities.map((item) => (
+                      <li key={item} className="flex gap-3 leading-relaxed text-foreground/84">
+                        <span className="mt-2 h-1 w-1 flex-none rounded-full bg-accent/80" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
                 {asset.tools ? <AssetMeta label="Herramientas" value={asset.tools} /> : null}
                 <AssetMeta label="Canal" value={asset.channel} />
-              </dl>
+              </div>
             </div>
 
             <div className="flex flex-wrap items-center gap-3">
@@ -356,7 +381,7 @@ const AssetLightbox = ({ asset, onClose }: { asset: PortfolioAsset; onClose: () 
                 href={actionHref}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-3 text-sm font-medium text-background shadow-glow transition-colors hover:bg-accent-soft"
+                className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-3 text-sm font-medium text-background transition-colors hover:bg-accent-soft"
               >
                 {actionLabel}
                 <ExternalLink className="h-4 w-4" aria-hidden="true" />
@@ -364,7 +389,7 @@ const AssetLightbox = ({ asset, onClose }: { asset: PortfolioAsset; onClose: () 
               <button
                 type="button"
                 onClick={onClose}
-                className="inline-flex items-center gap-2 rounded-full border border-hairline bg-surface/28 px-5 py-3 text-sm text-foreground/76 transition-colors hover:border-accent/30 hover:text-foreground"
+                className="inline-flex items-center gap-2 rounded-full border border-hairline bg-transparent px-5 py-3 text-sm text-foreground/72 transition-colors hover:border-accent/30 hover:text-foreground"
               >
                 Cerrar
               </button>
@@ -378,7 +403,7 @@ const AssetLightbox = ({ asset, onClose }: { asset: PortfolioAsset; onClose: () 
 
 const AssetMeta = ({ label, value }: { label: string; value: string }) => (
   <div>
-    <dt className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">{label}</dt>
-    <dd className="mt-1 leading-relaxed text-foreground/82">{value}</dd>
+    <dt className="text-[10px] uppercase tracking-[0.18em] text-foreground/48">{label}</dt>
+    <dd className="mt-2 break-words leading-relaxed text-foreground/84">{value}</dd>
   </div>
 );
