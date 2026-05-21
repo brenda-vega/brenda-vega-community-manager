@@ -6,7 +6,7 @@ const services = [
   "Community Manager",
   "Social Media Manager",
   "Content Creator",
-  "Visual Content",
+  "Visual Content Designer",
   "Comunicación editorial",
   "Métricas y reportes",
 ];
@@ -18,7 +18,7 @@ const secondaryLinks = [
     icon: ArrowUpRight,
   },
   {
-    label: "Explorar enlaces",
+    label: "Ver enlaces",
     href: "https://linktr.ee/brendavega012",
     icon: LinkIcon,
   },
@@ -39,10 +39,10 @@ export const Contact = () => {
           <div className="space-y-7 lg:col-span-7 lg:space-y-8">
             <span className="text-xs uppercase tracking-[0.22em] text-muted-foreground">07 · Contacto</span>
             <h2 className="max-w-4xl font-display text-4xl leading-[1.04] tracking-tight text-balance sm:text-5xl lg:text-6xl">
-              ¿Necesitas presencia activa, contenido visual y comunicación editorial?
+              Disponible para social media, contenido visual y comunicación editorial.
             </h2>
             <p className="max-w-2xl text-base leading-relaxed text-muted-foreground text-pretty lg:text-lg">
-              Disponible para gestión de redes sociales, reels, contenido visual, calendarios editoriales y reportes claros de ejecución.
+              Community Manager, Social Media, Content Creator y Visual Content Designer para marcas que necesitan ejecución clara.
             </p>
 
             <div className="space-y-5 pt-1 sm:pt-2">
@@ -52,7 +52,7 @@ export const Contact = () => {
                 rel="noopener noreferrer"
                 className="soft-button inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3.5 text-sm font-medium text-background shadow-glow transition-colors duration-500 hover:bg-accent-soft"
               >
-                Conversemos
+                Contactar por WhatsApp
                 <MessageCircle className="h-4 w-4" aria-hidden="true" />
               </a>
 

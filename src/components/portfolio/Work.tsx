@@ -33,7 +33,7 @@ const projects: Project[] = [
     caseStudyPath: "/projects/kairos",
     hasCaseStudy: true,
     description: [
-      "Social media, newsletter, infografías y videos cortos para una marca Web3 con foco en claridad y crecimiento orgánico.",
+      "Social media, newsletter, infografías y videos cortos para una marca Web3.",
     ],
     did: [
       "+129% crecimiento orgánico de comunidad",
@@ -58,7 +58,7 @@ const projects: Project[] = [
     caseStudyPath: "/projects/lytryum",
     hasCaseStudy: true,
     description: [
-      "Construcción de comunidad desde cero para academia Web3 en español con contenido educativo y adaptación multicanal.",
+      "Comunidad desde cero para academia Web3 en español con contenido educativo multicanal.",
     ],
     did: [
       "4 comunidades construidas desde cero",
@@ -83,7 +83,7 @@ const projects: Project[] = [
     caseStudyPath: "/projects/exponencial",
     hasCaseStudy: true,
     description: [
-      "Contenido visual, thumbnails, piezas promocionales y materiales para eventos de comunidad cripto.",
+      "Contenido visual, thumbnails y piezas promocionales para eventos de comunidad cripto.",
     ],
     did: [
       "Gestión de contenido en 6+ plataformas",
@@ -108,7 +108,7 @@ const projects: Project[] = [
     caseStudyPath: "/projects/fidex",
     hasCaseStudy: true,
     description: [
-      "Apoyo visual para comunicar una propuesta financiera con claridad, consistencia de marca y adaptación responsive.",
+      "Apoyo visual para comunicar una propuesta financiera con claridad y consistencia.",
     ],
     did: [
       "Comunicación digital",
@@ -131,7 +131,7 @@ const projects: Project[] = [
     caseStudyPath: "/projects/phronesis",
     hasCaseStudy: true,
     description: [
-      "Organización visual de métricas y reportes para facilitar lectura rápida de información compleja.",
+      "Organización visual de métricas y reportes para lectura rápida de información compleja.",
     ],
     did: [
       "Métricas",
@@ -250,6 +250,11 @@ const ProjectCase = ({
                   {project.name}
                 </Link>
               </h3>
+              {project.result ? (
+                <p className="max-w-sm border-l border-accent/50 pl-3 text-sm leading-relaxed text-foreground/86 text-pretty">
+                  {project.result}
+                </p>
+              ) : null}
               <div className="max-w-sm space-y-3 text-sm leading-relaxed text-muted-foreground text-pretty">
                 {project.description.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>

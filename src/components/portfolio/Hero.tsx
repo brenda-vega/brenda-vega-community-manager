@@ -98,10 +98,10 @@ export const Hero = () => {
 
           <div className="reveal reveal-delay-2 max-w-2xl space-y-5 text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed text-pretty">
             <p>
-              Gestión de redes sociales, contenido visual, reels y comunicación digital para marcas que necesitan consistencia, presencia activa y contenido alineado a objetivos.
+              Gestiono redes sociales, reels, contenido visual y comunicación digital para marcas que necesitan presencia constante y contenido medible.
             </p>
             <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-foreground/68">
-              Gestiono social media, contenido visual, video corto y reportes de ejecución para marcas que necesitan mantener ritmo, coherencia visual y conversación activa con su comunidad.
+              Produzco calendarios editoriales, newsletters, reportes y campañas con ritmo, coherencia visual y comunidad activa.
             </p>
           </div>
 
@@ -117,7 +117,7 @@ export const Hero = () => {
               }}
               className="group inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3.5 text-sm font-medium text-background shadow-glow soft-button hover:bg-accent-soft"
             >
-              Ver proyectos de contenido
+              Ver proyectos
               <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
             <a
