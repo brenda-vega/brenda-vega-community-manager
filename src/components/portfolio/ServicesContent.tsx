@@ -46,11 +46,11 @@ const assetPath = (filename: string) => `${import.meta.env.BASE_URL}assets/${fil
 
 const featuredReels = [
   {
-    title: "Reel — Berachain Market Analysis",
+    title: "Short-Form Educational Content",
     src: assetPath("kairos-web3-market-analysis-reel.mp4"),
-    caption: "Contenido corto enfocado en análisis visual de mercado y comunicación educativa para plataformas sociales de formato corto.",
-    alt: "Berachain market analysis reel",
-    format: "Educational Reel / Market Analysis",
+    caption: "Contenido short-form enfocado en comunicación educativa, adaptación visual y distribución multi-plataforma para redes sociales de formato vertical.",
+    alt: "Short-form educational social content reel",
+    format: "EDUCATIONAL SOCIAL CONTENT",
     objective: "Simplificar información compleja para formatos de consumo rápido y contenido recurrente.",
     role: "Edición de video, dirección visual y adaptación multi-plataforma.",
     responsibilities: ["Edición de video", "Dirección visual", "Adaptación multi-plataforma"],
@@ -65,11 +65,11 @@ const featuredReels = [
     },
   },
   {
-    title: "Reel — 5 Lupas de la Semana",
+    title: "Weekly Editorial News Reel",
     src: assetPath("kairos-weekly-web3-news-reel.mp4"),
-    caption: "Resumen visual semanal enfocado en noticias y análisis del ecosistema Web3 para contenido de alta frecuencia.",
-    alt: "5 Lupas de la Semana reel",
-    format: "Weekly News Reel",
+    caption: "Sistema recurrente de contenido semanal enfocado en noticias, comunicación visual y distribución editorial para plataformas sociales de formato corto.",
+    alt: "Weekly editorial news reel",
+    format: "EDITORIAL SHORT-FORM CONTENT",
     objective: "Mantener ritmo editorial y distribución constante de contenido para comunidad digital.",
     role: "Edición de video, estructura visual y adaptación multi-plataforma.",
     responsibilities: ["Edición de video", "Estructura visual", "Adaptación multi-plataforma"],
