@@ -18,6 +18,9 @@ const stats: StatConfig[] = [
   { end: 42, suffix: "+", label: "semanas de newsletter" },
 ];
 
+const contentSignals = ["campañas multi-plataforma", "contenido semanal recurrente", "adaptación cross-platform"];
+const mobileStats = ["4+ comunidades", "100+ assets", "42+ newsletters"];
+
 const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
 
 export const Hero = () => {
@@ -85,22 +88,23 @@ export const Hero = () => {
       </div>
 
       <div className="container relative z-10">
-        <div className="max-w-3xl space-y-5 sm:space-y-6 lg:max-w-[43rem] xl:max-w-[47rem] lg:space-y-7">
-          <div className="reveal inline-flex items-center gap-3 rounded-full border border-hairline bg-surface/32 px-4 py-2 text-[11px] uppercase tracking-[0.19em] text-foreground/76 backdrop-blur-sm">
+        <div className="max-w-3xl space-y-5 sm:space-y-6 lg:max-w-[40rem] xl:max-w-[44rem] lg:space-y-6">
+          <div className="reveal inline-grid max-w-full grid-cols-[auto_1fr] items-center gap-3 rounded-full border border-hairline bg-surface/32 px-4 py-2 text-[10px] uppercase leading-relaxed tracking-[0.16em] text-foreground/76 backdrop-blur-sm sm:inline-flex sm:text-[11px] sm:tracking-[0.19em]">
             <span className="h-1.5 w-1.5 rounded-full bg-accent/85" />
-            Community Manager · Content Systems · Reels · Social Media
+            <span className="min-w-0">Community Manager · Social Media · Content Systems</span>
           </div>
 
-          <h1 className="reveal reveal-delay-1 max-w-[14ch] font-display text-[2.65rem] leading-[0.96] tracking-normal text-balance sm:text-[3.7rem] lg:text-[4.85rem] xl:text-[5.65rem]">
-            <span className="block text-foreground">Community Manager</span>
+          <h1 className="reveal reveal-delay-1 max-w-[13ch] font-display text-[2.35rem] leading-[0.98] tracking-normal text-balance sm:text-[3.35rem] lg:text-[4.25rem] xl:text-[4.95rem]">
+            <span className="block text-foreground">Community</span>
+            <span className="block text-foreground">Manager</span>
             <span className="block text-[0.5em] italic font-light leading-[1.08] text-accent">Social Media & Visual Content</span>
           </h1>
 
-          <div className="reveal reveal-delay-2 max-w-2xl space-y-3 text-[15px] text-foreground/82 sm:text-lg lg:text-[1.08rem] leading-relaxed text-pretty">
+          <div className="reveal reveal-delay-2 max-w-xl space-y-3 text-[15px] leading-relaxed text-foreground/82 text-pretty sm:text-[1.02rem]">
             <p>
-              Diseño sistemas de contenido y comunicación visual para marcas digitales, combinando estrategia, contenido editorial y ejecución multi-plataforma.
+              Diseño sistemas de contenido y comunicación visual para marcas digitales, combinando operación editorial, social media y ejecución multi-plataforma.
             </p>
-            <p className="text-[13px] leading-relaxed text-foreground/70 sm:text-base">
+            <p className="text-[13px] leading-relaxed text-foreground/66 sm:text-sm">
               Visual Content Designer · Editorial Content · Community Systems
             </p>
           </div>
@@ -131,9 +135,22 @@ export const Hero = () => {
             </a>
           </div>
 
-          <p className="text-[11px] uppercase tracking-[0.16em] text-foreground/68 sm:text-xs lg:hidden">
-            4+ COMUNIDADES · 100+ ASSETS · 42+ NEWSLETTERS
-          </p>
+          <div className="flex flex-wrap gap-x-2 gap-y-1 text-[11px] uppercase tracking-[0.16em] text-foreground/68 sm:text-xs lg:hidden">
+            {mobileStats.map((item, index) => (
+              <span key={item}>
+                {item}
+                {index < mobileStats.length - 1 ? <span className="pl-2 text-foreground/38">·</span> : null}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap gap-2 text-[10px] uppercase tracking-[0.14em] text-foreground/48 lg:hidden">
+            {contentSignals.map((signal) => (
+              <span key={signal} className="rounded-full border border-hairline bg-surface/18 px-3 py-1.5">
+                {signal}
+              </span>
+            ))}
+          </div>
 
           <div
             ref={statsRef}
@@ -141,6 +158,14 @@ export const Hero = () => {
           >
             {stats.map((stat) => (
               <Stat key={stat.label} stat={stat} progress={progress} />
+            ))}
+          </div>
+
+          <div className="hidden flex-wrap gap-2 text-[10px] uppercase tracking-[0.14em] text-foreground/46 lg:col-span-4 lg:col-start-9 lg:-mt-2 lg:flex">
+            {contentSignals.map((signal) => (
+              <span key={signal} className="rounded-full border border-white/[0.055] bg-surface/12 px-3 py-1.5">
+                {signal}
+              </span>
             ))}
           </div>
         </div>

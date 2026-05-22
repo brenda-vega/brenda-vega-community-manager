@@ -8,7 +8,7 @@ export const About = () => {
       <div className="container">
         <div className="mb-10 flex items-center justify-between border-b border-hairline pb-5 text-xs uppercase tracking-[0.22em] text-muted-foreground">
           <span>02 · Perfil</span>
-          <span className="hidden sm:inline">Community · Social Media · Content Systems</span>
+          <span className="hidden sm:inline">Social Media · Content Systems · Operación editorial</span>
         </div>
 
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
@@ -16,17 +16,17 @@ export const About = () => {
             <div className="space-y-5">
               <span className="font-display text-5xl leading-none text-foreground/8 sm:text-6xl">02</span>
               <h2 className="max-w-sm font-display text-2xl leading-tight text-foreground sm:text-3xl">
-                Contenido, comunicación visual y sistemas editoriales.
+                Contenido, social media y operación editorial.
               </h2>
             </div>
           </div>
           <div className="lg:col-span-7 lg:col-start-6">
             <div className="space-y-6 border-l border-hairline pl-6 text-base leading-relaxed text-muted-foreground text-pretty sm:pl-8 lg:text-lg">
               <p>
-                Trabajo en la intersección entre contenido, comunicación visual y sistemas editoriales para marcas digitales y proyectos tecnológicos.
+                Trabajo con marcas digitales que necesitan sostener presencia, claridad visual y distribución constante de contenido.
               </p>
               <p>
-                He colaborado en ecosistemas de contenido para Kairos Research, Lytryum, Exponencial Cripto Club y proyectos de turismo, branding institucional y ecommerce, desarrollando piezas orientadas a comunicación, organización visual y distribución multi-plataforma.
+                He apoyado ecosistemas de contenido para Kairos Research, Lytryum, Exponencial Cripto Club y proyectos de turismo, branding institucional y ecommerce, organizando piezas para social media, newsletters, campañas y comunicación multi-plataforma.
               </p>
 
               <div className="grid gap-7 border-y border-hairline py-6 text-sm leading-relaxed lg:grid-cols-2">

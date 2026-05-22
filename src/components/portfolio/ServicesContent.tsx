@@ -24,20 +24,20 @@ type PortfolioAsset = {
 
 const contentSystems = [
   {
-    title: "Contenido editorial y social media",
-    description: "Sistemas visuales para newsletters, campañas, reels y contenido educativo.",
+    title: "Ritmo editorial y social media",
+    description: "Planeación de publicaciones, reels, newsletters y contenido educativo con frecuencia clara.",
   },
   {
     title: "Adaptación multi-plataforma",
-    description: "Contenido optimizado para redes sociales, newsletters, blogs y formatos digitales.",
+    description: "Ajuste de mensajes y formatos para redes sociales, newsletters, blogs y canales digitales.",
   },
   {
     title: "Organización de contenido",
-    description: "Calendarios editoriales, estructura visual y sistemas de publicación recurrente.",
+    description: "Calendarios, briefs visuales y sistemas simples para sostener campañas y assets recurrentes.",
   },
   {
     title: "Comunicación visual estratégica",
-    description: "Diseño orientado a claridad, retención visual y objetivos de marketing.",
+    description: "Diseño aplicado a claridad, retención y objetivos de marketing sin perder consistencia de marca.",
   },
 ];
 
@@ -347,15 +347,15 @@ export const ServicesContent = () => {
         <div className="container">
           <div className="mb-8 flex items-center justify-between border-b border-hairline pb-4 text-xs uppercase tracking-[0.22em] text-muted-foreground">
             <span>04 · Qué hago</span>
-            <span className="hidden sm:inline">Editorial Content · Multi-platform Content</span>
+            <span className="hidden sm:inline">Operación editorial · Content Systems</span>
           </div>
 
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-end">
             <h2 className="max-w-3xl font-display text-3xl leading-[1.02] tracking-normal text-balance sm:text-4xl lg:col-span-7 lg:text-5xl">
-              Sistema de contenido
+              Sistema de trabajo para contenido
             </h2>
             <p className="max-w-md text-sm leading-relaxed text-muted-foreground lg:col-span-4 lg:col-start-9">
-              Organización editorial para sostener social media, newsletter y campaign assets sin perder ritmo ni consistencia.
+              Organización editorial para sostener social media, newsletters y campaign assets con ritmo, claridad y consistencia.
             </p>
           </div>
 

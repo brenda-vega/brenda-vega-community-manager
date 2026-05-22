@@ -124,7 +124,7 @@ export const Navbar = () => {
           <a
             href="#contact"
             onClick={(event) => scrollToTarget(event, "#contact")}
-            className="hidden h-9 items-center rounded-full border border-hairline bg-surface/55 px-4 text-[11px] tracking-[0.16em] text-foreground/90 soft-button hover:border-accent/30 hover:bg-surface-elevated hover:text-foreground md:inline-flex"
+            className="hidden h-9 items-center rounded-full border border-hairline bg-surface/45 px-4 text-[11px] uppercase tracking-[0.15em] text-foreground/84 soft-button hover:border-accent/30 hover:bg-surface-elevated hover:text-foreground md:inline-flex"
           >
             Disponible · 2026
           </a>
