@@ -15,6 +15,11 @@ type PortfolioAsset = {
   type?: "image" | "video";
   actionLabel?: string;
   actionHref?: string;
+  results?: string;
+  publicReference?: {
+    label: string;
+    href: string;
+  };
 };
 
 const contentSystems = [
@@ -51,7 +56,11 @@ const featuredReels = [
     tools: "CapCut · Premiere Pro · Photoshop · Adobe Podcast · Metricool",
     channel: "TikTok · Instagram Reels · YouTube Shorts",
     type: "video" as const,
-    actionLabel: "Ver reel",
+    results: "+129% crecimiento orgánico · 30–35% open rate · 42 semanas consecutivas · distribución multi-plataforma",
+    publicReference: {
+      label: "Producción visible en TikTok @kairos.research",
+      href: "https://www.tiktok.com/@kairos.research",
+    },
   },
   {
     title: "Reel — 5 Lupas de la Semana",
@@ -65,7 +74,11 @@ const featuredReels = [
     tools: "CapCut · Premiere Pro · Photoshop · Metricool",
     channel: "TikTok · Instagram Reels · YouTube Shorts",
     type: "video" as const,
-    actionLabel: "Ver reel",
+    results: "+129% crecimiento orgánico · 30–35% open rate · 42 semanas consecutivas · distribución multi-plataforma",
+    publicReference: {
+      label: "Producción visible en TikTok @kairos.research",
+      href: "https://www.tiktok.com/@kairos.research",
+    },
   },
 ];
 
@@ -451,9 +464,9 @@ export const ServicesContent = () => {
 
 const AssetLightbox = ({ asset, onClose }: { asset: PortfolioAsset; onClose: () => void }) => {
   const isVideo = asset.type === "video";
-  const actionHref = asset.actionHref ?? asset.src;
-  const showAction = isVideo || Boolean(asset.actionHref);
-  const actionLabel = asset.actionLabel ?? "Ver reel";
+  const actionHref = asset.actionHref;
+  const showAction = Boolean(asset.actionHref);
+  const actionLabel = asset.actionLabel ?? "Ver manual";
 
   return (
     <div
@@ -520,6 +533,10 @@ const AssetLightbox = ({ asset, onClose }: { asset: PortfolioAsset; onClose: () 
                 <AssetMeta label="Rol" value={asset.role} />
                 {asset.tools ? <AssetMeta label="Herramientas" value={asset.tools} /> : null}
                 <AssetMeta label="Canal / plataforma" value={asset.channel} />
+                {asset.publicReference ? (
+                  <AssetReference label={asset.publicReference.label} href={asset.publicReference.href} />
+                ) : null}
+                {asset.results ? <AssetMeta label="Resultados" value={asset.results} /> : null}
               </div>
             </div>
 
@@ -554,5 +571,18 @@ const AssetMeta = ({ label, value }: { label: string; value: string }) => (
   <div>
     <dt className="text-[10px] uppercase tracking-[0.18em] text-foreground/48">{label}</dt>
     <dd className="mt-2 break-words leading-relaxed text-foreground/84">{value}</dd>
+  </div>
+);
+
+const AssetReference = ({ label, href }: { label: string; href: string }) => (
+  <div className="border-t border-hairline pt-4">
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      className="text-xs leading-relaxed text-foreground/54 underline decoration-foreground/18 underline-offset-4 transition-colors hover:text-foreground/78 hover:decoration-foreground/40"
+    >
+      {label}
+    </a>
   </div>
 );
