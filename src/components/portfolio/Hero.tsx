@@ -18,7 +18,7 @@ const stats: StatConfig[] = [
   { end: 42, suffix: "+", label: "semanas de newsletter" },
 ];
 
-const contentSignals = ["campañas multi-plataforma", "contenido semanal recurrente", "adaptación cross-platform"];
+const metricSignal = "Campañas multi-plataforma · Contenido recurrente · Adaptación cross-platform";
 const mobileStats = ["4+ comunidades", "100+ assets", "42+ newsletters"];
 
 const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
@@ -88,19 +88,20 @@ export const Hero = () => {
       </div>
 
       <div className="container relative z-10">
-        <div className="max-w-3xl space-y-5 sm:space-y-6 lg:max-w-[40rem] xl:max-w-[44rem] lg:space-y-6">
-          <div className="reveal inline-grid max-w-full grid-cols-[auto_1fr] items-center gap-3 rounded-full border border-hairline bg-surface/32 px-4 py-2 text-[10px] uppercase leading-relaxed tracking-[0.16em] text-foreground/76 backdrop-blur-sm sm:inline-flex sm:text-[11px] sm:tracking-[0.19em]">
+        <div className="max-w-3xl space-y-6 sm:space-y-7 lg:max-w-[40rem] xl:max-w-[44rem] lg:space-y-8">
+          <div className="reveal inline-grid max-w-[calc(100vw-3rem)] grid-cols-[auto_1fr] items-center gap-3 rounded-full border border-hairline bg-surface/32 px-4 py-2 text-[10px] uppercase leading-relaxed tracking-[0.16em] text-foreground/76 backdrop-blur-sm sm:inline-flex sm:max-w-full sm:text-[11px] sm:tracking-[0.19em]">
             <span className="h-1.5 w-1.5 rounded-full bg-accent/85" />
-            <span className="min-w-0">Community Manager · Social Media · Content Systems</span>
+            <span className="min-w-0 sm:hidden">Community Manager · Social Media</span>
+            <span className="hidden min-w-0 sm:inline">Community Manager · Social Media · Content Systems</span>
           </div>
 
-          <h1 className="reveal reveal-delay-1 max-w-[13ch] font-display text-[2.35rem] leading-[0.98] tracking-normal text-balance sm:text-[3.35rem] lg:text-[4.25rem] xl:text-[4.95rem]">
+          <h1 className="reveal reveal-delay-1 max-w-[13ch] font-display text-[2.35rem] leading-[1.04] tracking-normal text-balance sm:text-[3.35rem] sm:leading-[1.02] lg:text-[4.25rem] xl:text-[4.95rem]">
             <span className="block text-foreground">Community</span>
             <span className="block text-foreground">Manager</span>
-            <span className="block text-[0.5em] italic font-light leading-[1.08] text-accent">Social Media & Visual Content</span>
+            <span className="mt-2 block text-[0.5em] italic font-light leading-[1.18] text-accent sm:mt-3">Social Media & Visual Content</span>
           </h1>
 
-          <div className="reveal reveal-delay-2 max-w-xl space-y-3 text-[15px] leading-relaxed text-foreground/82 text-pretty sm:text-[1.02rem]">
+          <div className="reveal reveal-delay-2 max-w-[20.5rem] space-y-4 text-[15px] leading-[1.8] text-foreground/82 text-pretty sm:max-w-[34rem] sm:text-[1.02rem]">
             <p>
               Diseño sistemas de contenido y comunicación visual para marcas digitales, combinando operación editorial, social media y ejecución multi-plataforma.
             </p>
@@ -111,7 +112,7 @@ export const Hero = () => {
 
         </div>
 
-        <div className="reveal reveal-delay-3 mt-6 flex flex-col gap-4 lg:mt-0 lg:grid lg:-translate-y-12 lg:grid-cols-12 lg:items-center xl:-translate-y-14">
+        <div className="reveal reveal-delay-3 mt-8 flex flex-col gap-5 lg:mt-3 lg:grid lg:-translate-y-10 lg:grid-cols-12 lg:items-center xl:-translate-y-12">
           <div className="flex flex-wrap items-center gap-3 sm:gap-4 lg:col-span-5">
             <a
               href="#work"
@@ -135,22 +136,17 @@ export const Hero = () => {
             </a>
           </div>
 
-          <div className="flex flex-wrap gap-x-2 gap-y-1 text-[11px] uppercase tracking-[0.16em] text-foreground/68 sm:text-xs lg:hidden">
-            {mobileStats.map((item, index) => (
+          <div className="flex max-w-[20.5rem] flex-wrap gap-x-4 gap-y-1 text-[11px] uppercase tracking-[0.16em] text-foreground/68 sm:max-w-none sm:text-xs lg:hidden">
+            {mobileStats.map((item) => (
               <span key={item}>
                 {item}
-                {index < mobileStats.length - 1 ? <span className="pl-2 text-foreground/38">·</span> : null}
               </span>
             ))}
           </div>
 
-          <div className="flex flex-wrap gap-2 text-[10px] uppercase tracking-[0.14em] text-foreground/48 lg:hidden">
-            {contentSignals.map((signal) => (
-              <span key={signal} className="rounded-full border border-hairline bg-surface/18 px-3 py-1.5">
-                {signal}
-              </span>
-            ))}
-          </div>
+          <p className="max-w-[20.5rem] text-[10px] uppercase leading-relaxed tracking-[0.14em] text-foreground/46 sm:max-w-[22rem] lg:hidden">
+            {metricSignal}
+          </p>
 
           <div
             ref={statsRef}
@@ -161,13 +157,9 @@ export const Hero = () => {
             ))}
           </div>
 
-          <div className="hidden flex-wrap gap-2 text-[10px] uppercase tracking-[0.14em] text-foreground/46 lg:col-span-4 lg:col-start-9 lg:-mt-2 lg:flex">
-            {contentSignals.map((signal) => (
-              <span key={signal} className="rounded-full border border-white/[0.055] bg-surface/12 px-3 py-1.5">
-                {signal}
-              </span>
-            ))}
-          </div>
+          <p className="hidden border-t border-white/[0.055] pt-4 text-[10px] uppercase leading-relaxed tracking-[0.14em] text-foreground/44 lg:col-span-4 lg:col-start-9 lg:-mt-1 lg:block">
+            {metricSignal}
+          </p>
         </div>
       </div>
     </section>
