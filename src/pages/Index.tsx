@@ -3,7 +3,7 @@ import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
 import { Work } from "@/components/portfolio/Work";
 import { ServicesContent } from "@/components/portfolio/ServicesContent";
-import { Contact } from "@/components/portfolio/Contact";
+import { Contact, FloatingWhatsApp } from "@/components/portfolio/Contact";
 
 const Index = () => {
   return (
@@ -14,6 +14,7 @@ const Index = () => {
       <Work />
       <ServicesContent />
       <Contact />
+      <FloatingWhatsApp />
     </main>
   );
 };
