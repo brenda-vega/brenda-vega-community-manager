@@ -18,6 +18,7 @@ type PortfolioAsset = {
   results?: string;
   publicReference?: {
     label: string;
+    linkLabel?: string;
     href: string;
   };
 };
@@ -46,7 +47,7 @@ const assetPath = (filename: string) => `${import.meta.env.BASE_URL}assets/${fil
 const featuredReels = [
   {
     title: "Reel — Berachain Market Analysis",
-    src: assetPath("    crypto-market-analysis-reel-berachain.mp4"),
+    src: assetPath("kairos-web3-market-analysis-reel.mp4"),
     caption: "Contenido corto enfocado en análisis visual de mercado y comunicación educativa para plataformas sociales de formato corto.",
     alt: "Berachain market analysis reel",
     format: "Educational Reel / Market Analysis",
@@ -58,13 +59,14 @@ const featuredReels = [
     type: "video" as const,
     results: "+129% crecimiento orgánico · 30–35% open rate · 42 semanas consecutivas · distribución multi-plataforma",
     publicReference: {
-      label: "Producción visible en TikTok @kairos.research",
-      href: "https://www.tiktok.com/@kairos.research",
+      label: "Producción visible en TikTok",
+      linkLabel: "TikTok Market Analysis Reel",
+      href: "https://www.tiktok.com/@kairos.research/video/7490680364675992837",
     },
   },
   {
     title: "Reel — 5 Lupas de la Semana",
-    src: assetPath("    weekly-web3-news-reel-kairos.mp4"),
+    src: assetPath("kairos-weekly-web3-news-reel.mp4"),
     caption: "Resumen visual semanal enfocado en noticias y análisis del ecosistema Web3 para contenido de alta frecuencia.",
     alt: "5 Lupas de la Semana reel",
     format: "Weekly News Reel",
@@ -76,8 +78,9 @@ const featuredReels = [
     type: "video" as const,
     results: "+129% crecimiento orgánico · 30–35% open rate · 42 semanas consecutivas · distribución multi-plataforma",
     publicReference: {
-      label: "Producción visible en TikTok @kairos.research",
-      href: "https://www.tiktok.com/@kairos.research",
+      label: "Producción visible en TikTok",
+      linkLabel: "TikTok Weekly News Reel",
+      href: "https://www.tiktok.com/@kairos.research/video/7524744680295140613",
     },
   },
 ];
@@ -534,7 +537,11 @@ const AssetLightbox = ({ asset, onClose }: { asset: PortfolioAsset; onClose: () 
                 {asset.tools ? <AssetMeta label="Herramientas" value={asset.tools} /> : null}
                 <AssetMeta label="Canal / plataforma" value={asset.channel} />
                 {asset.publicReference ? (
-                  <AssetReference label={asset.publicReference.label} href={asset.publicReference.href} />
+                  <AssetReference
+                    label={asset.publicReference.label}
+                    linkLabel={asset.publicReference.linkLabel}
+                    href={asset.publicReference.href}
+                  />
                 ) : null}
                 {asset.results ? <AssetMeta label="Resultados" value={asset.results} /> : null}
               </div>
@@ -574,15 +581,16 @@ const AssetMeta = ({ label, value }: { label: string; value: string }) => (
   </div>
 );
 
-const AssetReference = ({ label, href }: { label: string; href: string }) => (
-  <div className="border-t border-hairline pt-4">
+const AssetReference = ({ label, linkLabel, href }: { label: string; linkLabel?: string; href: string }) => (
+  <div className="space-y-2 border-t border-hairline pt-4">
+    <p className="text-[10px] uppercase tracking-[0.18em] text-foreground/42">{label}</p>
     <a
       href={href}
       target="_blank"
       rel="noreferrer"
       className="text-xs leading-relaxed text-foreground/54 underline decoration-foreground/18 underline-offset-4 transition-colors hover:text-foreground/78 hover:decoration-foreground/40"
     >
-      {label}
+      {linkLabel ?? href}
     </a>
   </div>
 );
