@@ -31,13 +31,13 @@ const secondaryLinks = [
 
 export const Contact = () => {
   return (
-    <section id="contact" className="scroll-reveal relative scroll-mt-24 border-t border-white/18 bg-background py-12 text-foreground sm:py-14 lg:py-16">
+    <section id="contact" className="relative scroll-mt-24 border-t border-white/22 bg-background py-12 text-foreground sm:py-14 lg:py-16">
       <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-full bg-background" />
 
       <div className="container">
-        <div className="grid grid-cols-1 gap-8 border-y border-white/22 py-6 sm:py-7 lg:grid-cols-12 lg:gap-12 lg:py-8">
+        <div className="grid grid-cols-1 gap-8 border-y border-white/28 py-6 sm:py-7 lg:grid-cols-12 lg:gap-12 lg:py-8">
           <div className="space-y-4 lg:col-span-7">
-            <span className="text-xs uppercase tracking-[0.22em] text-white/82">06 · Contacto</span>
+            <span className="text-xs uppercase tracking-[0.22em] text-white/90">06 · Contacto</span>
             <h2 className="max-w-3xl font-display text-2xl leading-[1.08] tracking-normal text-balance text-white sm:text-3xl lg:text-[2.65rem]">
               Disponible para Community Management, Social Media y sistemas editoriales para marcas digitales.
             </h2>
@@ -60,7 +60,7 @@ export const Contact = () => {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="soft-button inline-flex items-center gap-2 rounded-full border border-white/22 bg-white/[0.07] px-4 py-2.5 text-[12px] text-white/88 transition-colors duration-700 hover:border-white/34 hover:bg-white/[0.11] hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/40"
+                    className="soft-button inline-flex items-center gap-2 rounded-full border border-white/26 bg-white/[0.09] px-4 py-2.5 text-[12px] text-white/90 transition-colors duration-700 hover:border-white/40 hover:bg-white/[0.13] hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/40"
                   >
                     {label}
                     <Icon className="h-3.5 w-3.5 text-accent/68" aria-hidden="true" />
@@ -69,7 +69,7 @@ export const Contact = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-x-8 gap-y-3 border-t border-white/18 pt-4 text-sm text-white/82">
+            <div className="flex flex-wrap gap-x-8 gap-y-3 border-t border-white/22 pt-4 text-sm text-white/90">
               <span className="inline-flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-accent/82" aria-hidden="true" />
                 San Luis Potosí, México - Disponible para Remoto
@@ -78,17 +78,17 @@ export const Contact = () => {
             </div>
           </div>
 
-          <aside className="self-start border-l border-white/24 bg-white/[0.075] px-0 py-0 lg:col-span-4 lg:col-start-9 lg:px-7 lg:py-6">
+          <aside className="self-start border-l border-white/32 bg-white/[0.11] px-0 py-0 lg:col-span-4 lg:col-start-9 lg:px-7 lg:py-6">
             <div className="mb-5 flex items-center gap-2">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full rounded-full bg-accent/20" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
               </span>
-              <span className="text-xs uppercase tracking-[0.18em] text-white/82">Disponible para</span>
+              <span className="text-xs uppercase tracking-[0.18em] text-white/90">Disponible para</span>
             </div>
             <ul className="space-y-2">
               {services.map((s) => (
-                <li key={s} className="flex items-center justify-between border-b border-white/16 pb-2.5 text-sm text-white/94 last:border-b-0 last:pb-0">
+                <li key={s} className="flex items-center justify-between border-b border-white/22 pb-2.5 text-sm text-white last:border-b-0 last:pb-0">
                   {s}
                   <span className="text-accent/72">+</span>
                 </li>
@@ -97,9 +97,9 @@ export const Contact = () => {
           </aside>
         </div>
 
-        <footer className="mt-7 flex flex-col items-start justify-between gap-4 border-t border-white/18 pt-5 text-xs sm:flex-row sm:items-center lg:mt-8">
+        <footer className="mt-7 flex flex-col items-start justify-between gap-4 border-t border-white/22 pt-5 text-xs sm:flex-row sm:items-center lg:mt-8">
           <p className="text-white/72">© 2026 Brenda Vega · Community Manager</p>
-          <p className="text-white/86">Community Manager · Social Media · Content Creator · Visual Content Designer</p>
+          <p className="text-white/90">Community Manager · Social Media · Content Creator · Visual Content Designer</p>
         </footer>
       </div>
     </section>
