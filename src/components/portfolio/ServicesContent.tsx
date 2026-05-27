@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 type PortfolioAsset = {
   title: string;
   caption: string;
+  cardSummary?: string;
   src: string;
   alt: string;
   format: string;
@@ -13,6 +14,7 @@ type PortfolioAsset = {
   responsibilities: string[];
   tools?: string;
   channel: string;
+  tags?: string[];
   type?: "image" | "video";
   actionLabel?: string;
   actionHref?: string;
@@ -179,6 +181,22 @@ const visualAssets: PortfolioAsset[] = [
     responsibilities: ["Diseño de post", "Adaptación de copy visual", "Consistencia de marca"],
     tools: "Canva, Photoshop, LinkedIn",
     channel: "LinkedIn / Social Media",
+  },
+  {
+    title: "Real Banquetes — Content & Editorial Marketing",
+    caption:
+      "Desarrollo de contenido visual y materiales promocionales para una propuesta gastronómica enfocada en hospitalidad y banquetes. El proyecto incluyó investigación, estrategia de comunicación visual, fotografía gastronómica, diseño editorial y creación de piezas impresas orientadas a fortalecer la presentación de marca y la experiencia del cliente.",
+    cardSummary: "Contenido visual y materiales promocionales para hospitality y food marketing.",
+    src: assetPath("real-banquetes-editorial-branding.png"),
+    alt: "Real Banquetes content and editorial marketing materials",
+    format: "CONTENIDO VISUAL · COMUNICACIÓN · MATERIAL PROMOCIONAL",
+    gridLabel: "CONTENT MARKETING · HOSPITALITY · PRINT",
+    objective: "Construir una comunicación visual más atractiva y coherente para promocionar servicios gastronómicos y eventos.",
+    role: "Investigación · Estrategia visual · Comunicación promocional · Fotografía · Diseño editorial · Material impreso · Contenido visual",
+    responsibilities: ["Investigación", "Estrategia visual", "Comunicación promocional", "Fotografía", "Diseño editorial", "Material impreso", "Contenido visual"],
+    tools: "Photoshop · Illustrator · Canva",
+    channel: "Print · Hospitality · Food Marketing",
+    tags: ["Content Marketing", "Branding", "Editorial", "Hospitality", "Food Design"],
   },
   {
     title: "Mantle Puebla — Event Promotion",
@@ -455,7 +473,9 @@ export const ServicesContent = () => {
                     <div>
                       <h3 className="mt-2 font-display text-lg leading-tight text-foreground transition-colors duration-700 group-hover:text-foreground">{item.title}</h3>
                       <p className="mt-2 text-[10px] uppercase tracking-[0.16em] text-accent/85">{item.gridLabel ?? item.format}</p>
-                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground transition-colors duration-700 group-hover:text-foreground/72">{item.caption}</p>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground transition-colors duration-700 group-hover:text-foreground/72">
+                        {item.cardSummary ?? item.caption}
+                      </p>
                     </div>
                     <button
                       type="button"
@@ -558,6 +578,7 @@ const AssetLightbox = ({ asset, onClose }: { asset: PortfolioAsset; onClose: () 
                 <AssetMeta label="Rol" value={asset.role} />
                 {asset.tools ? <AssetMeta label="Herramientas" value={asset.tools} /> : null}
                 <AssetMeta label="Canal / plataforma" value={asset.channel} />
+                {asset.tags ? <AssetMeta label="Tags" value={asset.tags.join(" · ")} /> : null}
                 {asset.publicReference ? (
                   <AssetReference
                     label={asset.publicReference.label}
