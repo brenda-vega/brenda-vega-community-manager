@@ -39,7 +39,7 @@ export const Contact = () => {
           <div className="space-y-4 lg:col-span-7">
             <span className="text-xs uppercase tracking-[0.22em] text-white/90">06 · Contacto</span>
             <h2 className="max-w-3xl font-display text-2xl leading-[1.08] tracking-normal text-balance text-white sm:text-3xl lg:text-[2.65rem]">
-              Disponible para Community Management, Social Media y sistemas editoriales para marcas digitales.
+              Disponible para Community Management, Social Media y sistemas editoriales para marcas, proyectos y experiencias.
             </h2>
 
             <div className="space-y-3 pt-1">
